@@ -126,38 +126,43 @@ cities = ["New York", "Los Angeles", "Chicago", "Miami", "Dallas", "Philadelphia
           "Mount Vernon", "Redondo Beach", "Kenner", "Schenectady"]
 
 
-# https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
-def check_cities():
+def process_csv():
     os.chdir("..")
+    age_gender_race = pd.read_csv('data/Culture/Age, Gender, and Race.csv')
+    languages = pd.read_csv('data/Culture/Identity and Engagement - Languages.csv')
+    education = pd.read_csv("data/Culture/Educational Attainment.csv")
+    compare_cities(age_gender_race)
+    compare_cities(languages)
+    compare_cities(education)
 
-    # reading the csv file using read_csv
-    # storing the data frame in variable called df
-    df = pd.read_csv('data/Age, Gender, and Race.csv')
 
+# https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
+def compare_cities(df):
     # creating a list of column names by
     # calling the .columns
     list_of_city_names = list(df.columns)
     list_of_city_names.pop(0)
 
-    print(list_of_city_names)
+    # print(list_of_city_names)
 
     count = 0
-    # for city in cities:
-    #     print(city)
-    #     if any(city in cities for cityName in cities):
-    #         print("found city " + city)
-    #         count = count + 1
-
     for x in range(500):
+        found = False
         for column in list_of_city_names:
             # column = re.split(r'[`\-=~!@#$%^&*()_+\[\]{};\'\\:"|<,./<>?]', column)
-            if cities[x] in column:
-                print("found city " + cities[x])
-                if states[x] in column:
-                    print("found state " + states[x])
-        count = count + 1
+            # print(column.split(',')[0].replace('city', ''))
+            city = column.split(',')[0].replace('city', '').strip()
+            state = column.split(',')[1]
+            if cities[x].strip() == city[:len(cities[x])]:
+                if states[x] in state:
+                    # print("found state " + states[x])
+                    count = count + 1
+                    found = True
+                    break
+        if found is False:
+            print(cities[x] + "," + states[x] + " not found")
 
     print(count)
 
 
-check_cities()
+process_csv()
