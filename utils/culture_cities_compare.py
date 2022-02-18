@@ -126,6 +126,7 @@ cities = ["New York", "Los Angeles", "Chicago", "Miami", "Dallas", "Philadelphia
           "Mount Vernon", "Redondo Beach", "Kenner", "Schenectady"]
 
 
+# process each of the csv files for comparing if they contain 500 cities
 def process_csv():
     os.chdir("..")
     age_gender_race = pd.read_csv('data/Culture/Age, Gender, and Race.csv')
@@ -139,13 +140,18 @@ def process_csv():
 # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
 def compare_cities(df):
     # creating a list of column names by
-    # calling the .columns
+    # calling the columns
     list_of_city_names = list(df.columns)
     list_of_city_names.pop(0)
 
     # print(list_of_city_names)
 
+    # lists of cities and states that are not a direct match
+    unmatched_cities = []
+    unmatched_states = []
+
     count = 0
+    # compare cities by doing a direct match using ==
     for x in range(500):
         found = False
         for column in list_of_city_names:
@@ -153,16 +159,50 @@ def compare_cities(df):
             # print(column.split(',')[0].replace('city', ''))
             city = column.split(',')[0].replace('city', '').strip()
             state = column.split(',')[1]
-            if cities[x].strip() == city[:len(cities[x])]:
+            if cities[x].strip() == city.split('-')[0]:
                 if states[x] in state:
                     # print("found state " + states[x])
                     count = count + 1
                     found = True
                     break
         if found is False:
-            print(cities[x] + "," + states[x] + " not found")
+            unmatched_cities.append(cities[x])
+            unmatched_states.append(states[x])
 
-    print(count)
+    # match cities by checking if it exists as the first # of characters
+    for x in range(len(unmatched_cities)):
+        found = False
+        for column in list_of_city_names:
+            city = column.split(',')[0].replace('city', '').strip()
+            state = column.split(',')[1]
+            if unmatched_cities[x].strip() == city[:len(unmatched_cities[x])]:
+                if unmatched_states[x] in state:
+                    # print("found state " + states[x])
+                    count = count + 1
+
+                    # replace matched cities with empty string
+                    unmatched_cities[x] = ''
+                    unmatched_states[x] = ''
+                    found = True
+                    break
+
+    # remove cities that were just matched
+    unmatched_states = [x for x in unmatched_states if x != '']
+    unmatched_cities = [x for x in unmatched_cities if x != '']
+
+    # match remaining cities by checking if it exists anywhere
+    for x in range(len(unmatched_cities)):
+        found = False
+        for column in list_of_city_names:
+            city = column.split(',')[0].replace('city', '').strip()
+            state = column.split(',')[1]
+            if unmatched_cities[x].strip() in city:
+                if unmatched_states[x] in state:
+                    # print("found state " + states[x])
+                    count = count + 1
+                    found = True
+                    break
+    print("cities matched: " + str(count))
 
 
 process_csv()

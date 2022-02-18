@@ -138,17 +138,62 @@ def languages_preprocess(df):
     # df = (df.loc[23, [col for col in df.columns if "!!Percent!!Estimate" in col]])
     list_of_city_names = list([col for col in df.columns if "!!Percent!!Estimate" in col])
 
-    matching_cities = []
+    matched_cities = []
+    # lists of cities and states that are not a direct match
+    unmatched_cities = []
 
     count = 0
+    # compare cities by doing a direct match using ==
     for x in range(500):
+        found = False
         for column in list_of_city_names:
-            if cities[x].strip() in column.split(',')[0].replace('city', '').strip():
-                if states[x] in column.split(',')[1]:
-                    matching_cities.append(df[column].values[23])
-                    count = count + 1
-                    print(cities[x] + "," + states[x])
+            # column = re.split(r'[`\-=~!@#$%^&*()_+\[\]{};\'\\:"|<,./<>?]', column)
+            # print(column.split(',')[0].replace('city', ''))
+            city = column.split(',')[0].replace('city', '').strip()
+            state = column.split(',')[1]
+            if cities[x].strip() == city.split('-')[0]:
+                if states[x] in state:
+                    matched_cities.append(df[column].values[23])
+                    found = True
+                    break
+        if found is False:
+            matched_cities.append(' ')
+            unmatched_cities.append(x)
 
-    print(count)
+    # x is index in array cities/states, used to track which city or state was not matched
+    # if x is 4 that means index 4 in array cities/states was not matched
+    for index, x in enumerate(unmatched_cities):
+        for column in list_of_city_names:
+            city = column.split(',')[0].replace('city', '').strip()
+            state = column.split(',')[1]
+            # match cities by checking if it exists as the first # of characters
+            if cities[x].strip() == city[:len(cities[x])]:
+                if states[x] in state:
+                    matched_cities[x] = (df[column].values[23])
+                    # replace matched cities with empty string
+                    unmatched_cities[index] = ''
+                    break
+
+    # remove cities that were just matched
+    unmatched_cities = [x for x in unmatched_cities if x != '']
+
+    # match remaining cities by checking if it exists anywhere
+    for index, x in enumerate(unmatched_cities):
+        found = False
+        for column in list_of_city_names:
+            city = column.split(',')[0].replace('city', '').strip()
+            state = column.split(',')[1]
+            if cities[x].strip() in city:
+                if states[x] in state:
+                    matched_cities[x] = (df[column].values[23])
+                    found = True
+                    break
+    print(matched_cities)
+
+    df = pd.read_csv('data/final500Cities.csv')
+    df['Speak A Language Other Than English'] = matched_cities
+    print(df)
+    df.to_csv('data/final500Cities.csv', mode='w', index=False)
+
 
 process_csv()
