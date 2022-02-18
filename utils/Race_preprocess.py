@@ -128,13 +128,13 @@ cities = ["New York", "Los Angeles", "Chicago", "Miami", "Dallas", "Philadelphia
 
 def process_csv():
     os.chdir("..")
-    languages = pd.read_csv('data/Culture/Identity and Engagement - Languages.csv')
-    preprocess(languages)
+    age_gender_race = pd.read_csv('data/Culture/Age, Gender, and Race.csv')
+    preprocess(age_gender_race)
 
 
 def preprocess(df):
     # df = (df.loc[23, [col for col in df.columns if "!!Percent!!Estimate" in col]])
-    list_of_city_names = list([col for col in df.columns if "!!Percent!!Estimate" in col])
+    list_of_city_names = list([col for col in df.columns if "!!Percent" in col])
 
     matched_cities = []
     # lists of cities and states that are not a direct match
@@ -151,7 +151,7 @@ def preprocess(df):
             state = column.split(',')[1]
             if cities[x].strip() == city.split('-')[0]:
                 if states[x] in state:
-                    matched_cities.append(df[column].values[23])
+                    matched_cities.append(df[column].values[36])
                     found = True
                     break
         if found is False:
@@ -167,7 +167,7 @@ def preprocess(df):
             # match cities by checking if it exists as the first # of characters
             if cities[x].strip() == city[:len(cities[x])]:
                 if states[x] in state:
-                    matched_cities[x] = (df[column].values[23])
+                    matched_cities[x] = (df[column].values[36])
                     # replace matched cities with empty string
                     unmatched_cities[index] = ''
                     break
@@ -183,13 +183,14 @@ def preprocess(df):
             state = column.split(',')[1]
             if cities[x].strip() in city:
                 if states[x] in state:
-                    matched_cities[x] = (df[column].values[23])
+                    matched_cities[x] = (df[column].values[36])
+                    unmatched_cities[index] = ''
                     found = True
                     break
     print(matched_cities)
 
     df = pd.read_csv('data/final500Cities.csv')
-    df['Speak A Language Other Than English'] = matched_cities
+    df["Two or More Races"] = matched_cities
     print(df)
     df.to_csv('data/final500Cities.csv', mode='w', index=False)
 
