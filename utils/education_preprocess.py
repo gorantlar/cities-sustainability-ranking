@@ -136,7 +136,8 @@ def preprocess(df):
     # df = (df.loc[23, [col for col in df.columns if "!!Percent!!Estimate" in col]])
     list_of_city_names = list([col for col in df.columns if "!!Percent!!Estimate" in col])
 
-    matched_cities = []
+    # store the value when cities match
+    city_values = []
     # lists of cities and states that are not a direct match
     unmatched_cities = []
 
@@ -151,11 +152,11 @@ def preprocess(df):
             state = column.split(',')[1]
             if cities[x].strip() == city.split('-')[0]:
                 if states[x] in state:
-                    matched_cities.append(df[column].values[15])
+                    city_values.append(df[column].values[15])
                     found = True
                     break
         if found is False:
-            matched_cities.append(' ')
+            city_values.append(' ')
             unmatched_cities.append(x)
 
     # x is index in array cities/states, used to track which city or state was not matched
@@ -167,7 +168,7 @@ def preprocess(df):
             # match cities by checking if it exists as the first # of characters
             if cities[x].strip() == city[:len(cities[x])]:
                 if states[x] in state:
-                    matched_cities[x] = (df[column].values[15])
+                    city_values[x] = (df[column].values[15])
                     # replace matched cities with empty string
                     unmatched_cities[index] = ''
                     break
@@ -183,14 +184,14 @@ def preprocess(df):
             state = column.split(',')[1]
             if cities[x].strip() in city:
                 if states[x] in state:
-                    matched_cities[x] = (df[column].values[15])
+                    city_values[x] = (df[column].values[15])
                     unmatched_cities[index] = ''
                     found = True
                     break
-    print(matched_cities)
+    print(city_values)
 
     df = pd.read_csv('data/final500Cities.csv')
-    df["Bachelor's Degree or Higher"] = matched_cities
+    df["Bachelor's Degree or Higher"] = city_values
     print(df)
     df.to_csv('data/final500Cities.csv', mode='w', index=False)
 
