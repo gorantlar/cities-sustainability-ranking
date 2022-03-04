@@ -166,6 +166,7 @@ def process_csv():
 
     compare_cities_health(health, "Park access")
     compare_cities_health(health, "Walkability")
+    compare_cities_health(health, "Limited access to healthy foods")
     compare_cities(age_gender_race)
     compare_cities(languages)
     compare_cities(education)

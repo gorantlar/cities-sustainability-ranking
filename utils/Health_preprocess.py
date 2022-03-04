@@ -104,6 +104,7 @@ def process_csv():
 
     compare_cities_health(health, "Park access")
     compare_cities_health(health, "Walkability")
+    compare_cities_health(health, "Limited access to healthy foods")
 
 
 def compare_cities_health(df, metric_name):
