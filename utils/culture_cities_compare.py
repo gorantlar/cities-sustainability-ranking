@@ -165,6 +165,7 @@ def process_csv():
     health = pd.read_csv("data/Culture/Health Data.csv")
 
     compare_cities_health(health, "Park access")
+    compare_cities_health(health, "Walkability")
     compare_cities(age_gender_race)
     compare_cities(languages)
     compare_cities(education)
