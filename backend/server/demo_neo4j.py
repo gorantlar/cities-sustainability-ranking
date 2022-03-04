@@ -1,4 +1,4 @@
-from neo4j import GraphDatabase;
+from neo4j import GraphDatabase
 
 class HelloWorldExample:
 
@@ -18,6 +18,9 @@ class HelloWorldExample:
         result = tx.run("CREATE (a:Greeting) "
                         "SET a.message = $message "
                         "RETURN a.message + ', from node ' + id(a)", message=message)
+        print("result", result)
+        print("result.single()", result.single())
+        # print("result.single()[0]", result.single()[0])
         return result.single()[0]
 
 if __name__ == "__main__":
