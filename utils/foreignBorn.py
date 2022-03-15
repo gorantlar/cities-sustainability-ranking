@@ -63,35 +63,6 @@ states = ["New York", "California", "Illinois", "Florida", "Texas", "Pennsylvani
           "Florida", "California", "Delaware", "California", "New Jersey", "New Jersey", "Illinois", "New York",
           "California", "Louisiana", "New York", ]
 
-state_abbr = ["NY", "CA", "IL", "FL", "TX", "PA", "TX", "GA", "DC", "MA", "AZ", "WA", "CA", "MI", "CA", "MN", "FL", "CO",
-             "CA", "MD", "NV", "OR", "TX", "MO", "CA", "FL", "CA", "OH", "PA", "TX", "OH", "MO", "IN", "OH", "NC", "VA",
-             "WI", "RI", "FL", "UT", "TN", "VA", "TN", "NC", "LA", "KY", "OK", "CT", "NY", "TX", "CT", "AZ", "NE", "TX",
-             "HI", "TX", "NM", "AL", "OH", "NY", "CA", "PA", "OK", "FL", "CA", "CO", "SC", "MA", "MI", "CA", "NY", "TN",
-             "CA", "UT", "LA", "OH", "CT", "SC", "AZ", "FL", "UT", "MA", "CA", "KS", "OH", "IA", "CA", "FL", "TX", "WI",
-             "NV", "AR", "CA", "NC", "NC", "CA", "FL", "TN", "WA", "NY", "TX", "CA", "GA", "ID", "CA", "PA", "CA", "CO",
-             "OH", "AR", "CA", "CA", "CA", "NC", "TX", "IN", "CA", "MI", "NC", "MS", "CA", "MI", "KY", "MI", "NV", "AL",
-             "AL", "CO", "NC", "CA", "MN", "CA", "FL", "NJ", "NE", "MO", "AK", "TX", "CA", "IA", "IL", "NJ", "IN", "LA",
-             "GA", "CA", "OR", "OH", "TX", "PA", "OR", "FL", "LA", "TX", "NJ", "NC", "GA", "AZ", "TX", "AZ", "TX", "FL",
-             "IL", "NC", "AL", "AZ", "AZ", "NV", "VA", "VA", "CA", "WA", "TX", "TX", "CA", "NH", "FL", "IN", "AZ", "TX",
-             "MS", "WI", "WA", "CA", "TX", "MI", "CA", "VA", "CA", "CA", "ND", "WI", "TX", "ME", "CA", "FL", "TX", "NY",
-             "CA", "CA", "FL", "IL", "AZ", "KS", "TX", "TX", "CA", "CT", "TN", "IA", "SD", "CA", "PA", "WA", "ID", "NC",
-             "FL", "TN", "NC", "VA", "CA", "CA", "CT", "AZ", "CA", "CA", "FL", "CA", "CA", "OR", "NC", "CA", "NH", "IL",
-             "VA", "CA", "IL", "CO", "IN", "LA", "TX", "AL", "GA", "CA", "FL", "TX", "GA", "KS", "CA", "CA", "CA", "TX",
-             "MA", "CA", "IL", "WA", "KS", "IL", "TX", "NJ", "CA", "CO", "TX", "CA", "AZ", "AZ", "MO", "GA", "CA", "CO",
-             "FL", "CA", "TX", "CA", "KS", "TX", "WV", "CA", "CA", "CO", "NM", "UT", "VA", "MI", "IL", "FL", "TX", "WA",
-             "MI", "WA", "WA", "CA", "WI", "NC", "CT", "NJ", "VA", "CA", "AR", "WI", "OK", "CO", "TX", "TX", "CA", "TX",
-             "CA", "CO", "UT", "MT", "MN", "MN", "SC", "MA", "TX", "IA", "CA", "FL", "MO", "UT", "IN", "CA", "CA", "SC",
-             "CA", "CA", "ID", "CO", "CA", "FL", "FL", "IA", "WA", "NM", "CA", "MA", "CO", "IL", "CA", "OK", "FL", "OR",
-             "VT", "GA", "OR", "TX", "OR", "CA", "NC", "CA", "TX", "CA", "IA", "FL", "CA", "TX", "CA", "NV", "TX", "CA",
-             "CA", "CA", "CA", "CA", "CA", "CO", "WA", "CA", "CA", "TX", "IN", "WA", "TX", "TX", "CA", "FL", "MO", "NM",
-             "OR", "KS", "UT", "CA", "UT", "WA", "CA", "MA", "CA", "IN", "FL", "GA", "CA", "FL", "MA", "VA", "CA", "MA",
-             "OK", "MI", "MI", "CA", "OK", "MT", "SD", "VA", "SC", "CA", "CA", "CA", "CA", "MA", "GA", "FL", "CT", "CA",
-             "MO", "MA", "IN", "CA", "IL", "TX", "IL", "CA", "CA", "AL", "CA", "CA", "CA", "NJ", "FL", "MN", "GA", "CA",
-             "TX", "CA", "MI", "CA", "CA", "FL", "CA", "CA", "CA", "MI", "WA", "RI", "MA", "CA", "AR", "FL", "RI", "IL",
-             "MI", "MN", "MA", "MN", "WY", "CA", "CA", "CA", "MO", "TX", "CO", "FL", "NY", "AR", "OH", "UT", "CA", "TX",
-             "CA", "CA", "CA", "PA", "MI", "IN", "TX", "CA", "IN", "IL", "IL", "MI", "CA", "NJ", "IL", "CA", "IL", "MI",
-             "CT", "WI", "RI", "FL", "CA", "DE", "CA", "NJ", "NJ", "IL", "NY", "CA", "LA", "NY"]
-
 cities = ["New York", "Los Angeles", "Chicago", "Miami", "Dallas", "Philadelphia", "Houston", "Atlanta", "Washington",
           "Boston", "Phoenix", "Seattle", "San Francisco", "Detroit", "San Diego", "Minneapolis", "Tampa", "Denver",
           "Riverside", "Baltimore", "Las Vegas", "Portland", "San Antonio", "St. Louis", "Sacramento", "Orlando",
@@ -154,72 +125,20 @@ cities = ["New York", "Los Angeles", "Chicago", "Miami", "Dallas", "Philadelphia
           "Pawtucket", "Lauderhill", "Redlands", "Wilmington", "Lynwood", "Passaic", "Union City", "Palatine",
           "Mount Vernon", "Redondo Beach", "Kenner", "Schenectady"]
 
-
-# process each of the csv files for comparing if they contain 500 cities
 def process_csv():
     os.chdir("..")
-
-    age_gender_race = pd.read_csv('data/Culture/Age, Gender, and Race.csv')
-    languages = pd.read_csv('data/Culture/Identity and Engagement - Languages.csv')
-    education = pd.read_csv("data/Culture/Educational Attainment.csv")
-    health = pd.read_csv("data/Culture/Health Data.csv")
     foreign = pd.read_csv("data/Culture/ForeignBorn.csv")
+    preprocess(foreign)
 
-    compare_cities_health(health, "Park access")
-    compare_cities_health(health, "Walkability")
-    compare_cities_health(health, "Limited access to healthy foods")
-    compare_cities(age_gender_race)
-    compare_cities(languages)
-    compare_cities(education)
-    compare_cities(foreign)
 
-def compare_cities_health(df, metric_name):
-    df = df.loc[df['metric_name'] == metric_name]
-    df = df.loc[df['group_name'] == "total population"]
+def preprocess(df):
+    # df = (df.loc[23, [col for col in df.columns if "!!Percent!!Estimate" in col]])
+    list_of_city_names = list([col for col in df.columns if "!!Percent" in col])
 
-    list_states = list(df["state_abbr"])
-    list_cities = list(df["city_name"])
-
+    # store the value when cities match
+    city_values = []
     # lists of cities and states that are not a direct match
     unmatched_cities = []
-    unmatched_states = []
-
-    count = 0
-    # compare cities by doing a direct match using ==
-    for x in range(500):
-        found = False
-        for city, state in zip(list_cities, list_states):
-            if city == cities[x]:
-                if state == state_abbr[x]:
-                    count = count + 1
-                    found = True
-                    break
-        if found is False:
-            unmatched_cities.append(cities[x])
-            unmatched_states.append(state_abbr[x])
-
-    # match cities by checking if it exists as the first # of characters
-    for x in range(500):
-        for city, state in zip(unmatched_cities, unmatched_states):
-            if cities[x].strip() == city[:len(cities[x])]:
-                if state == state_abbr[x]:
-                    count = count + 1
-                    break
-
-    print("cities matched: " + str(count))
-
-# https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
-def compare_cities(df):
-    # creating a list of column names by
-    # calling the columns
-    list_of_city_names = list(df.columns)
-    list_of_city_names.pop(0)
-
-    # print(list_of_city_names)
-
-    # lists of cities and states that are not a direct match
-    unmatched_cities = []
-    unmatched_states = []
 
     count = 0
     # compare cities by doing a direct match using ==
@@ -232,48 +151,48 @@ def compare_cities(df):
             state = column.split(',')[1]
             if cities[x].strip() == city.split('-')[0]:
                 if states[x] in state:
-                    # print("found state " + states[x])
-                    count = count + 1
+                    city_values.append(df[column].values[104])
                     found = True
                     break
         if found is False:
-            unmatched_cities.append(cities[x])
-            unmatched_states.append(states[x])
+            city_values.append(' ')
+            unmatched_cities.append(x)
 
-    # match cities by checking if it exists as the first # of characters
-    for x in range(len(unmatched_cities)):
-        found = False
+    # x is index in array cities/states, used to track which city or state was not matched
+    # if x is 4 that means index 4 in array cities/states was not matched
+    for index, x in enumerate(unmatched_cities):
         for column in list_of_city_names:
             city = column.split(',')[0].replace('city', '').strip()
             state = column.split(',')[1]
-            if unmatched_cities[x].strip() == city[:len(unmatched_cities[x])]:
-                if unmatched_states[x] in state:
-                    # print("found state " + states[x])
-                    count = count + 1
-
+            # match cities by checking if it exists as the first # of characters
+            if cities[x].strip() == city[:len(cities[x])]:
+                if states[x] in state:
+                    city_values[x] = (df[column].values[104])
                     # replace matched cities with empty string
-                    unmatched_cities[x] = ''
-                    unmatched_states[x] = ''
-                    found = True
+                    unmatched_cities[index] = ''
                     break
 
     # remove cities that were just matched
-    unmatched_states = [x for x in unmatched_states if x != '']
     unmatched_cities = [x for x in unmatched_cities if x != '']
 
     # match remaining cities by checking if it exists anywhere
-    for x in range(len(unmatched_cities)):
+    for index, x in enumerate(unmatched_cities):
         found = False
         for column in list_of_city_names:
             city = column.split(',')[0].replace('city', '').strip()
             state = column.split(',')[1]
-            if unmatched_cities[x].strip() in city:
-                if unmatched_states[x] in state:
-                    # print("found state " + states[x])
-                    count = count + 1
+            if cities[x].strip() in city:
+                if states[x] in state:
+                    city_values[x] = (df[column].values[104])
+                    unmatched_cities[index] = ''
                     found = True
                     break
-    print("cities matched: " + str(count))
+    print(city_values)
+
+    df = pd.read_csv('data/final500Cities.csv')
+    df["Foreign Born"] = city_values
+    print(df)
+    df.to_csv('data/final500Cities.csv', mode='w', index=False)
 
 
 process_csv()
