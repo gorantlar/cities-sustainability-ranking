@@ -1,8 +1,10 @@
 import neo4j
 from neo4j import graph
 
+
 class City:
-    def __init__(self, city_id, name, state, state_id, county, county_fips, latitude, longitude, population, density, zips):
+    def __init__(self, city_id, name, state, state_id, county, county_fips, latitude, longitude, population, density,
+                 zips):
         self.city_id = city_id
         self.name = name
         self.state = state
@@ -52,4 +54,3 @@ class City:
 
     def __str__(self) -> str:
         return str(self.city_id) + ", " + self.name + ", " + self.state_id
-
