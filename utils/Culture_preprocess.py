@@ -128,20 +128,28 @@ cities = ["New York", "Los Angeles", "Chicago", "Miami", "Dallas", "Philadelphia
 
 def process_csv():
     os.chdir("..")
+    foreign = pd.read_csv("data/Culture/ForeignBorn.csv")
+    education = pd.read_csv("data/Culture/Educational Attainment.csv")
     languages = pd.read_csv('data/Culture/Identity and Engagement - Languages.csv')
-    preprocess(languages)
+    race = pd.read_csv('data/Culture/Age, Gender, and Race.csv')
+    preprocess(foreign, 104, "Foreign Born")
+    preprocess(education, 15, "Bachelor's Degree or Higher")
+    preprocess(languages, 23, 'Speak A Language Other Than English')
+    preprocess(race, 36, "Two or More Races")
 
 
-def preprocess(df):
-    # df = (df.loc[23, [col for col in df.columns if "!!Percent!!Estimate" in col]])
-    list_of_city_names = list([col for col in df.columns if "!!Percent!!Estimate" in col])
+def preprocess(df, row_number, column_name):
+    # Get a list columns from dataset containing city names
+    list_of_city_names = list([col for col in df.columns if "!!Percent" in col])
+    if len(list_of_city_names) == 0:
+        list_of_city_names = list([col for col in df.columns if "!!Percent!!Estimate" in col])
 
     # store the value when cities match
     city_values = []
+
     # lists of cities and states that are not a direct match
     unmatched_cities = []
 
-    count = 0
     # compare cities by doing a direct match using ==
     for x in range(500):
         found = False
@@ -152,7 +160,7 @@ def preprocess(df):
             state = column.split(',')[1]
             if cities[x].strip() == city.split('-')[0]:
                 if states[x] in state:
-                    city_values.append(df[column].values[23])
+                    city_values.append(df[column].values[row_number])
                     found = True
                     break
         if found is False:
@@ -168,7 +176,7 @@ def preprocess(df):
             # match cities by checking if it exists as the first # of characters
             if cities[x].strip() == city[:len(cities[x])]:
                 if states[x] in state:
-                    city_values[x] = (df[column].values[23])
+                    city_values[x] = (df[column].values[row_number])
                     # replace matched cities with empty string
                     unmatched_cities[index] = ''
                     break
@@ -178,19 +186,18 @@ def preprocess(df):
 
     # match remaining cities by checking if it exists anywhere
     for index, x in enumerate(unmatched_cities):
-        found = False
         for column in list_of_city_names:
             city = column.split(',')[0].replace('city', '').strip()
             state = column.split(',')[1]
             if cities[x].strip() in city:
                 if states[x] in state:
-                    city_values[x] = (df[column].values[23])
-                    found = True
+                    city_values[x] = (df[column].values[row_number])
+                    unmatched_cities[index] = ''
                     break
     print(city_values)
 
     df = pd.read_csv('data/final500Cities.csv')
-    df['Speak A Language Other Than English'] = city_values
+    df[column_name] = city_values
     print(df)
     df.to_csv('data/final500Cities.csv', mode='w', index=False)
 
