@@ -1,0 +1,3002 @@
+[
+  {
+    "City_ID": "1840034016",
+    "City_Name": "New York",
+    "State_ID": "NY",
+    "State_Name": "New York"
+  },
+  {
+    "City_ID": "1840020491",
+    "City_Name": "Los Angeles",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000494",
+    "City_Name": "Chicago",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840015149",
+    "City_Name": "Miami",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840019440",
+    "City_Name": "Dallas",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840000673",
+    "City_Name": "Philadelphia",
+    "State_ID": "PA",
+    "State_Name": "Pennsylvania"
+  },
+  {
+    "City_ID": "1840020925",
+    "City_Name": "Houston",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840013660",
+    "City_Name": "Atlanta",
+    "State_ID": "GA",
+    "State_Name": "Georgia"
+  },
+  {
+    "City_ID": "1840006060",
+    "City_Name": "Washington",
+    "State_ID": "DC",
+    "State_Name": "District of Columbia"
+  },
+  {
+    "City_ID": "1840000455",
+    "City_Name": "Boston",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840020568",
+    "City_Name": "Phoenix",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840021117",
+    "City_Name": "Seattle",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840021543",
+    "City_Name": "San Francisco",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840003971",
+    "City_Name": "Detroit",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840021990",
+    "City_Name": "San Diego",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840007830",
+    "City_Name": "Minneapolis",
+    "State_ID": "MN",
+    "State_Name": "Minnesota"
+  },
+  {
+    "City_ID": "1840015982",
+    "City_Name": "Tampa",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840018789",
+    "City_Name": "Denver",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840020551",
+    "City_Name": "Riverside",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840001592",
+    "City_Name": "Baltimore",
+    "State_ID": "MD",
+    "State_Name": "Maryland"
+  },
+  {
+    "City_ID": "1840020364",
+    "City_Name": "Las Vegas",
+    "State_ID": "NV",
+    "State_Name": "Nevada"
+  },
+  {
+    "City_ID": "1840019941",
+    "City_Name": "Portland",
+    "State_ID": "OR",
+    "State_Name": "Oregon"
+  },
+  {
+    "City_ID": "1840022220",
+    "City_Name": "San Antonio",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840001651",
+    "City_Name": "St. Louis",
+    "State_ID": "MO",
+    "State_Name": "Missouri"
+  },
+  {
+    "City_ID": "1840021491",
+    "City_Name": "Sacramento",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015099",
+    "City_Name": "Orlando",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840021570",
+    "City_Name": "San Jose",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000596",
+    "City_Name": "Cleveland",
+    "State_ID": "OH",
+    "State_Name": "Ohio"
+  },
+  {
+    "City_ID": "1840001254",
+    "City_Name": "Pittsburgh",
+    "State_ID": "PA",
+    "State_Name": "Pennsylvania"
+  },
+  {
+    "City_ID": "1840019590",
+    "City_Name": "Austin",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840003814",
+    "City_Name": "Cincinnati",
+    "State_ID": "OH",
+    "State_Name": "Ohio"
+  },
+  {
+    "City_ID": "1840008535",
+    "City_Name": "Kansas City",
+    "State_ID": "MO",
+    "State_Name": "Missouri"
+  },
+  {
+    "City_ID": "1840030084",
+    "City_Name": "Indianapolis",
+    "State_ID": "IN",
+    "State_Name": "Indiana"
+  },
+  {
+    "City_ID": "1840003760",
+    "City_Name": "Columbus",
+    "State_ID": "OH",
+    "State_Name": "Ohio"
+  },
+  {
+    "City_ID": "1840014557",
+    "City_Name": "Charlotte",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840003871",
+    "City_Name": "Virginia Beach",
+    "State_ID": "VA",
+    "State_Name": "Virginia"
+  },
+  {
+    "City_ID": "1840003046",
+    "City_Name": "Milwaukee",
+    "State_ID": "WI",
+    "State_Name": "Wisconsin"
+  },
+  {
+    "City_ID": "1840003289",
+    "City_Name": "Providence",
+    "State_ID": "RI",
+    "State_Name": "Rhode Island"
+  },
+  {
+    "City_ID": "1840015031",
+    "City_Name": "Jacksonville",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840021383",
+    "City_Name": "Salt Lake City",
+    "State_ID": "UT",
+    "State_Name": "Utah"
+  },
+  {
+    "City_ID": "1840036155",
+    "City_Name": "Nashville",
+    "State_ID": "TN",
+    "State_Name": "Tennessee"
+  },
+  {
+    "City_ID": "1840001698",
+    "City_Name": "Richmond",
+    "State_ID": "VA",
+    "State_Name": "Virginia"
+  },
+  {
+    "City_ID": "1840015457",
+    "City_Name": "Memphis",
+    "State_ID": "TN",
+    "State_Name": "Tennessee"
+  },
+  {
+    "City_ID": "1840014497",
+    "City_Name": "Raleigh",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840001839",
+    "City_Name": "New Orleans",
+    "State_ID": "LA",
+    "State_Name": "Louisiana"
+  },
+  {
+    "City_ID": "1840030815",
+    "City_Name": "Louisville",
+    "State_ID": "KY",
+    "State_Name": "Kentucky"
+  },
+  {
+    "City_ID": "1840020428",
+    "City_Name": "Oklahoma City",
+    "State_ID": "OK",
+    "State_Name": "Oklahoma"
+  },
+  {
+    "City_ID": "1840004836",
+    "City_Name": "Bridgeport",
+    "State_ID": "CT",
+    "State_Name": "Connecticut"
+  },
+  {
+    "City_ID": "1840000386",
+    "City_Name": "Buffalo",
+    "State_ID": "NY",
+    "State_Name": "New York"
+  },
+  {
+    "City_ID": "1840020696",
+    "City_Name": "Fort Worth",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840004773",
+    "City_Name": "Hartford",
+    "State_ID": "CT",
+    "State_Name": "Connecticut"
+  },
+  {
+    "City_ID": "1840022101",
+    "City_Name": "Tucson",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840009315",
+    "City_Name": "Omaha",
+    "State_ID": "NE",
+    "State_Name": "Nebraska"
+  },
+  {
+    "City_ID": "1840023252",
+    "City_Name": "El Paso",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840013305",
+    "City_Name": "Honolulu",
+    "State_ID": "HI",
+    "State_Name": "Hawaii"
+  },
+  {
+    "City_ID": "1840021024",
+    "City_Name": "McAllen",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840019176",
+    "City_Name": "Albuquerque",
+    "State_ID": "NM",
+    "State_Name": "New Mexico"
+  },
+  {
+    "City_ID": "1840006507",
+    "City_Name": "Birmingham",
+    "State_ID": "AL",
+    "State_Name": "Alabama"
+  },
+  {
+    "City_ID": "1840034249",
+    "City_Name": "Dayton",
+    "State_ID": "OH",
+    "State_Name": "Ohio"
+  },
+  {
+    "City_ID": "1840000373",
+    "City_Name": "Rochester",
+    "State_ID": "NY",
+    "State_Name": "New York"
+  },
+  {
+    "City_ID": "1840020319",
+    "City_Name": "Fresno",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840001044",
+    "City_Name": "Allentown",
+    "State_ID": "PA",
+    "State_Name": "Pennsylvania"
+  },
+  {
+    "City_ID": "1840021672",
+    "City_Name": "Tulsa",
+    "State_ID": "OK",
+    "State_Name": "Oklahoma"
+  },
+  {
+    "City_ID": "1840015130",
+    "City_Name": "Cape Coral",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840018905",
+    "City_Name": "Concord",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840018825",
+    "City_Name": "Colorado Springs",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840015163",
+    "City_Name": "Charleston",
+    "State_ID": "SC",
+    "State_Name": "South Carolina"
+  },
+  {
+    "City_ID": "1840000466",
+    "City_Name": "Springfield",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840002928",
+    "City_Name": "Grand Rapids",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840020580",
+    "City_Name": "Mission Viejo",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000417",
+    "City_Name": "Albany",
+    "State_ID": "NY",
+    "State_Name": "New York"
+  },
+  {
+    "City_ID": "1840014486",
+    "City_Name": "Knoxville",
+    "State_ID": "TN",
+    "State_Name": "Tennessee"
+  },
+  {
+    "City_ID": "1840019148",
+    "City_Name": "Bakersfield",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020135",
+    "City_Name": "Ogden",
+    "State_ID": "UT",
+    "State_Name": "Utah"
+  },
+  {
+    "City_ID": "1840013941",
+    "City_Name": "Baton Rouge",
+    "State_ID": "LA",
+    "State_Name": "Louisiana"
+  },
+  {
+    "City_ID": "1840000791",
+    "City_Name": "Akron",
+    "State_ID": "OH",
+    "State_Name": "Ohio"
+  },
+  {
+    "City_ID": "1840004850",
+    "City_Name": "New Haven",
+    "State_ID": "CT",
+    "State_Name": "Connecticut"
+  },
+  {
+    "City_ID": "1840014730",
+    "City_Name": "Columbia",
+    "State_ID": "SC",
+    "State_Name": "South Carolina"
+  },
+  {
+    "City_ID": "1840020566",
+    "City_Name": "Mesa",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840015094",
+    "City_Name": "Palm Bay",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840020174",
+    "City_Name": "Provo",
+    "State_ID": "UT",
+    "State_Name": "Utah"
+  },
+  {
+    "City_ID": "1840000434",
+    "City_Name": "Worcester",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840020553",
+    "City_Name": "Murrieta",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840001686",
+    "City_Name": "Wichita",
+    "State_ID": "KS",
+    "State_Name": "Kansas"
+  },
+  {
+    "City_ID": "1840000572",
+    "City_Name": "Toledo",
+    "State_ID": "OH",
+    "State_Name": "Ohio"
+  },
+  {
+    "City_ID": "1840007069",
+    "City_Name": "Des Moines",
+    "State_ID": "IA",
+    "State_Name": "Iowa"
+  },
+  {
+    "City_ID": "1840020490",
+    "City_Name": "Long Beach",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015119",
+    "City_Name": "Port St. Lucie",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840019390",
+    "City_Name": "Denton",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840002915",
+    "City_Name": "Madison",
+    "State_ID": "WI",
+    "State_Name": "Wisconsin"
+  },
+  {
+    "City_ID": "1840020121",
+    "City_Name": "Reno",
+    "State_ID": "NV",
+    "State_Name": "Nevada"
+  },
+  {
+    "City_ID": "1840015509",
+    "City_Name": "Little Rock",
+    "State_ID": "AR",
+    "State_Name": "Arkansas"
+  },
+  {
+    "City_ID": "1840020296",
+    "City_Name": "Oakland",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840013364",
+    "City_Name": "Durham",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840015324",
+    "City_Name": "Winston-Salem",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840019304",
+    "City_Name": "Indio",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015064",
+    "City_Name": "Palm Coast",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840014569",
+    "City_Name": "Chattanooga",
+    "State_ID": "TN",
+    "State_Name": "Tennessee"
+  },
+  {
+    "City_ID": "1840021093",
+    "City_Name": "Spokane",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840000378",
+    "City_Name": "Syracuse",
+    "State_ID": "NY",
+    "State_Name": "New York"
+  },
+  {
+    "City_ID": "1840019422",
+    "City_Name": "Arlington",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021517",
+    "City_Name": "Stockton",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840029462",
+    "City_Name": "Augusta",
+    "State_ID": "GA",
+    "State_Name": "Georgia"
+  },
+  {
+    "City_ID": "1840027142",
+    "City_Name": "Boise",
+    "State_ID": "ID",
+    "State_Name": "Idaho"
+  },
+  {
+    "City_ID": "1840020474",
+    "City_Name": "Oxnard",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840003389",
+    "City_Name": "Scranton",
+    "State_ID": "PA",
+    "State_Name": "Pennsylvania"
+  },
+  {
+    "City_ID": "1840020287",
+    "City_Name": "Modesto",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840018794",
+    "City_Name": "Aurora",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840003563",
+    "City_Name": "Youngstown",
+    "State_ID": "OH",
+    "State_Name": "Ohio"
+  },
+  {
+    "City_ID": "1840013368",
+    "City_Name": "Fayetteville",
+    "State_ID": "AR",
+    "State_Name": "Arkansas"
+  },
+  {
+    "City_ID": "1840019322",
+    "City_Name": "Anaheim",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840021731",
+    "City_Name": "Victorville",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020516",
+    "City_Name": "Lancaster",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840013356",
+    "City_Name": "Greensboro",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840019718",
+    "City_Name": "Corpus Christi",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840008261",
+    "City_Name": "Fort Wayne",
+    "State_ID": "IN",
+    "State_Name": "Indiana"
+  },
+  {
+    "City_ID": "1840021964",
+    "City_Name": "Santa Ana",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840002949",
+    "City_Name": "Flint",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840013490",
+    "City_Name": "Fayetteville",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840014895",
+    "City_Name": "Jackson",
+    "State_ID": "MS",
+    "State_Name": "Mississippi"
+  },
+  {
+    "City_ID": "1840021488",
+    "City_Name": "Santa Rosa",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840003102",
+    "City_Name": "Lansing",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840015211",
+    "City_Name": "Lexington",
+    "State_ID": "KY",
+    "State_Name": "Kentucky"
+  },
+  {
+    "City_ID": "1840003172",
+    "City_Name": "Ann Arbor",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840020361",
+    "City_Name": "Henderson",
+    "State_ID": "NV",
+    "State_Name": "Nevada"
+  },
+  {
+    "City_ID": "1840005061",
+    "City_Name": "Huntsville",
+    "State_ID": "AL",
+    "State_Name": "Alabama"
+  },
+  {
+    "City_ID": "1840006009",
+    "City_Name": "Mobile",
+    "State_ID": "AL",
+    "State_Name": "Alabama"
+  },
+  {
+    "City_ID": "1840020151",
+    "City_Name": "Fort Collins",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840013411",
+    "City_Name": "Asheville",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840021864",
+    "City_Name": "Santa Clarita",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840008940",
+    "City_Name": "St. Paul",
+    "State_ID": "MN",
+    "State_Name": "Minnesota"
+  },
+  {
+    "City_ID": "1840018903",
+    "City_Name": "Antioch",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015108",
+    "City_Name": "Lakeland",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840001383",
+    "City_Name": "Trenton",
+    "State_ID": "NJ",
+    "State_Name": "New Jersey"
+  },
+  {
+    "City_ID": "1840009357",
+    "City_Name": "Lincoln",
+    "State_ID": "NE",
+    "State_Name": "Nebraska"
+  },
+  {
+    "City_ID": "1840009904",
+    "City_Name": "Springfield",
+    "State_ID": "MO",
+    "State_Name": "Missouri"
+  },
+  {
+    "City_ID": "1840023385",
+    "City_Name": "Anchorage",
+    "State_ID": "AK",
+    "State_Name": "Alaska"
+  },
+  {
+    "City_ID": "1840020662",
+    "City_Name": "Plano",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840019325",
+    "City_Name": "Irvine",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840007081",
+    "City_Name": "Davenport",
+    "State_ID": "IA",
+    "State_Name": "Iowa"
+  },
+  {
+    "City_ID": "1840009132",
+    "City_Name": "Rockford",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840002791",
+    "City_Name": "Newark",
+    "State_ID": "NJ",
+    "State_Name": "New Jersey"
+  },
+  {
+    "City_ID": "1840009241",
+    "City_Name": "South Bend",
+    "State_ID": "IN",
+    "State_Name": "Indiana"
+  },
+  {
+    "City_ID": "1840015768",
+    "City_Name": "Shreveport",
+    "State_ID": "LA",
+    "State_Name": "Louisiana"
+  },
+  {
+    "City_ID": "1840015830",
+    "City_Name": "Savannah",
+    "State_ID": "GA",
+    "State_Name": "Georgia"
+  },
+  {
+    "City_ID": "1840019350",
+    "City_Name": "Chula Vista",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020007",
+    "City_Name": "Eugene",
+    "State_ID": "OR",
+    "State_Name": "Oregon"
+  },
+  {
+    "City_ID": "1840000963",
+    "City_Name": "Canton",
+    "State_ID": "OH",
+    "State_Name": "Ohio"
+  },
+  {
+    "City_ID": "1840020604",
+    "City_Name": "Lubbock",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840001185",
+    "City_Name": "Reading",
+    "State_ID": "PA",
+    "State_Name": "Pennsylvania"
+  },
+  {
+    "City_ID": "1840021224",
+    "City_Name": "Salem",
+    "State_ID": "OR",
+    "State_Name": "Oregon"
+  },
+  {
+    "City_ID": "1840015977",
+    "City_Name": "St. Petersburg",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840015044",
+    "City_Name": "Lafayette",
+    "State_ID": "LA",
+    "State_Name": "Louisiana"
+  },
+  {
+    "City_ID": "1840021002",
+    "City_Name": "Laredo",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840003600",
+    "City_Name": "Jersey City",
+    "State_ID": "NJ",
+    "State_Name": "New Jersey"
+  },
+  {
+    "City_ID": "1840014559",
+    "City_Name": "Concord",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840014887",
+    "City_Name": "Columbus",
+    "State_ID": "GA",
+    "State_Name": "Georgia"
+  },
+  {
+    "City_ID": "1840019309",
+    "City_Name": "Chandler",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840020657",
+    "City_Name": "McKinney",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021940",
+    "City_Name": "Scottsdale",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840020854",
+    "City_Name": "Killeen",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840015913",
+    "City_Name": "Tallahassee",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840009373",
+    "City_Name": "Peoria",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840015576",
+    "City_Name": "Wilmington",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840008353",
+    "City_Name": "Montgomery",
+    "State_ID": "AL",
+    "State_Name": "Alabama"
+  },
+  {
+    "City_ID": "1840021947",
+    "City_Name": "Gilbert",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840020563",
+    "City_Name": "Glendale",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840020363",
+    "City_Name": "North Las Vegas",
+    "State_ID": "NV",
+    "State_Name": "Nevada"
+  },
+  {
+    "City_ID": "1840003874",
+    "City_Name": "Chesapeake",
+    "State_ID": "VA",
+    "State_Name": "Virginia"
+  },
+  {
+    "City_ID": "1840003869",
+    "City_Name": "Norfolk",
+    "State_ID": "VA",
+    "State_Name": "Virginia"
+  },
+  {
+    "City_ID": "1840020292",
+    "City_Name": "Fremont",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840018481",
+    "City_Name": "Kennewick",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840020707",
+    "City_Name": "Garland",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840019438",
+    "City_Name": "Irving",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021639",
+    "City_Name": "Visalia",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840002984",
+    "City_Name": "Nashua",
+    "State_ID": "NH",
+    "State_Name": "New Hampshire"
+  },
+  {
+    "City_ID": "1840015157",
+    "City_Name": "Hialeah",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840013730",
+    "City_Name": "Evansville",
+    "State_ID": "IN",
+    "State_Name": "Indiana"
+  },
+  {
+    "City_ID": "1840019310",
+    "City_Name": "Avondale",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840019743",
+    "City_Name": "Brownsville",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840013947",
+    "City_Name": "Gulfport",
+    "State_ID": "MS",
+    "State_Name": "Mississippi"
+  },
+  {
+    "City_ID": "1840002400",
+    "City_Name": "Appleton",
+    "State_ID": "WI",
+    "State_Name": "Wisconsin"
+  },
+  {
+    "City_ID": "1840021129",
+    "City_Name": "Tacoma",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840021728",
+    "City_Name": "San Bernardino",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840019570",
+    "City_Name": "College Station",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840003185",
+    "City_Name": "Kalamazoo",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840021844",
+    "City_Name": "Thousand Oaks",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840003858",
+    "City_Name": "Roanoke",
+    "State_ID": "VA",
+    "State_Name": "Virginia"
+  },
+  {
+    "City_ID": "1840020402",
+    "City_Name": "Fontana",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020552",
+    "City_Name": "Moreno Valley",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000177",
+    "City_Name": "Fargo",
+    "State_ID": "ND",
+    "State_Name": "North Dakota"
+  },
+  {
+    "City_ID": "1840002344",
+    "City_Name": "Green Bay",
+    "State_ID": "WI",
+    "State_Name": "Wisconsin"
+  },
+  {
+    "City_ID": "1840019156",
+    "City_Name": "Amarillo",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840000327",
+    "City_Name": "Portland",
+    "State_ID": "ME",
+    "State_Name": "Maine"
+  },
+  {
+    "City_ID": "1840021829",
+    "City_Name": "Santa Barbara",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840014022",
+    "City_Name": "Gainesville",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840020654",
+    "City_Name": "Frisco",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840003478",
+    "City_Name": "Yonkers",
+    "State_ID": "NY",
+    "State_Name": "New York"
+  },
+  {
+    "City_ID": "1840020483",
+    "City_Name": "Glendale",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020578",
+    "City_Name": "Huntington Beach",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015072",
+    "City_Name": "Deltona",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840007034",
+    "City_Name": "Aurora",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840021942",
+    "City_Name": "Tempe",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840003834",
+    "City_Name": "Overland Park",
+    "State_ID": "KS",
+    "State_Name": "Kansas"
+  },
+  {
+    "City_ID": "1840020709",
+    "City_Name": "Grand Prairie",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840022140",
+    "City_Name": "Waco",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021632",
+    "City_Name": "Salinas",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840004851",
+    "City_Name": "Waterbury",
+    "State_ID": "CT",
+    "State_Name": "Connecticut"
+  },
+  {
+    "City_ID": "1840014421",
+    "City_Name": "Clarksville",
+    "State_ID": "TN",
+    "State_Name": "Tennessee"
+  },
+  {
+    "City_ID": "1840000471",
+    "City_Name": "Cedar Rapids",
+    "State_ID": "IA",
+    "State_Name": "Iowa"
+  },
+  {
+    "City_ID": "1840002648",
+    "City_Name": "Sioux Falls",
+    "State_ID": "SD",
+    "State_Name": "South Dakota"
+  },
+  {
+    "City_ID": "1840020410",
+    "City_Name": "Ontario",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000478",
+    "City_Name": "Erie",
+    "State_ID": "PA",
+    "State_Name": "Pennsylvania"
+  },
+  {
+    "City_ID": "1840021189",
+    "City_Name": "Vancouver",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840020041",
+    "City_Name": "Nampa",
+    "State_ID": "ID",
+    "State_Name": "Idaho"
+  },
+  {
+    "City_ID": "1840013468",
+    "City_Name": "Gastonia",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840014236",
+    "City_Name": "Fort Lauderdale",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840014495",
+    "City_Name": "Murfreesboro",
+    "State_ID": "TN",
+    "State_Name": "Tennessee"
+  },
+  {
+    "City_ID": "1840014479",
+    "City_Name": "High Point",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840003862",
+    "City_Name": "Newport News",
+    "State_ID": "VA",
+    "State_Name": "Virginia"
+  },
+  {
+    "City_ID": "1840020411",
+    "City_Name": "Rancho Cucamonga",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020550",
+    "City_Name": "Hemet",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840004837",
+    "City_Name": "Danbury",
+    "State_ID": "CT",
+    "State_Name": "Connecticut"
+  },
+  {
+    "City_ID": "1840020567",
+    "City_Name": "Peoria",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840020623",
+    "City_Name": "Oceanside",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020245",
+    "City_Name": "Elk Grove",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015141",
+    "City_Name": "Pembroke Pines",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840021499",
+    "City_Name": "Vallejo",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020577",
+    "City_Name": "Garden Grove",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020076",
+    "City_Name": "Medford",
+    "State_ID": "OR",
+    "State_Name": "Oregon"
+  },
+  {
+    "City_ID": "1840016196",
+    "City_Name": "Cary",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840019305",
+    "City_Name": "Corona",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840002983",
+    "City_Name": "Manchester",
+    "State_ID": "NH",
+    "State_Name": "New Hampshire"
+  },
+  {
+    "City_ID": "1840007239",
+    "City_Name": "Champaign",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840003837",
+    "City_Name": "Alexandria",
+    "State_ID": "VA",
+    "State_Name": "Virginia"
+  },
+  {
+    "City_ID": "1840020293",
+    "City_Name": "Hayward",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840009517",
+    "City_Name": "Springfield",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840020198",
+    "City_Name": "Lakewood",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840008354",
+    "City_Name": "Lafayette",
+    "State_ID": "IN",
+    "State_Name": "Indiana"
+  },
+  {
+    "City_ID": "1840015039",
+    "City_Name": "Lake Charles",
+    "State_ID": "LA",
+    "State_Name": "Louisiana"
+  },
+  {
+    "City_ID": "1840020794",
+    "City_Name": "Odessa",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840005563",
+    "City_Name": "Tuscaloosa",
+    "State_ID": "AL",
+    "State_Name": "Alabama"
+  },
+  {
+    "City_ID": "1840015800",
+    "City_Name": "Warner Robins",
+    "State_ID": "GA",
+    "State_Name": "Georgia"
+  },
+  {
+    "City_ID": "1840020502",
+    "City_Name": "Palmdale",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015144",
+    "City_Name": "Hollywood",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840020792",
+    "City_Name": "Midland",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840043455",
+    "City_Name": "Macon",
+    "State_ID": "GA",
+    "State_Name": "Georgia"
+  },
+  {
+    "City_ID": "1840001626",
+    "City_Name": "Kansas City",
+    "State_ID": "KS",
+    "State_Name": "Kansas"
+  },
+  {
+    "City_ID": "1840021573",
+    "City_Name": "Sunnyvale",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020507",
+    "City_Name": "Pomona",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020620",
+    "City_Name": "Escondido",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020930",
+    "City_Name": "Pasadena",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840003219",
+    "City_Name": "New Bedford",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840020253",
+    "City_Name": "Fairfield",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840008143",
+    "City_Name": "Naperville",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840018417",
+    "City_Name": "Bellevue",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840001621",
+    "City_Name": "Topeka",
+    "State_ID": "KS",
+    "State_Name": "Kansas"
+  },
+  {
+    "City_ID": "1840008192",
+    "City_Name": "Joliet",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840019612",
+    "City_Name": "Beaumont",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840000838",
+    "City_Name": "Paterson",
+    "State_ID": "NJ",
+    "State_Name": "New Jersey"
+  },
+  {
+    "City_ID": "1840020313",
+    "City_Name": "Merced",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020255",
+    "City_Name": "Pueblo",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840022076",
+    "City_Name": "Tyler",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021873",
+    "City_Name": "Torrance",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840021998",
+    "City_Name": "Yuma",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840021941",
+    "City_Name": "Surprise",
+    "State_ID": "AZ",
+    "State_Name": "Arizona"
+  },
+  {
+    "City_ID": "1840007391",
+    "City_Name": "Columbia",
+    "State_ID": "MO",
+    "State_Name": "Missouri"
+  },
+  {
+    "City_ID": "1840029463",
+    "City_Name": "Athens",
+    "State_ID": "GA",
+    "State_Name": "Georgia"
+  },
+  {
+    "City_ID": "1840020233",
+    "City_Name": "Roseville",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840021422",
+    "City_Name": "Thornton",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840015137",
+    "City_Name": "Miramar",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840020505",
+    "City_Name": "Pasadena",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020713",
+    "City_Name": "Mesquite",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021830",
+    "City_Name": "Santa Maria",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840003833",
+    "City_Name": "Olathe",
+    "State_ID": "KS",
+    "State_Name": "Kansas"
+  },
+  {
+    "City_ID": "1840019436",
+    "City_Name": "Carrollton",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840006196",
+    "City_Name": "Charleston",
+    "State_ID": "WV",
+    "State_Name": "West Virginia"
+  },
+  {
+    "City_ID": "1840020582",
+    "City_Name": "Orange",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020576",
+    "City_Name": "Fullerton",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020149",
+    "City_Name": "Greeley",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840020683",
+    "City_Name": "Las Cruces",
+    "State_ID": "NM",
+    "State_Name": "New Mexico"
+  },
+  {
+    "City_ID": "1840021389",
+    "City_Name": "West Valley City",
+    "State_ID": "UT",
+    "State_Name": "Utah"
+  },
+  {
+    "City_ID": "1840003866",
+    "City_Name": "Hampton",
+    "State_ID": "VA",
+    "State_Name": "Virginia"
+  },
+  {
+    "City_ID": "1840002418",
+    "City_Name": "Warren",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840007207",
+    "City_Name": "Bloomington",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840015134",
+    "City_Name": "Coral Springs",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840020879",
+    "City_Name": "Round Rock",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021154",
+    "City_Name": "Yakima",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840003094",
+    "City_Name": "Sterling Heights",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840018424",
+    "City_Name": "Kent",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840018346",
+    "City_Name": "Bellingham",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840021571",
+    "City_Name": "Santa Clara",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840002493",
+    "City_Name": "Racine",
+    "State_ID": "WI",
+    "State_Name": "Wisconsin"
+  },
+  {
+    "City_ID": "1840013407",
+    "City_Name": "Greenville",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840004841",
+    "City_Name": "Stamford",
+    "State_ID": "CT",
+    "State_Name": "Connecticut"
+  },
+  {
+    "City_ID": "1840003613",
+    "City_Name": "Elizabeth",
+    "State_ID": "NJ",
+    "State_Name": "New Jersey"
+  },
+  {
+    "City_ID": "1840003855",
+    "City_Name": "Lynchburg",
+    "State_ID": "VA",
+    "State_Name": "Virginia"
+  },
+  {
+    "City_ID": "1840021843",
+    "City_Name": "Simi Valley",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840013456",
+    "City_Name": "Fort Smith",
+    "State_ID": "AR",
+    "State_Name": "Arkansas"
+  },
+  {
+    "City_ID": "1840003160",
+    "City_Name": "Kenosha",
+    "State_ID": "WI",
+    "State_Name": "Wisconsin"
+  },
+  {
+    "City_ID": "1840020451",
+    "City_Name": "Norman",
+    "State_ID": "OK",
+    "State_Name": "Oklahoma"
+  },
+  {
+    "City_ID": "1840018774",
+    "City_Name": "Boulder",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840019476",
+    "City_Name": "Abilene",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840020979",
+    "City_Name": "Pearland",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840018914",
+    "City_Name": "Berkeley",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020710",
+    "City_Name": "Richardson",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840020141",
+    "City_Name": "Redding",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840018788",
+    "City_Name": "Arvada",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840021559",
+    "City_Name": "St. George",
+    "State_ID": "UT",
+    "State_Name": "Utah"
+  },
+  {
+    "City_ID": "1840018496",
+    "City_Name": "Billings",
+    "State_ID": "MT",
+    "State_Name": "Montana"
+  },
+  {
+    "City_ID": "1840008987",
+    "City_Name": "Rochester",
+    "State_ID": "MN",
+    "State_Name": "Minnesota"
+  },
+  {
+    "City_ID": "1840007685",
+    "City_Name": "Duluth",
+    "State_ID": "MN",
+    "State_Name": "Minnesota"
+  },
+  {
+    "City_ID": "1840014618",
+    "City_Name": "Rock Hill",
+    "State_ID": "SC",
+    "State_Name": "South Carolina"
+  },
+  {
+    "City_ID": "1840000429",
+    "City_Name": "Cambridge",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840022217",
+    "City_Name": "Sugar Land",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840000532",
+    "City_Name": "Iowa City",
+    "State_ID": "IA",
+    "State_Name": "Iowa"
+  },
+  {
+    "City_ID": "1840018778",
+    "City_Name": "Chico",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015110",
+    "City_Name": "Clearwater",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840008534",
+    "City_Name": "Independence",
+    "State_ID": "MO",
+    "State_Name": "Missouri"
+  },
+  {
+    "City_ID": "1840021388",
+    "City_Name": "West Jordan",
+    "State_ID": "UT",
+    "State_Name": "Utah"
+  },
+  {
+    "City_ID": "1840007376",
+    "City_Name": "Bloomington",
+    "State_ID": "IN",
+    "State_Name": "Indiana"
+  },
+  {
+    "City_ID": "1840020480",
+    "City_Name": "El Monte",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840019352",
+    "City_Name": "Carlsbad",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015164",
+    "City_Name": "North Charleston",
+    "State_ID": "SC",
+    "State_Name": "South Carolina"
+  },
+  {
+    "City_ID": "1840021937",
+    "City_Name": "Temecula",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840018944",
+    "City_Name": "Clovis",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020046",
+    "City_Name": "Meridian",
+    "State_ID": "ID",
+    "State_Name": "Idaho"
+  },
+  {
+    "City_ID": "1840021423",
+    "City_Name": "Westminster",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840019326",
+    "City_Name": "Costa Mesa",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015143",
+    "City_Name": "Pompano Beach",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840015993",
+    "City_Name": "West Palm Beach",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840000440",
+    "City_Name": "Waterloo",
+    "State_ID": "IA",
+    "State_Name": "Iowa"
+  },
+  {
+    "City_ID": "1840019785",
+    "City_Name": "Everett",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840021707",
+    "City_Name": "Santa Fe",
+    "State_ID": "NM",
+    "State_Name": "New Mexico"
+  },
+  {
+    "City_ID": "1840019245",
+    "City_Name": "Downey",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000426",
+    "City_Name": "Lowell",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840018792",
+    "City_Name": "Centennial",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840008134",
+    "City_Name": "Elgin",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840020277",
+    "City_Name": "Richmond",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840019059",
+    "City_Name": "Broken Arrow",
+    "State_ID": "OK",
+    "State_Name": "Oklahoma"
+  },
+  {
+    "City_ID": "1840015151",
+    "City_Name": "Miami Gardens",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840018618",
+    "City_Name": "Bend",
+    "State_ID": "OR",
+    "State_Name": "Oregon"
+  },
+  {
+    "City_ID": "1840002310",
+    "City_Name": "Burlington",
+    "State_ID": "VT",
+    "State_Name": "Vermont"
+  },
+  {
+    "City_ID": "1840015609",
+    "City_Name": "Sandy Springs",
+    "State_ID": "GA",
+    "State_Name": "Georgia"
+  },
+  {
+    "City_ID": "1840019939",
+    "City_Name": "Gresham",
+    "State_ID": "OR",
+    "State_Name": "Oregon"
+  },
+  {
+    "City_ID": "1840020639",
+    "City_Name": "Lewisville",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840019932",
+    "City_Name": "Hillsboro",
+    "State_ID": "OR",
+    "State_Name": "Oregon"
+  },
+  {
+    "City_ID": "1840037414",
+    "City_Name": "San Buenaventura",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840014653",
+    "City_Name": "Jacksonville",
+    "State_ID": "NC",
+    "State_Name": "North Carolina"
+  },
+  {
+    "City_ID": "1840019237",
+    "City_Name": "Inglewood",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020973",
+    "City_Name": "League City",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021533",
+    "City_Name": "Turlock",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000447",
+    "City_Name": "Sioux City",
+    "State_ID": "IA",
+    "State_Name": "Iowa"
+  },
+  {
+    "City_ID": "1840017272",
+    "City_Name": "Davie",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840018926",
+    "City_Name": "Daly City",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840019396",
+    "City_Name": "Allen",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021876",
+    "City_Name": "West Covina",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840021337",
+    "City_Name": "Sparks",
+    "State_ID": "NV",
+    "State_Name": "Nevada"
+  },
+  {
+    "City_ID": "1840021923",
+    "City_Name": "Wichita Falls",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021551",
+    "City_Name": "San Mateo",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020501",
+    "City_Name": "Norwalk",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020407",
+    "City_Name": "Rialto",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020265",
+    "City_Name": "Manteca",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020618",
+    "City_Name": "El Cajon",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840019233",
+    "City_Name": "Burbank",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020178",
+    "City_Name": "Longmont",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840019827",
+    "City_Name": "Renton",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840021994",
+    "City_Name": "Vista",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840021498",
+    "City_Name": "Vacaville",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840021020",
+    "City_Name": "Edinburg",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840007260",
+    "City_Name": "Carmel",
+    "State_ID": "IN",
+    "State_Name": "Indiana"
+  },
+  {
+    "City_ID": "1840021094",
+    "City_Name": "Spokane Valley",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840022146",
+    "City_Name": "San Angelo",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840020746",
+    "City_Name": "Longview",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021518",
+    "City_Name": "Tracy",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840014207",
+    "City_Name": "Boca Raton",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840032155",
+    "City_Name": "Lee's Summit",
+    "State_ID": "MO",
+    "State_Name": "Missouri"
+  },
+  {
+    "City_ID": "1840020387",
+    "City_Name": "Rio Rancho",
+    "State_ID": "NM",
+    "State_Name": "New Mexico"
+  },
+  {
+    "City_ID": "1840018556",
+    "City_Name": "Beaverton",
+    "State_ID": "OR",
+    "State_Name": "Oregon"
+  },
+  {
+    "City_ID": "1840001632",
+    "City_Name": "Lawrence",
+    "State_ID": "KS",
+    "State_Name": "Kansas"
+  },
+  {
+    "City_ID": "1840020171",
+    "City_Name": "Orem",
+    "State_ID": "UT",
+    "State_Name": "Utah"
+  },
+  {
+    "City_ID": "1840021991",
+    "City_Name": "San Marcos",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840037422",
+    "City_Name": "Sandy",
+    "State_ID": "UT",
+    "State_Name": "Utah"
+  },
+  {
+    "City_ID": "1840019826",
+    "City_Name": "Federal Way",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840020404",
+    "City_Name": "Hesperia",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000467",
+    "City_Name": "Brockton",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840019240",
+    "City_Name": "Compton",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840010496",
+    "City_Name": "Fishers",
+    "State_ID": "IN",
+    "State_Name": "Indiana"
+  },
+  {
+    "City_ID": "1840016000",
+    "City_Name": "Sunrise",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840014741",
+    "City_Name": "Roswell",
+    "State_ID": "GA",
+    "State_Name": "Georgia"
+  },
+  {
+    "City_ID": "1840022903",
+    "City_Name": "Menifee",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015142",
+    "City_Name": "Plantation",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840000461",
+    "City_Name": "Quincy",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840003872",
+    "City_Name": "Portsmouth",
+    "State_ID": "VA",
+    "State_Name": "Virginia"
+  },
+  {
+    "City_ID": "1840019114",
+    "City_Name": "Chino",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000409",
+    "City_Name": "Lynn",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840020423",
+    "City_Name": "Edmond",
+    "State_ID": "OK",
+    "State_Name": "Oklahoma"
+  },
+  {
+    "City_ID": "1840003969",
+    "City_Name": "Dearborn",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840003985",
+    "City_Name": "Livonia",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840021870",
+    "City_Name": "South Gate",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020477",
+    "City_Name": "Lawton",
+    "State_ID": "OK",
+    "State_Name": "Oklahoma"
+  },
+  {
+    "City_ID": "1840019840",
+    "City_Name": "Missoula",
+    "State_ID": "MT",
+    "State_Name": "Montana"
+  },
+  {
+    "City_ID": "1840002180",
+    "City_Name": "Rapid City",
+    "State_ID": "SD",
+    "State_Name": "South Dakota"
+  },
+  {
+    "City_ID": "1840003873",
+    "City_Name": "Suffolk",
+    "State_ID": "VA",
+    "State_Name": "Virginia"
+  },
+  {
+    "City_ID": "1840017286",
+    "City_Name": "Mount Pleasant",
+    "State_ID": "SC",
+    "State_Name": "South Carolina"
+  },
+  {
+    "City_ID": "1840019214",
+    "City_Name": "Carson",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020294",
+    "City_Name": "Livermore",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840021969",
+    "City_Name": "Westminster",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840021866",
+    "City_Name": "Santa Monica",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000497",
+    "City_Name": "Fall River",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840013864",
+    "City_Name": "Albany",
+    "State_ID": "GA",
+    "State_Name": "Georgia"
+  },
+  {
+    "City_ID": "1840015150",
+    "City_Name": "Miami Beach",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840004839",
+    "City_Name": "Norwalk",
+    "State_ID": "CT",
+    "State_Name": "Connecticut"
+  },
+  {
+    "City_ID": "1840021538",
+    "City_Name": "San Leandro",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840008571",
+    "City_Name": "O'Fallon",
+    "State_ID": "MO",
+    "State_Name": "Missouri"
+  },
+  {
+    "City_ID": "1840000433",
+    "City_Name": "Newton",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840008365",
+    "City_Name": "Muncie",
+    "State_ID": "IN",
+    "State_Name": "Indiana"
+  },
+  {
+    "City_ID": "1840018845",
+    "City_Name": "Citrus Heights",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840007269",
+    "City_Name": "Decatur",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840019569",
+    "City_Name": "Bryan",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840010113",
+    "City_Name": "Waukegan",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840020486",
+    "City_Name": "Hawthorne",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020304",
+    "City_Name": "Redwood City",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840014795",
+    "City_Name": "Hoover",
+    "State_ID": "AL",
+    "State_Name": "Alabama"
+  },
+  {
+    "City_ID": "1840020591",
+    "City_Name": "Lake Forest",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020241",
+    "City_Name": "Napa",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840021878",
+    "City_Name": "Whittier",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840003511",
+    "City_Name": "Clifton",
+    "State_ID": "NJ",
+    "State_Name": "New Jersey"
+  },
+  {
+    "City_ID": "1840015114",
+    "City_Name": "Largo",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840006747",
+    "City_Name": "Bloomington",
+    "State_ID": "MN",
+    "State_Name": "Minnesota"
+  },
+  {
+    "City_ID": "1840014742",
+    "City_Name": "Johns Creek",
+    "State_ID": "GA",
+    "State_Name": "Georgia"
+  },
+  {
+    "City_ID": "1840020581",
+    "City_Name": "Newport Beach",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840021026",
+    "City_Name": "Mission",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840020329",
+    "City_Name": "Milpitas",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840002434",
+    "City_Name": "Troy",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840019115",
+    "City_Name": "Chino Hills",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840019222",
+    "City_Name": "Alhambra",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015960",
+    "City_Name": "Melbourne",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840020332",
+    "City_Name": "Mountain View",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840019324",
+    "City_Name": "Buena Park",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020298",
+    "City_Name": "Pleasanton",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840001847",
+    "City_Name": "Westland",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840018416",
+    "City_Name": "Auburn",
+    "State_ID": "WA",
+    "State_Name": "Washington"
+  },
+  {
+    "City_ID": "1840003287",
+    "City_Name": "Cranston",
+    "State_ID": "RI",
+    "State_Name": "Rhode Island"
+  },
+  {
+    "City_ID": "1840003123",
+    "City_Name": "Somerville",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840020246",
+    "City_Name": "Folsom",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015336",
+    "City_Name": "Springdale",
+    "State_ID": "AR",
+    "State_Name": "Arkansas"
+  },
+  {
+    "City_ID": "1840015136",
+    "City_Name": "Deerfield Beach",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840003344",
+    "City_Name": "Warwick",
+    "State_ID": "RI",
+    "State_Name": "Rhode Island"
+  },
+  {
+    "City_ID": "1840009186",
+    "City_Name": "Cicero",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840002442",
+    "City_Name": "Farmington Hills",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840004023",
+    "City_Name": "Brooklyn Park",
+    "State_ID": "MN",
+    "State_Name": "Minnesota"
+  },
+  {
+    "City_ID": "1840000408",
+    "City_Name": "Lawrence",
+    "State_ID": "MA",
+    "State_Name": "Massachusetts"
+  },
+  {
+    "City_ID": "1840008929",
+    "City_Name": "Plymouth",
+    "State_ID": "MN",
+    "State_Name": "Minnesota"
+  },
+  {
+    "City_ID": "1840018713",
+    "City_Name": "Cheyenne",
+    "State_ID": "WY",
+    "State_Name": "Wyoming"
+  },
+  {
+    "City_ID": "1840021967",
+    "City_Name": "Tustin",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020515",
+    "City_Name": "Lakewood",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840020557",
+    "City_Name": "Perris",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840009549",
+    "City_Name": "St. Joseph",
+    "State_ID": "MO",
+    "State_Name": "Missouri"
+  },
+  {
+    "City_ID": "1840021030",
+    "City_Name": "Pharr",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840020152",
+    "City_Name": "Loveland",
+    "State_ID": "CO",
+    "State_Name": "Colorado"
+  },
+  {
+    "City_ID": "1840014208",
+    "City_Name": "Boynton Beach",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840000782",
+    "City_Name": "New Rochelle",
+    "State_ID": "NY",
+    "State_Name": "New York"
+  },
+  {
+    "City_ID": "1840014507",
+    "City_Name": "Jonesboro",
+    "State_ID": "AR",
+    "State_Name": "Arkansas"
+  },
+  {
+    "City_ID": "1840003406",
+    "City_Name": "Parma",
+    "State_ID": "OH",
+    "State_Name": "Ohio"
+  },
+  {
+    "City_ID": "1840020145",
+    "City_Name": "Layton",
+    "State_ID": "UT",
+    "State_Name": "Utah"
+  },
+  {
+    "City_ID": "1840018913",
+    "City_Name": "Alameda",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840019616",
+    "City_Name": "Baytown",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840021730",
+    "City_Name": "Upland",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840019230",
+    "City_Name": "Bellflower",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840021530",
+    "City_Name": "San Ramon",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000986",
+    "City_Name": "Bethlehem",
+    "State_ID": "PA",
+    "State_Name": "Pennsylvania"
+  },
+  {
+    "City_ID": "1840000374",
+    "City_Name": "Wyoming",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840007092",
+    "City_Name": "Hammond",
+    "State_ID": "IN",
+    "State_Name": "Indiana"
+  },
+  {
+    "City_ID": "1840020950",
+    "City_Name": "Missouri City",
+    "State_ID": "TX",
+    "State_Name": "Texas"
+  },
+  {
+    "City_ID": "1840019227",
+    "City_Name": "Baldwin Park",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840008194",
+    "City_Name": "Gary",
+    "State_ID": "IN",
+    "State_Name": "Indiana"
+  },
+  {
+    "City_ID": "1840011243",
+    "City_Name": "Arlington Heights",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840011482",
+    "City_Name": "Bolingbrook",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840002429",
+    "City_Name": "Rochester Hills",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840021539",
+    "City_Name": "Union City",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840001507",
+    "City_Name": "Camden",
+    "State_ID": "NJ",
+    "State_Name": "New Jersey"
+  },
+  {
+    "City_ID": "1840008129",
+    "City_Name": "Evanston",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840021733",
+    "City_Name": "Apple Valley",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840011319",
+    "City_Name": "Schaumburg",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840002431",
+    "City_Name": "Southfield",
+    "State_ID": "MI",
+    "State_Name": "Michigan"
+  },
+  {
+    "City_ID": "1840004774",
+    "City_Name": "New Britain",
+    "State_ID": "CT",
+    "State_Name": "Connecticut"
+  },
+  {
+    "City_ID": "1840003008",
+    "City_Name": "Waukesha",
+    "State_ID": "WI",
+    "State_Name": "Wisconsin"
+  },
+  {
+    "City_ID": "1840003285",
+    "City_Name": "Pawtucket",
+    "State_ID": "RI",
+    "State_Name": "Rhode Island"
+  },
+  {
+    "City_ID": "1840015146",
+    "City_Name": "Lauderhill",
+    "State_ID": "FL",
+    "State_Name": "Florida"
+  },
+  {
+    "City_ID": "1840020412",
+    "City_Name": "Redlands",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840005579",
+    "City_Name": "Wilmington",
+    "State_ID": "DE",
+    "State_Name": "Delaware"
+  },
+  {
+    "City_ID": "1840020492",
+    "City_Name": "Lynwood",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840000837",
+    "City_Name": "Passaic",
+    "State_ID": "NJ",
+    "State_Name": "New Jersey"
+  },
+  {
+    "City_ID": "1840001034",
+    "City_Name": "Union City",
+    "State_ID": "NJ",
+    "State_Name": "New Jersey"
+  },
+  {
+    "City_ID": "1840011311",
+    "City_Name": "Palatine",
+    "State_ID": "IL",
+    "State_Name": "Illinois"
+  },
+  {
+    "City_ID": "1840000781",
+    "City_Name": "Mount Vernon",
+    "State_ID": "NY",
+    "State_Name": "New York"
+  },
+  {
+    "City_ID": "1840020509",
+    "City_Name": "Redondo Beach",
+    "State_ID": "CA",
+    "State_Name": "California"
+  },
+  {
+    "City_ID": "1840015047",
+    "City_Name": "Kenner",
+    "State_ID": "LA",
+    "State_Name": "Louisiana"
+  },
+  {
+    "City_ID": "1840000395",
+    "City_Name": "Schenectady",
+    "State_ID": "NY",
+    "State_Name": "New York"
+  }
+]

@@ -1,0 +1,6 @@
+backend/.idea/
+backend/venv/
+*.pyc
+*.pyo
+*.DS_Store
+/backend/*.DS_Store
