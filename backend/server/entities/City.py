@@ -37,7 +37,8 @@ class City:
         # self.violent_crimes = violent_crimes
         # self.insurance = insurance
 
-    def get_city(self, node):
+    @staticmethod
+    def get_city(node):
         if not isinstance(node, neo4j.graph.Node):
             raise TypeError("Argument passed is not a neo4j.graph.Node")
 
