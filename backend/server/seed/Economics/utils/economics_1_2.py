@@ -3,7 +3,6 @@
 import time
 
 import requests
-import xlsxwriter
 from bs4 import BeautifulSoup
 import csv
 import openpyxl
@@ -20,65 +19,82 @@ def get_all_details(link):
 
     cityDetails = {}
     # --------------------------------------------------------------------------------------------------------
-    value_for = ["Estimated median household income in 2019", "Estimated median house or condo value in 2019"]
-    section = soup.find("section", id = "median-income")
-
+    value_for = ["col_1"]
+    section = soup.find("section", id = "religion")
     try:
-        hgraphs = section.find_all("div", class_ = "hgraph")
-        index = 0
-        for part in hgraphs:
-            # city
+        table = section.find("div", class_ = "table-responsive")
+        denom = 0
+        numer = 0
+        religion_list = []
+        for part in table.find_all("tr"):
+            val = ''
+            # religion
             td_ptr = part.find_next("td")
-            # value
+            name = td_ptr.text
+            if name not in religion_list:
+                religion_list.append(name)
+            else:
+                continue
+
+            # value_1
             td_ptr = td_ptr.find_next("td")
-            val = td_ptr.text
+            print(f'{link}')
+            if '-' in td_ptr.text:
+                continue
+            else:
+                val = int(td_ptr.text.replace(",", ""), 10)
 
-            cityDetails[value_for[index]] = val
-            index += 1
-
+            if name.lower().strip() == "other":
+                numer = val
+            print(val)
+            denom += val
+        print(numer, " and  ", denom)
+        print(f'{link}: {numer/denom}')
+            # cityDetails[value_for[0]] = val
+        return str(round((numer/denom) * 100)) + '%'
     except AttributeError:
         errors.append([link, "'median-income' section not present"])
-
+    return "N"
     # --------------------------------------------------------------------------------------------------------
-    value_for = ["Median gross rent in 2019"]
-    section = soup.find("section", id = "median-rent")
-    try:
-        cityDetails[value_for[0]] = section.text.split(":")[1]
-    except AttributeError:
-        errors.append([link, "'median-rent' section not present"])
-
-    # --------------------------------------------------------------------------------------------------------
-    value_for = ["Cost of living index in March 2019"]
-    section = soup.find("section", id="cost-of-living-index")
-    try:
-        cityDetails[value_for[0]] = section.text.split(":")[1].split("(")[0]
-    except AttributeError:
-        errors.append([link, "'cost-of-living-index' section not present"])
-
-    # --------------------------------------------------------------------------------------------------------
-    value_for = ["Percentage of residents living in poverty in 2019"]
-    section = soup.find("section", id="poverty-level")
-    try:
-        cityDetails[value_for[0]] = section.text.split(":")[1].split("(")[0]
-    except AttributeError:
-        errors.append([link, "'poverty-level' section not present"])
-
-    # --------------------------------------------------------------------------------------------------------
-    value_for = ["Unemployment in November 2020"]
-    section = soup.find("section", id="unemployment")
-    try:
-        # city
-        td_ptr = section.find_next("td")
-        # value
-        td_ptr = td_ptr.find_next("td")
-        val = td_ptr.text
-        cityDetails[value_for[0]] = val
-
-    except AttributeError:
-        errors.append([link, "'unemployment' section not present"])
-
-    if errors:
-        toCheck.append(errors)
+    # value_for = ["Median gross rent in 2019"]
+    # section = soup.find("section", id = "median-rent")
+    # try:
+    #     cityDetails[value_for[0]] = section.text.split(":")[1]
+    # except AttributeError:
+    #     errors.append([link, "'median-rent' section not present"])
+    #
+    # # --------------------------------------------------------------------------------------------------------
+    # value_for = ["Cost of living index in March 2019"]
+    # section = soup.find("section", id="cost-of-living-index")
+    # try:
+    #     cityDetails[value_for[0]] = section.text.split(":")[1].split("(")[0]
+    # except AttributeError:
+    #     errors.append([link, "'cost-of-living-index' section not present"])
+    #
+    # # --------------------------------------------------------------------------------------------------------
+    # value_for = ["Percentage of residents living in poverty in 2019"]
+    # section = soup.find("section", id="poverty-level")
+    # try:
+    #     cityDetails[value_for[0]] = section.text.split(":")[1].split("(")[0]
+    # except AttributeError:
+    #     errors.append([link, "'poverty-level' section not present"])
+    #
+    # # --------------------------------------------------------------------------------------------------------
+    # value_for = ["Unemployment in November 2020"]
+    # section = soup.find("section", id="unemployment")
+    # try:
+    #     # city
+    #     td_ptr = section.find_next("td")
+    #     # value
+    #     td_ptr = td_ptr.find_next("td")
+    #     val = td_ptr.text
+    #     cityDetails[value_for[0]] = val
+    #
+    # except AttributeError:
+    #     errors.append([link, "'unemployment' section not present"])
+    #
+    # if errors:
+    #     toCheck.append(errors)
     # print(f'{link}: {cityDetails}')
     return cityDetails
 
@@ -97,14 +113,14 @@ def get_all_details(link):
 
 def getAllCitiesMap():
     path = os.getcwd()
-    excel_files = glob.glob(os.path.join("../data/", "*.xlsx"))
+    excel_files = glob.glob(os.path.join("data/", "*.xlsx"))
     cityDataCities = {}
 
     for file in excel_files:
         wrkbk = openpyxl.load_workbook(file)
         sh = wrkbk.active
         fileName = file.split("\\")[-1]
-        stateName = " ".join(fileName.split()[:-1]).lower()
+        stateName = " ".join(fileName.split()[:-1]).lower().replace("data/", "")
 
         # for testing 12 cities per state
         # for row in sh.iter_rows(min_row=0, min_col=0, max_row=12, max_col=3):
@@ -123,12 +139,7 @@ if __name__ == '__main__':
     baseURL = "https://www.city-data.com/city/"
 
     # all new columns
-    column_headers = ["Estimated median household income in 2019",
-                      "Estimated median house or condo value in 2019",
-                      "Median gross rent in 2019",
-                      "Cost of living index in March 2019",
-                      "Percentage of residents living in poverty in 2019",
-                      "Unemployment in November 2020"]
+    column_headers = ["Religious Diversity(Other non-Christian religious groups)"]
 
     exceptionsFor500 = {
         "nashville:tennessee": "nashville davidson:tennessee",
@@ -140,15 +151,10 @@ if __name__ == '__main__':
     exceptionsStates = {"puerto rico", "village of islands"}
 
     # name of csv output file
-    outputFile = open("../output/output.csv", 'w', newline='', encoding='utf-8')
+    outputFile = open("output/output.csv", 'w', newline='', encoding='utf-8')
     csvWriter = csv.writer(outputFile)
 
-    def writeCityDetails(row, city_details):
-        for col in column_headers:
-            val = "N" if col not in city_details else city_details[col]
-            row.append(val.strip())
-        print("Writing details for: ", row[:5], " total errors till this: ", len(toCheck))
-        csvWriter.writerow(row)
+
 
     # For Manual-review
     prev_size_of_to_check = 0
@@ -158,13 +164,13 @@ if __name__ == '__main__':
     # generate city-data cities map
     cityDataCities = getAllCitiesMap()
     cityDataCitiesList = cityDataCities.keys()
-
+    # print(cityDataCitiesList)
 
     def findClosestMatch(key):
         return difflib.get_close_matches(key, cityDataCitiesList, cutoff=0.8, n=3)
 
 
-    with open("../final500Cities.csv", "r") as readObj:
+    with open("../../final500Cities.csv", "r") as readObj:
         csvReader = csv.reader(readObj)
         headers = next(csvReader)
         baseHeadersLen = len(headers)
@@ -184,11 +190,11 @@ if __name__ == '__main__':
             cityName = row[1].lower().replace("-", " ")
             stateName = row[2].lower()
             key = cityName + ":" + stateName
-            cityIncomeDetails = {}
+            none_percent = {}
 
-
+            print("key ", key)
             if key in cityDataCities:
-                cityIncomeDetails = get_all_details(cityDataCities[key])
+                none_percent = get_all_details(cityDataCities[key])
                 current_to_check_length = len(toCheck)
 
                 if prev_size_of_to_check == current_to_check_length:
@@ -197,7 +203,7 @@ if __name__ == '__main__':
                     totalFailed += 1
 
             elif key in exceptionsFor500:
-                cityIncomeDetails = get_all_details(cityDataCities[exceptionsFor500[key]])
+                none_percent = get_all_details(cityDataCities[exceptionsFor500[key]])
                 current_to_check_length = len(toCheck)
 
                 if prev_size_of_to_check == current_to_check_length:
@@ -214,8 +220,9 @@ if __name__ == '__main__':
 
             time.sleep(3)
             prev_size_of_to_check = len(toCheck)
-            writeCityDetails(row, cityIncomeDetails)
-            # break
+            row.append(none_percent)
+            csvWriter.writerow(row)
+            #break
     # todo
     # Target cities score (check with 500 cities)
 
