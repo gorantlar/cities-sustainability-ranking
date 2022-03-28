@@ -130,7 +130,13 @@ def compare_cities_health(df, metric_name):
                 if state == state_abbr[x]:
                     count = count + 1
                     found = True
-                    city_values.append(str(df["est"].values[index]) + "%")
+                    if metric_name == "Limited access to healthy foods":
+                        if df["est"].values[index] == df["est"].values[index]:
+                            city_values.append(str(round(100 - df["est"].values[index])) + "%")
+                        else:
+                            city_values.append(str(df["est"].values[index]) + "%")
+                    else:
+                        city_values.append(str(df["est"].values[index]) + "%")
                     break
         if found is False:
             unmatched_cities.append(cities[x])
@@ -142,13 +148,22 @@ def compare_cities_health(df, metric_name):
             if cities[x].strip() == city[:len(cities[x])]:
                 if state == state_abbr[x]:
                     count = count + 1
-                    city_values.append(str(df["est"].values[index]) + "%")
+                    if metric_name == "Limited access to healthy foods":
+                        if df["est"].values[index] == df["est"].values[index]:
+                            city_values.append(str(round(100 - df["est"].values[index])) + "%")
+                        else:
+                            city_values.append(str(df["est"].values[index]) + "%")
+                    else:
+                        city_values.append(str(df["est"].values[index]) + "%")
                     break
 
     print("cities matched: " + str(count))
 
     df = pd.read_csv('data/final500Cities.csv')
-    df[metric_name] = city_values
+    if metric_name == "Limited access to healthy foods":
+        df["Close Access to Healthy Foods"] = city_values
+    else:
+        df[metric_name] = city_values
     print(df)
     df.to_csv('data/final500Cities.csv', mode='w', index=False)
 
