@@ -1,16 +1,17 @@
 # This code gets the cities list per state from www.city-data.com
 # And store it in data/ state-wise
+import csv
+import difflib
+import glob
+import os
 import time
 
+import openpyxl
 import requests
 from bs4 import BeautifulSoup
-import csv
-import openpyxl
-import os
-import glob
-import difflib
 
 toCheck = []
+
 
 def get_all_details(link):
     html_text = requests.get(link).text
@@ -20,11 +21,13 @@ def get_all_details(link):
     cityDetails = {}
     # --------------------------------------------------------------------------------------------------------
     value_for = ["col_1"]
-    section = soup.find("section", id = "religion")
+    section = soup.find("section", id="religion")
     try:
-        table = section.find("div", class_ = "table-responsive")
+        table = section.find("div", class_="table-responsive")
         denom = 0
         numer = 0
+        other = 0
+        none = 0
         religion_list = []
         for part in table.find_all("tr"):
             val = ''
@@ -44,14 +47,14 @@ def get_all_details(link):
             else:
                 val = int(td_ptr.text.replace(",", ""), 10)
 
-            if name.lower().strip() == "other":
+            if val > numer:
                 numer = val
             print(val)
             denom += val
         print(numer, " and  ", denom)
-        print(f'{link}: {numer/denom}')
-            # cityDetails[value_for[0]] = val
-        return str(round((numer/denom) * 100)) + '%'
+        # cityDetails[value_for[0]] = val
+        print(str(100 - round((numer / denom) * 100)) + '%')
+        return str(100 - round((numer / denom) * 100)) + '%'
     except AttributeError:
         errors.append([link, "'median-income' section not present"])
     return "N"
@@ -139,7 +142,7 @@ if __name__ == '__main__':
     baseURL = "https://www.city-data.com/city/"
 
     # all new columns
-    column_headers = ["Religious Diversity(Other non-Christian religious groups)"]
+    column_headers = ["Religious Diversity"]
 
     exceptionsFor500 = {
         "nashville:tennessee": "nashville davidson:tennessee",
@@ -154,8 +157,6 @@ if __name__ == '__main__':
     outputFile = open("output/output.csv", 'w', newline='', encoding='utf-8')
     csvWriter = csv.writer(outputFile)
 
-
-
     # For Manual-review
     prev_size_of_to_check = 0
     totalPassed = 0
@@ -164,6 +165,8 @@ if __name__ == '__main__':
     # generate city-data cities map
     cityDataCities = getAllCitiesMap()
     cityDataCitiesList = cityDataCities.keys()
+
+
     # print(cityDataCitiesList)
 
     def findClosestMatch(key):
@@ -222,10 +225,9 @@ if __name__ == '__main__':
             prev_size_of_to_check = len(toCheck)
             row.append(none_percent)
             csvWriter.writerow(row)
-            #break
+            # break
     # todo
     # Target cities score (check with 500 cities)
-
 
     # error logging
     errors = open("error_log.txt", "w")
