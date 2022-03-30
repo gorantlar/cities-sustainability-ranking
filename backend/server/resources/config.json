@@ -1,0 +1,24 @@
+{
+  "weights": {
+    "economics": {
+      "weight": 1,
+      "subdomains": {
+        "production and resourcing": 1,
+        "exchange and transfer": 1,
+        "accounting and regulation": 1,
+        "consumption and use": {
+          "weight" : 1,
+          "columns": {
+              "government_finances_expenditure_per_resident_in_2018": 1,
+              "government_finances_revenue_per_resident_in_2018": 1,
+              "government_finances_debt_per_resident_in_2018": 1,
+              "government_finances_cash_and_securities_per_resident_in_2018": 1
+          }
+        },
+        "labour and welfare": 1,
+        "technology and infrastructure": 1,
+        "wealth and distribution": 1
+      }
+    }
+  }
+}

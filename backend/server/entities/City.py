@@ -3,7 +3,9 @@ from neo4j import graph
 
 class City:
     def __init__(self, city_id, name, state, state_id, county, county_fips, latitude, longitude, population, density,
-                 zips, speak_a_language_other_than_english):
+                 zips, speak_a_language_other_than_english,
+                 government_finances_expenditure_per_resident_in_2018 , government_finances_revenue_per_resident_in_2018 ,
+                 government_finances_debt_per_resident_in_2018 , government_finances_cash_and_securities_per_resident_in_2018):
         self.city_id = city_id
         self.name = name
         self.state = state
@@ -36,6 +38,12 @@ class City:
         # self.registered_voters = registered_voters
         # self.violent_crimes = violent_crimes
         # self.insurance = insurance
+
+        self.government_finances_expenditure_per_resident_in_2018 = government_finances_expenditure_per_resident_in_2018
+        self.government_finances_revenue_per_resident_in_2018 = government_finances_revenue_per_resident_in_2018
+        self.government_finances_debt_per_resident_in_2018 = government_finances_debt_per_resident_in_2018
+        self.government_finances_cash_and_securities_per_resident_in_2018 = government_finances_cash_and_securities_per_resident_in_2018
+
 
     @staticmethod
     def get_city(node):
