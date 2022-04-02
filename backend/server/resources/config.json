@@ -1,24 +1,350 @@
 {
-  "weights": {
-    "economics": {
-      "weight": 1,
-      "subdomains": {
-        "production and resourcing": 1,
-        "exchange and transfer": 1,
-        "accounting and regulation": 1,
-        "consumption and use": {
-          "weight" : 1,
-          "columns": {
-              "government_finances_expenditure_per_resident_in_2018": 1,
-              "government_finances_revenue_per_resident_in_2018": 1,
-              "government_finances_debt_per_resident_in_2018": 1,
-              "government_finances_cash_and_securities_per_resident_in_2018": 1
-          }
-        },
-        "labour and welfare": 1,
-        "technology and infrastructure": 1,
-        "wealth and distribution": 1
-      }
-    }
-  }
+  "city_id": [
+    1840000177.0,
+    1840043455.0
+  ],
+  "name": [
+    0,
+    2.2250738585072014e-308
+  ],
+  "state": [
+    0,
+    2.2250738585072014e-308
+  ],
+  "state_id": [
+    0,
+    2.2250738585072014e-308
+  ],
+  "county": [
+    0,
+    2.2250738585072014e-308
+  ],
+  "county_fips": [
+    1073.0,
+    56021.0
+  ],
+  "latitude": [
+    21.3294,
+    61.1508
+  ],
+  "longitude": [
+    -157.846,
+    2.2250738585072014e-308
+  ],
+  "population": [
+    65273.0,
+    18713220.0
+  ],
+  "density": [
+    65.0,
+    20394.0
+  ],
+  "zips": [
+    7055.0,
+    Infinity
+  ],
+  "speak_a_language_other_than_english": [
+    0,
+    92.8
+  ],
+  "bachelor_s_degree_or_higher": [
+    0,
+    81.1
+  ],
+  "two_or_more_races": [
+    0,
+    17.5
+  ],
+  "park_access": [
+    7.2,
+    99.9
+  ],
+  "walkability": [
+    6.5,
+    94.4
+  ],
+  "limited_access_to_healthy_foods": [
+    33.3,
+    61.1
+  ],
+  "foreign_born": [
+    0,
+    75.7
+  ],
+  "state_annual_co_2_equivalent_total_output_emission_rate_lb_m_wh_2020": [
+    30.31,
+    1990.11
+  ],
+  "state_annual_total_nonrenewables_net_generation_m_wh_2020": [
+    1231.0,
+    369966928.0
+  ],
+  "state_annual_total_renewables_net_generation_m_wh_2020": [
+    67547.0,
+    103399309.0
+  ],
+  "frequent_physical_distress_in_2018_percent": [
+    7.6,
+    21.0
+  ],
+  "broadband_connection_2019": [
+    0,
+    91.8
+  ],
+  "park_access_2018": [
+    0,
+    99.8
+  ],
+  "preventive_services_2018": [
+    0,
+    43.7
+  ],
+  "walkability_2019": [
+    0,
+    94.4
+  ],
+  "poplution_percent": [
+    0,
+    37.9
+  ],
+  "vacant_houses": [
+    0,
+    0.354693210980636
+  ],
+  "crimes_occurred": [
+    0,
+    20.8
+  ],
+  "registered_voters": [
+    0,
+    84.4
+  ],
+  "violent_crimes": [
+    0,
+    1932.3
+  ],
+  "insurance": [
+    0,
+    34.6
+  ],
+  "all_median_household_income_2019": [
+    0,
+    189185.0
+  ],
+  "all_change_in_median_household_income_between_2000_and_2019": [
+    0,
+    149.2
+  ],
+  "all_median_non_family_income_2019": [
+    0,
+    127159.0
+  ],
+  "all_change_in_median_non_family_income_between_2000_and_2019": [
+    0,
+    147.4
+  ],
+  "all_median_per_capita_income_2019": [
+    0,
+    101748.0
+  ],
+  "all_change_in_median_per_capita_income_between_2000_and_2019": [
+    0,
+    149.2
+  ],
+  "white_median_household_income_2019": [
+    0,
+    159173.0
+  ],
+  "white_change_in_median_household_income_between_2000_and_2019": [
+    0,
+    148.2
+  ],
+  "white_median_non_family_income_2019": [
+    0,
+    126251.0
+  ],
+  "white_change_in_median_non_family_income_between_2000_and_2019": [
+    0,
+    148.2
+  ],
+  "white_median_per_capita_income_2019": [
+    0,
+    110059.0
+  ],
+  "white_change_in_median_per_capita_income_between_2000_and_2019": [
+    0,
+    125.5
+  ],
+  "black_or_african_american_median_household_income_2019": [
+    0,
+    250001.0
+  ],
+  "black_or_african_american_change_in_median_household_income_between_2000_and_2019": [
+    0,
+    143.5
+  ],
+  "black_or_african_american_median_non_family_income_2019": [
+    0,
+    171372.0
+  ],
+  "black_or_african_american_change_in_median_non_family_income_between_2000_and_2019": [
+    0,
+    149.7
+  ],
+  "black_or_african_american_median_per_capita_income_2019": [
+    0,
+    69212.0
+  ],
+  "black_or_african_american_change_in_median_per_capita_income_between_2000_and_2019": [
+    0,
+    149.2
+  ],
+  "asian_median_household_income_2019": [
+    0,
+    250001.0
+  ],
+  "asian_change_in_median_household_income_between_2000_and_2019": [
+    0,
+    150.0
+  ],
+  "asian_median_non_family_income_2019": [
+    0,
+    250001.0
+  ],
+  "asian_change_in_median_non_family_income_between_2000_and_2019": [
+    0,
+    149.2
+  ],
+  "asian_median_per_capita_income_2019": [
+    0,
+    122318.0
+  ],
+  "asian_change_in_median_per_capita_income_between_2000_and_2019": [
+    0,
+    149.5
+  ],
+  "hispanic_or_latino_median_household_income_2019": [
+    0,
+    173112.0
+  ],
+  "hispanic_or_latino_change_in_median_household_income_between_2000_and_2019": [
+    0,
+    146.1
+  ],
+  "hispanic_or_latino_median_non_family_income_2019": [
+    0,
+    125519.0
+  ],
+  "hispanic_or_latino_change_in_median_non_family_income_between_2000_and_2019": [
+    0,
+    147.6
+  ],
+  "hispanic_or_latino_median_per_capita_income_2019": [
+    0,
+    63593.0
+  ],
+  "hispanic_or_latino_change_in_median_per_capita_income_between_2000_and_2019": [
+    0,
+    147.4
+  ],
+  "american_indian_and_alaska_native_median_household_income_2019": [
+    0,
+    314737.0
+  ],
+  "american_indian_and_alaska_native_change_in_median_household_income_between_2000_and_2019": [
+    0,
+    149.2
+  ],
+  "american_indian_and_alaska_native_median_non_family_income_2019": [
+    0,
+    563555.0
+  ],
+  "american_indian_and_alaska_native_change_in_median_non_family_income_between_2000_and_2019": [
+    0,
+    149.8
+  ],
+  "american_indian_and_alaska_native_median_per_capita_income_2019": [
+    0,
+    202803.0
+  ],
+  "american_indian_and_alaska_native_change_in_median_per_capita_income_between_2000_and_2019": [
+    0,
+    149.8
+  ],
+  "multirace_median_household_income_2019": [
+    0,
+    272043.0
+  ],
+  "multirace_change_in_median_household_income_between_2000_and_2019": [
+    0,
+    149.4
+  ],
+  "multirace_median_non_family_income_2019": [
+    0,
+    250001.0
+  ],
+  "multirace_change_in_median_non_family_income_between_2000_and_2019": [
+    0,
+    149.3
+  ],
+  "multirace_median_per_capita_income_2019": [
+    0,
+    72952.0
+  ],
+  "multirace_change_in_median_per_capita_income_between_2000_and_2019": [
+    0,
+    150.0
+  ],
+  "other_median_household_income_2019": [
+    0,
+    268950.0
+  ],
+  "other_change_in_median_household_income_between_2000_and_2019": [
+    0,
+    2.2250738585072014e-308
+  ],
+  "other_median_non_family_income_2019": [
+    0,
+    144101.0
+  ],
+  "other_change_in_median_non_family_income_between_2000_and_2019": [
+    0,
+    149.5
+  ],
+  "other_median_per_capita_income_2019": [
+    0,
+    88984.0
+  ],
+  "other_change_in_median_per_capita_income_between_2000_and_2019": [
+    0,
+    148.9
+  ],
+  "revenue_imputed_2017": [
+    15.37,
+    23.46
+  ],
+  "payroll_imputed_2017": [
+    10.86,
+    23.67
+  ],
+  "employees_imputed_2017": [
+    13.97,
+    27.76
+  ],
+  "government_finances_expenditure_per_resident_in_2018": [
+    0,
+    23697.37
+  ],
+  "government_finances_revenue_per_resident_in_2018": [
+    0,
+    19825.43
+  ],
+  "government_finances_debt_per_resident_in_2018": [
+    0,
+    53431.16
+  ],
+  "government_finances_cash_and_securities_per_resident_in_2018": [
+    0,
+    25294.13
+  ]
 }

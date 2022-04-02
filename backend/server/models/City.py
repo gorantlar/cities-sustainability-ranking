@@ -1,11 +1,45 @@
 import neo4j
 from neo4j import graph
 
+
 class City:
+    def __init__(self, city_dict):
+        for key in city_dict:
+            self.__setattr__(key, city_dict[key])
+
+    @staticmethod
+    def get_city(node):
+        if not isinstance(node, neo4j.graph.Node):
+            raise TypeError("Argument passed is not a neo4j.graph.Node")
+
+
+
+
+    def __hash__(self):
+        return hash(self.city_id)
+
+    def __eq__(self, other):
+        """checking equality"""
+        if isinstance(other, self.__class__):
+            return self.__hash__() == other.__hash__()
+        return NotImplemented
+
+    def __ne__(self, other):
+        """checking inequality"""
+        if isinstance(other, self.__class__):
+            return not self.__eq__(other)
+        return NotImplemented
+
+    def __str__(self) -> str:
+        return str(self.city_id) + ", " + self.name + ", " + self.state_id
+
+
+'''
     def __init__(self, city_id, name, state, state_id, county, county_fips, latitude, longitude, population, density,
                  zips, speak_a_language_other_than_english,
-                 government_finances_expenditure_per_resident_in_2018 , government_finances_revenue_per_resident_in_2018 ,
-                 government_finances_debt_per_resident_in_2018 , government_finances_cash_and_securities_per_resident_in_2018):
+                 government_finances_expenditure_per_resident_in_2018, government_finances_revenue_per_resident_in_2018,
+                 government_finances_debt_per_resident_in_2018,
+                 government_finances_cash_and_securities_per_resident_in_2018):
         self.city_id = city_id
         self.name = name
         self.state = state
@@ -43,14 +77,10 @@ class City:
         self.government_finances_revenue_per_resident_in_2018 = government_finances_revenue_per_resident_in_2018
         self.government_finances_debt_per_resident_in_2018 = government_finances_debt_per_resident_in_2018
         self.government_finances_cash_and_securities_per_resident_in_2018 = government_finances_cash_and_securities_per_resident_in_2018
-
-
-    @staticmethod
-    def get_city(node):
-        if not isinstance(node, neo4j.graph.Node):
-            raise TypeError("Argument passed is not a neo4j.graph.Node")
-
-        retVal = City(
+        
+        
+        
+    retVal = City(
             node['city_id'],
             node['name'],
             node['state'],
@@ -86,21 +116,4 @@ class City:
         )
 
         return retVal
-
-    def __hash__(self):
-        return hash(self.city_id)
-
-    def __eq__(self, other):
-        """checking equality"""
-        if isinstance(other, self.__class__):
-            return self.__hash__() == other.__hash__()
-        return NotImplemented
-
-    def __ne__(self, other):
-        """checking inequality"""
-        if isinstance(other, self.__class__):
-            return not self.__eq__(other)
-        return NotImplemented
-
-    def __str__(self) -> str:
-        return str(self.city_id) + ", " + self.name + ", " + self.state_id
+'''

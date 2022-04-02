@@ -1,8 +1,8 @@
 import csv
 
 from server.controllers import CityController
-from server.entities.City import City
-from server.entities.State import State
+from server.models.City import City
+from server.models.State import State
 
 
 def read_cities_and_states():

@@ -1,4 +1,4 @@
-from server.entities.City import City
+from server.models.City import City
 
 class State:
     def __init__(self, city):
