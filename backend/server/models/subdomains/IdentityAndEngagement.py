@@ -17,13 +17,14 @@ class IdentityAndEngagement(Subdomain):
         '''
         1. Add column names in breakdown, initialized with 0 normalized score
         '''
-        self.breakdown = {
+        self.__breakdown = {
             "Two or More Races": 0
         }
 
     @staticmethod
     def calculate_score(city, config):
         print("calculating score for IdentityAndEngagement")
+
         '''
         1. For each column in breakdown, calculate it's normalized score and store in breakdown
         2. After that, use config to read weights and calculate final score.

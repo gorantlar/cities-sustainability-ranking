@@ -41,6 +41,8 @@ async def seed():
         cities = [{k: str(v) for k, v in row.items()}
                   for row in csv.DictReader(csvfile, skipinitialspace=True)]
 
+        print(cities[0])
+
         for city in cities:
             city_obj = City(city)
             # pass them to create or insert cities in controller(It should read and update the config as well)

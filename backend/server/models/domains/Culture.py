@@ -4,7 +4,7 @@ from server.models.abstract_base_classes.Domain import Domain
 class Culture(Domain):
 
     # label = "Culture"
-    subdomains = []
+    subdomains = {}
 
     @property
     def score(self):

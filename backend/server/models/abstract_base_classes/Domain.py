@@ -3,11 +3,11 @@ from abc import ABC, abstractmethod
 
 class Domain(ABC):
 
-    # @staticmethod
-    # @property
-    # @abstractmethod
-    # def label(self):
-    #     pass
+    @staticmethod
+    @property
+    @abstractmethod
+    def subdomains(self):
+        pass
 
     @property
     @abstractmethod
