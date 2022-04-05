@@ -2,7 +2,58 @@
   "domains": {
     "Ecology": {
       "weight": 1,
-      "subdomains": {}
+      "subdomains": {
+		"WaterAndAir": {
+		  "weight": 1,
+          "columns": {
+            "air_quality_2020": {
+              "weight": 1,
+              "min": 0,
+              "max": 0,
+              "inverse": true
+            },
+			"air_pollution_2018": {
+              "weight": 1,
+              "min": 0,
+              "max": 0,
+              "inverse": true
+            }
+          }
+		},
+		"HabitatAndSettlements": {
+          "weight": 1,
+          "columns": {
+            "park_access_2018": {
+              "weight": 1,
+              "min": 0,
+              "max": 0,
+              "inverse": false
+            }
+          }
+        },
+		"BuiltFormAndTransport": {
+          "weight": 1,
+          "columns": {
+            "alltransit_performance_score": {
+              "weight": 1,
+              "min": 0,
+              "max": 0,
+              "inverse": false
+            }
+          }
+        },
+		"EmbodimentAndSustenance": {
+          "weight": 1,
+          "columns": {
+            "frequent_physical_distress_in_2018_percent": {
+              "weight": 1,
+              "min": 0,
+              "max": 0,
+              "inverse": true
+            }
+          }
+        }
+	  }
     },
     "Economics": {
       "weight": 1,
