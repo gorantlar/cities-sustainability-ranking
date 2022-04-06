@@ -304,7 +304,86 @@
       }
     },
     "Politics": {
-      "weight": 1
+      "weight": 1,
+      "subdomains": {
+        "OrganizationAndGovernance": {
+          "weight": 1,
+          "columns": {
+            "Vacant_houses": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "LawAndJustice": {
+          "weight": 1,
+          "columns": {
+            "PopulationPercent": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "CommunicationAndCritique": {
+          "weight": 1,
+          "columns": {
+            "crimesOccured": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "RepresentationAndNegotiation": {
+          "weight": 1,
+          "columns": {
+            "registeredVoters": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "SecurityAndAccord": {
+          "weight": 1,
+          "columns": {
+            "violentCrimes": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "DialogueAndReconciliation": {
+          "weight": 1,
+          "columns": {
+            "beliefs": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "EthicsAndAccountability": {
+          "weight": 1,
+          "columns": {
+            "acquittal": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        }
+      }
     }
   }
 }
