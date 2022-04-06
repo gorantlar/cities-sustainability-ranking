@@ -1,18 +1,58 @@
 import neo4j
 from neo4j import graph
+from resources.helper import getDomains
+from models.domains.Economics import Economics
+from models.domains.Culture import Culture
+from models.domains.Ecology import Ecology
 
 
 class City:
     def __init__(self, city_dict):
         for key in city_dict:
-            self.__setattr__(key, city_dict[key])
+            self.__setattr__(key, self.get_value((city_dict[key])))
+
+        self.score = self.calculate_score()
+
+    def get_value(self, val):
+        val = str(val).strip()
+        if val.lower() == "n" or val.lower() == "nan%":
+            return 0
+
+        val = val.replace("%", "")\
+                     .replace("$", "")\
+                     .replace(",", "")\
+                     .replace(" ", "")
+
+        try:
+            return float(val)
+            return True
+        except ValueError:
+            return val
 
     @staticmethod
     def get_city(node):
         if not isinstance(node, neo4j.graph.Node):
             raise TypeError("Argument passed is not a neo4j.graph.Node")
 
+    def calculate_score(self):
+        domains_config = getDomains()
+        numer = 0
+        denom = 0
+        for domain, domain_info in domains_config.items():
+            # passing subdomain dictionary to the constructors of domains
+            self.__setattr__(domain, globals()[domain](self, domain_info["subdomains"]))
+            weight = domain_info["weight"]
 
+            temp = self.__getattribute__(domain).score
+            print(domain, temp)
+            numer += (weight * temp)
+            denom += weight
+
+        if not denom:
+            print(f'Divide by 0: in City:calculate_score for {self.city.city_id}')
+            return 0
+
+        return format(numer/denom, ".2f")
 
 
     def __hash__(self):

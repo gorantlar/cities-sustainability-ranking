@@ -1,7 +1,7 @@
 from models.abstract_base_classes.Subdomain import Subdomain
 
 
-class IdentityAndEngagement(Subdomain):
+class TechnologyAndInfrastructure(Subdomain):
     pass
     # @property
     # def breakdown(self):

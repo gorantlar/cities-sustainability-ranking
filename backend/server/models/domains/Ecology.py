@@ -1,10 +1,11 @@
 from models.abstract_base_classes.Domain import Domain
 
 
-class Culture(Domain):
+class Ecology(Domain):
     pass
-    # label = "Culture"
-
+    # # label = "Culture"
+    # subdomains = {}
+    #
     # @property
     # def score(self):
     #     return super().score

@@ -1,10 +1,10 @@
 import json
 
-path = "./server/resources/config.json"
+path = "C:/Users/ssuryaw1/Downloads/SER517/GIT/SER-517-Neighborhood-Sustainability/backend/server/resources/config.json"
 
 
 def get_config():
-    return json.loads(open(path, "r").read().lower())
+    return json.loads(open(path, "r").read())
 
 
 def write_config(config_dict):
@@ -32,4 +32,21 @@ def get_float(val):
         # print("Not a float")
         return 0
 
-# print(get_config())
+def getDomains():
+    return json.loads(open(path, "r").read())["domains"]
+
+# print(getDomains())
+#
+# domains = getDomains()
+# for domain in domains:
+#     for sub in domains[domain]["subdomains"]:
+#         file = open("C:/Users/ssuryaw1/Downloads/SER517/GIT/SER-517-Neighborhood-Sustainability/backend/server/models/subdomains/"+sub+".py","w")
+#         template = open("subdomain_temp.txt", "r").read()
+#         file.write(template.replace("__class_name__", sub))
+#         file.close()
+
+#
+# domains = getDomains()
+# for domain in domains:
+#     for sub in domains[domain]["subdomains"]:
+#         print("from models.subdomains."+sub+" import "+sub)
