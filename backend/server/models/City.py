@@ -1,6 +1,6 @@
 import neo4j
 from neo4j import graph
-from resources.helper import getDomains
+from resources.helper import getDomains, get_value
 from models.domains.Economics import Economics
 from models.domains.Culture import Culture
 from models.domains.Ecology import Ecology
@@ -9,25 +9,10 @@ from models.domains.Ecology import Ecology
 class City:
     def __init__(self, city_dict):
         for key in city_dict:
-            self.__setattr__(key, self.get_value((city_dict[key])))
+            self.__setattr__(key, get_value((city_dict[key])))
 
         self.score = self.calculate_score()
 
-    def get_value(self, val):
-        val = str(val).strip()
-        if val.lower() == "n" or val.lower() == "nan%":
-            return 0
-
-        val = val.replace("%", "")\
-                     .replace("$", "")\
-                     .replace(",", "")\
-                     .replace(" ", "")
-
-        try:
-            return float(val)
-            return True
-        except ValueError:
-            return val
 
     @staticmethod
     def get_city(node):
@@ -53,7 +38,6 @@ class City:
             return 0
 
         return format(numer/denom, ".2f")
-
 
     def __hash__(self):
         return hash(self.city_id)

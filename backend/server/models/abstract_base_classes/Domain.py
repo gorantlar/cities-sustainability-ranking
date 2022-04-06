@@ -19,21 +19,13 @@ from models.subdomains.EnquiryAndLearning import EnquiryAndLearning
 from models.subdomains.WellbeingAndHealth import WellbeingAndHealth
 
 
-# class Domain(ABC):
-class Domain:
-    @staticmethod
-    @property
-    def subdomains(self):
-        pass
+class Domain(ABC):
 
-    @property
-    def score(self):
-        return self.__score
-
+    @abstractmethod
     def __init__(self, city, subdomains_config):
-        self.__score = self.calculate_score(self, city, subdomains_config)
+        self.score = self.calculate_score(city, subdomains_config)
 
-    @staticmethod
+    @abstractmethod
     def calculate_score(self, city, subdomains_config):
         numer = 0
         denom = 0

@@ -14,14 +14,20 @@ def write_config(config_dict):
 
 
 def get_value(val):
-    val = val.strip()
-    if val.lower() == "n":
+    val = str(val).strip()
+    if val.lower() == "n" or val.lower() == "nan%":
         return 0
 
-    return float(val.replace("%", "")
-                 .replace("$", "")
-                 .replace(",", "")
-                 .replace(" ", ""))
+    val = val.replace("%", "") \
+        .replace("$", "") \
+        .replace(",", "") \
+        .replace(" ", "")
+
+    try:
+        return float(val)
+        return True
+    except ValueError:
+        return val
 
 
 def get_float(val):
