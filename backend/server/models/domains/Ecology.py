@@ -1,7 +1,7 @@
 from server.models.abstract_base_classes.Domain import Domain
 
 
-class Culture(Domain):
+class Ecology(Domain):
 
     def __init__(self, city, config):
         super().__init__(city, config)

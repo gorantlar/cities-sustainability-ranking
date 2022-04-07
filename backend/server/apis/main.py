@@ -63,8 +63,6 @@ async def seed():
         }
 
 
-
-
 @app.get("/recalculate/{secret_key}")
 async def recalculate():
     print("starting to recalculate")
@@ -75,9 +73,10 @@ async def recalculate():
     for city_node in city_nodes:
         city = City(city_node['a'])
         # print(getattr(city, 'name'))
-        culture = Culture(city, config)
-        node, info = db_session.write_transaction(DomainController.merge_domain_tx, city, culture)
-        #for each subdomain of culture, repeat
+        # node, info = db_session.write_transaction(DomainController.merge_domain_tx, city, culture)
+
+        print(city.calculate_score())
+        # for each subdomain of culture, repeat
 
         # economics = Economics(city, config)
         # ecology = Ecology(city, config)
