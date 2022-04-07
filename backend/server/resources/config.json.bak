@@ -1,0 +1,187 @@
+{
+  "domains" : {
+    "Ecology": {
+      "weight": 1,
+      "subdomains": {}
+    },
+		"Economics": {
+		"weight": 1,
+		"subdomains": {
+			"ProductionAndResourcing": {
+				"weight": 1,
+				"columns": {
+					"cost_of_living_index_in_march_2019": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					}
+				}
+			},
+			"ExchangeAndTransfer": {
+				"weight": 1,
+				"columns": {
+					"past_trade_dollars_2020": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					},
+					"past_trade_tons_2020": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					},
+					"future_trade_dollars_2030": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					},
+					"future_trade_tons_2030": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					}
+				}
+			},
+			"AccountingAndRegulation": {
+				"weight": 1,
+				"columns": {
+					"government_finances_expenditure_per_resident_in_2018": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					},
+					"government_finances_revenue_per_resident_in_2018": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					},
+					"government_finances_debt_per_resident_in_2018": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": true
+					},
+					"government_finances_cash_and_securities_per_resident_in_2018": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					}
+				}
+			},
+			"ConsumptionAndUse": {
+				"weight": 1,
+				"columns": {
+					"average_domestic_production_to_consumption_ratio_2020": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					}
+				}
+			},
+			"LabourAndWelfare": {
+				"weight": 1,
+				"columns": {
+					"revenue_imputed_2017": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					},
+					"payroll_imputed_2017": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					},
+					"employees_imputed_2017": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					}
+				}
+			},
+			"TechnologyAndInfrastructure": {
+				"weight": 1,
+				"columns": {
+					"broadband_connection_2019": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					},
+					"preventive_services_2018": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					},
+					"park_access_2018": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					},
+					"walkability_2019": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					}
+				}
+			},
+			"WealthAndDistribution": {
+				"weight": 1,
+				"columns": {
+					"unemployment_in_november_2020": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": true
+					},
+					"percentage_of_residents_living_in_poverty_in_2019": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					},
+					"median_gross_rent_in_2019": {
+						"weight": 1,
+						"min": 0,
+						"max": 0,
+						"inverse": false
+					}
+				}
+			}
+		}
+	},   
+    "Culture": {
+      "weight": 1,
+      "subdomains": {
+        "IdentityAndEngagement": {
+          "weight": 1,
+          "columns": {
+            "park_access": {
+              "inverse": true,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        }
+      }
+    },
+    "Politics": {
+      "weight": 1
+    }
+  }
+}

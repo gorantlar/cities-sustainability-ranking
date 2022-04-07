@@ -1,0 +1,307 @@
+{
+  "domains": {
+    "Ecology": {
+      "weight": 1,
+      "subdomains": {
+		"WaterAndAir": {
+		  "weight": 1,
+          "columns": {
+            "air_quality_2020": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": true
+            },
+			"air_pollution_2018": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": true
+            }
+          }
+		},
+		"HabitatAndSettlements": {
+          "weight": 1,
+          "columns": {
+            "park_access_2018": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            }
+          }
+        },
+		"BuiltFormAndTransport": {
+          "weight": 1,
+          "columns": {
+            "alltransit_performance_score": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            }
+          }
+        },
+		"EmbodimentAndSustenance": {
+          "weight": 1,
+          "columns": {
+            "frequent_physical_distress_in_2018_percent": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": true
+            }
+          }
+        }
+	  }
+    },
+    "Economics": {
+      "weight": 1,
+      "subdomains": {
+        "ProductionAndResourcing": {
+          "weight": 1,
+          "columns": {
+            "cost_of_living_index_in_march_2019": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            }
+          }
+        },
+        "ExchangeAndTransfer": {
+          "weight": 1,
+          "columns": {
+            "past_trade_dollars_2020": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            },
+            "past_trade_tons_2020": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            },
+            "future_trade_dollars_2030": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            },
+            "future_trade_tons_2030": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            }
+          }
+        },
+        "AccountingAndRegulation": {
+          "weight": 1,
+          "columns": {
+            "government_finances_expenditure_per_resident_in_2018": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            },
+            "government_finances_revenue_per_resident_in_2018": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            },
+            "government_finances_debt_per_resident_in_2018": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": true
+            },
+            "government_finances_cash_and_securities_per_resident_in_2018": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            }
+          }
+        },
+        "ConsumptionAndUse": {
+          "weight": 1,
+          "columns": {
+            "average_domestic_production_to_consumption_ratio_2020": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            }
+          }
+        },
+        "LabourAndWelfare": {
+          "weight": 1,
+          "columns": {
+            "revenue_imputed_2017": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            },
+            "payroll_imputed_2017": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            },
+            "employees_imputed_2017": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            }
+          }
+        },
+        "TechnologyAndInfrastructure": {
+          "weight": 1,
+          "columns": {
+            "broadband_connection_2019": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            },
+            "preventive_services_2018": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            },
+            "park_access_2018": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            },
+            "walkability_2019": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            }
+          }
+        },
+        "WealthAndDistribution": {
+          "weight": 1,
+          "columns": {
+            "unemployment_in_november_2020": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": true
+            },
+            "percentage_of_residents_living_in_poverty_in_2019": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": true
+            },
+            "median_gross_rent_in_2019": {
+              "weight": 1,
+              "min": 0,
+              "max": 100,
+              "inverse": false
+            }
+          }
+        }
+      }
+    },
+    "Culture": {
+      "weight": 1,
+      "subdomains": {
+        "IdentityAndEngagement": {
+          "weight": 1,
+          "columns": {
+            "two_or_more_races": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "GenderAndGenerations": {
+          "weight": 1,
+          "columns": {
+            "speak_a_language_other_than_english": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "CreativityAndRecreation": {
+          "weight": 1,
+          "columns": {
+            "park_access": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "MemoryAndProjection": {
+          "weight": 1,
+          "columns": {
+            "foreign_born": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "BeliefsAndIdeas": {
+          "weight": 1,
+          "columns": {
+            "religious_diversity": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "EnquiryAndLearning": {
+          "weight": 1,
+          "columns": {
+            "bachelors_degree_or_higher": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        },
+        "WellbeingAndHealth": {
+          "weight": 1,
+          "columns": {
+            "walkability": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            },
+            "close_access_to_healthy_foods": {
+              "inverse": false,
+              "min": 1000,
+              "max": 50000,
+              "weight": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

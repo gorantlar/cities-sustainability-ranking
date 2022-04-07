@@ -1,0 +1,767 @@
+﻿city_name,state_id,Uninsured
+Auburn,AL,5.8
+Birmingham,AL,14.4
+Wilmington,DE,7.1
+Washington,DC,4.1
+Decatur,AL,13
+Boca Raton,FL,9.8
+Bonita Springs,FL,19.9
+Boynton Beach,FL,18.6
+Bradenton,FL,19.5
+Cape Coral,FL,16.2
+Dothan,AL,12.1
+Clearwater,FL,17.3
+Coconut Creek,FL,15.7
+Coral Gables,FL,7.2
+Coral Springs,FL,13.7
+Davie,FL,12.4
+Daytona Beach,FL,18.4
+Deerfield Beach,FL,23.1
+Delray Beach,FL,16.3
+Deltona,FL,12.7
+Doral,FL,18
+Fort Lauderdale,FL,18.2
+Fort Myers,FL,19.7
+Gainesville,FL,9.3
+Hialeah,FL,25.3
+Hollywood,FL,19.8
+Homestead,FL,24.2
+Jacksonville,FL,13.7
+Jupiter,FL,11.9
+Kissimmee,FL,17.8
+Lakeland,FL,12.5
+Largo,FL,16.1
+Lauderhill,FL,17.2
+Margate,FL,19.2
+Melbourne,FL,15.3
+Miami,FL,23.2
+Miami Beach,FL,22.5
+Miami Gardens,FL,22.7
+Miramar,FL,14.4
+North Miami,FL,28.9
+North Port,FL,18.1
+Ocala,FL,16.5
+Orlando,FL,16.7
+Palm Bay,FL,14.4
+Palm Beach Gardens,FL,9.1
+Palm Coast,FL,19.2
+Pembroke Pines,FL,11.1
+Pensacola,FL,12.4
+Pinellas Park,FL,13.7
+Plantation,FL,13
+Pompano Beach,FL,25.1
+Port Orange,FL,13.5
+Port St. Lucie,FL,15.3
+St. Petersburg,FL,13.6
+Sanford,FL,16.9
+Sarasota,FL,23.3
+Sunrise,FL,15
+Tallahassee,FL,9.3
+Tamarac,FL,14.7
+Tampa,FL,13.2
+Wellington,FL,10
+Weston,FL,7
+West Palm Beach,FL,19.2
+Albany,GA,19.5
+Alpharetta,GA,6.9
+Athens,GA,15
+Atlanta,GA,11.5
+Augusta,GA,15
+Brookhaven,GA,16.5
+Columbus,GA,13.2
+Johns Creek,GA,6.5
+Macon,GA,15.1
+Marietta,GA,20.5
+Hoover,AL,6.2
+Roswell,GA,13.8
+Sandy Springs,GA,10.9
+Savannah,GA,19.5
+Huntsville,AL,11.6
+Smyrna,GA,15
+Stonecrest,GA,16.7
+Valdosta,GA,19
+Warner Robins,GA,15.4
+Mobile,AL,13.4
+Honolulu,HI,4
+Montgomery,AL,12.2
+Boise City,ID,10.3
+Caldwell,ID,15.7
+Idaho Falls,ID,10.8
+Meridian,ID,9.3
+Nampa,ID,15.2
+Pocatello,ID,10.8
+Arlington Heights,IL,5.2
+Aurora,IL,11.9
+Berwyn,IL,12.9
+Bloomington,IL,4.7
+Bolingbrook,IL,8.4
+Champaign,IL,4.7
+Chicago,IL,10.8
+Cicero,IL,19.8
+Decatur,IL,6.6
+Des Plaines,IL,10.4
+Elgin,IL,12.8
+Evanston,IL,5.4
+Hoffman Estates,IL,6.8
+Joliet,IL,8.7
+Mount Prospect,IL,9.2
+Naperville,IL,3
+Normal,IL,4.4
+Oak Lawn,IL,8.9
+Oak Park,IL,3.6
+Orland Park,IL,5.8
+Palatine,IL,11.2
+Peoria,IL,6.7
+Rockford,IL,7.9
+Schaumburg,IL,6.8
+Skokie,IL,9.9
+Springfield,IL,5.2
+Tuscaloosa,AL,8.3
+Tinley Park,IL,4.7
+Waukegan,IL,17.5
+Wheaton,IL,4.1
+Anderson,IN,12.6
+Bloomington,IN,8.9
+Carmel,IN,3.4
+Elkhart,IN,15.9
+Evansville,IN,11.6
+Fishers,IN,3.2
+Fort Wayne,IN,10.3
+Gary,IN,13.2
+Greenwood,IN,10.2
+Hammond,IN,12.7
+Indianapolis,IN,11.8
+Kokomo,IN,9
+Lafayette,IN,12.8
+Muncie,IN,10.4
+Noblesville,IN,5.8
+South Bend,IN,12.3
+Terre Haute,IN,10.4
+Ames,IA,5.7
+Ankeny,IA,3.7
+Cedar Rapids,IA,5.2
+Council Bluffs,IA,7.8
+Davenport,IA,6.5
+Des Moines,IA,7.8
+Dubuque,IA,5.7
+Iowa City,IA,6.5
+Sioux City,IA,7.4
+Waterloo,IA,7.6
+West Des Moines,IA,3.3
+Anchorage,AK,12.4
+Kansas City,KS,21
+Lawrence,KS,8.6
+Lenexa,KS,7.7
+Manhattan,KS,6.1
+Olathe,KS,8
+Overland Park,KS,6.3
+Shawnee,KS,7.1
+Topeka,KS,9.9
+Wichita,KS,13.9
+Bowling Green,KY,7.8
+Lexington,KY,7.7
+Louisville,KY,6.3
+Owensboro,KY,6.6
+Baton Rouge,LA,11.1
+Bossier City,LA,10.7
+Kenner,LA,16.8
+Lafayette,LA,10.1
+Lake Charles,LA,11.7
+New Orleans,LA,10.6
+Shreveport,LA,11.1
+Portland,ME,7.9
+Baltimore,MD,7.5
+Bowie,MD,4.1
+Frederick,MD,8.1
+Gaithersburg,MD,10.4
+Rockville,MD,7.5
+Boston,MA,3.9
+Brockton,MA,4.5
+Cambridge,MA,2.2
+Chicopee,MA,3.8
+Fall River,MA,5
+Haverhill,MA,3.7
+Lawrence,MA,7.4
+Lowell,MA,5.6
+Lynn,MA,5.5
+Malden,MA,4.8
+Medford,MA,2.8
+New Bedford,MA,5.3
+Newton,MA,1.4
+Peabody,MA,3.2
+Quincy,MA,3.7
+Revere,MA,5.9
+Somerville,MA,3.3
+Springfield,MA,4.5
+Taunton,MA,2.6
+Waltham,MA,3.9
+Weymouth Town,MA,3.4
+Worcester,MA,3.3
+Ann Arbor,MI,3
+Battle Creek,MI,6.6
+Dearborn,MI,6.8
+Dearborn Heights,MI,7.6
+Detroit,MI,9.6
+Farmington Hills,MI,4.9
+Flint,MI,8.8
+Grand Rapids,MI,9.5
+Kalamazoo,MI,8
+Kentwood,MI,6.9
+Lansing,MI,8.2
+Livonia,MI,3.4
+Novi,MI,4.9
+Pontiac,MI,13.7
+Rochester Hills,MI,3.4
+Royal Oak,MI,3.4
+St. Clair Shores,MI,4.8
+Southfield,MI,6.5
+Sterling Heights,MI,8
+Taylor,MI,6.5
+Troy,MI,3.3
+Warren,MI,7.4
+Westland,MI,6.9
+Wyoming,MI,8.4
+Apple Valley,MN,5.2
+Blaine,MN,4.2
+Bloomington,MN,6.3
+Brooklyn Park,MN,7
+Burnsville,MN,4.5
+Coon Rapids,MN,4.6
+Duluth,MN,4.3
+Eagan,MN,4.1
+Eden Prairie,MN,2.6
+Edina,MN,2.8
+Lakeville,MN,1.8
+Maple Grove,MN,2.9
+Minneapolis,MN,7.2
+Minnetonka,MN,3.1
+Plymouth,MN,3.4
+Rochester,MN,5
+St. Cloud,MN,5
+St. Paul,MN,7.2
+Woodbury,MN,3.3
+Gulfport,MS,20.9
+Jackson,MS,15.6
+Southaven,MS,9.3
+Blue Springs,MO,6.2
+Columbia,MO,7.6
+Florissant,MO,10.3
+Independence,MO,13.9
+Joplin,MO,13.2
+Kansas City,MO,13.4
+Lee's Summit,MO,4.9
+O'Fallon,MO,4.8
+St. Charles,MO,6.9
+St. Joseph,MO,12.9
+St. Louis,MO,12.2
+St. Peters,MO,5.9
+Springfield,MO,15.7
+Billings,MT,8.3
+Great Falls,MT,10.2
+Missoula,MT,7.7
+Bellevue,NE,11.4
+Grand Island,NE,14.3
+Lincoln,NE,8.8
+Omaha,NE,11.6
+Carson City,NV,12.8
+Henderson,NV,7.9
+Las Vegas,NV,14.1
+North Las Vegas,NV,14.8
+Reno,NV,11.4
+Sparks,NV,10.9
+Manchester,NH,11.3
+Nashua,NH,6.9
+Bayonne,NJ,11.3
+Burlington,NJ,8.3
+Camden,NJ,12.7
+Clayton,NJ,5.8
+Clifton,NJ,12.1
+East Orange,NJ,13.6
+Egg Harbor City,NJ,18.9
+Elizabeth,NJ,22.7
+Glassboro,NJ,5.6
+Hammonton,NJ,9.9
+Hoboken,NJ,2.3
+Jersey City,NJ,12.5
+Lawnside,NJ,8.9
+Millville,NJ,4.8
+Newark,NJ,19.1
+New Brunswick,NJ,18.8
+Passaic,NJ,25.1
+Paterson,NJ,19.6
+Penns Grove,NJ,18.4
+Perth Amboy,NJ,18.7
+Plainfield,NJ,28.8
+Pleasantville,NJ,13.5
+Salem,NJ,5.9
+Trenton,NJ,19.4
+Union City,NJ,25.8
+Vineland,NJ,10.7
+West New York,NJ,24.1
+Albuquerque,NM,9.1
+Las Cruces,NM,8.8
+Rio Rancho,NM,6
+Santa Fe,NM,16.4
+Albany,NY,5.5
+Buffalo,NY,5.1
+Hempstead,NY,15.3
+Mount Vernon,NY,7.2
+New Rochelle,NY,11
+New York,NY,8.6
+Rochester,NY,5.7
+Schenectady,NY,7.4
+Syracuse,NY,5.6
+Utica,NY,6.9
+White Plains,NY,11.3
+Yonkers,NY,8.5
+Asheville,NC,12.9
+Burlington,NC,15.6
+Cary,NC,6.3
+Chapel Hill,NC,5.3
+Charlotte,NC,13.8
+Concord,NC,9.7
+Durham,NC,13.9
+Fayetteville,NC,11.4
+Gastonia,NC,11.2
+Greensboro,NC,11.7
+Greenville,NC,10.3
+High Point,NC,12.3
+Huntersville,NC,6.4
+Jacksonville,NC,7.4
+Raleigh,NC,11.4
+Rocky Mount,NC,10.9
+Wilmington,NC,12.2
+Winston-Salem,NC,14.2
+Bismarck,ND,7.1
+Fargo,ND,7.3
+Grand Forks,ND,7.5
+Akron,OH,10
+Canton,OH,9.5
+Cincinnati,OH,8.2
+Cleveland,OH,8.8
+Columbus,OH,9.8
+Dayton,OH,10.6
+Elyria,OH,8.9
+Hamilton,OH,9.4
+Kettering,OH,6.6
+Lakewood,OH,8.2
+Lorain,OH,8.2
+Parma,OH,6.8
+Springfield,OH,9.1
+Toledo,OH,8.3
+Youngstown,OH,7.9
+Broken Arrow,OK,11.1
+Edmond,OK,8.3
+Enid,OK,18.1
+Lawton,OK,15.9
+Avondale,AZ,12
+Midwest City,OK,14.5
+Moore,OK,11.1
+Norman,OK,10.9
+Oklahoma City,OK,16.5
+Tulsa,OK,19
+Buckeye,AZ,8.8
+Albany,OR,8
+Casa Grande,AZ,11.2
+Beaverton,OR,9.5
+Bend,OR,9.5
+Corvallis,OR,6.7
+Chandler,AZ,8.1
+Eugene,OR,7.9
+Gresham,OR,9
+Hillsboro,OR,6.6
+Medford,OR,10.9
+Portland,OR,7.3
+Salem,OR,8.5
+Springfield,OR,8.4
+Tigard,OR,8.6
+Allentown,PA,12.6
+Bethlehem,PA,8.4
+Erie,PA,7.7
+Flagstaff,AZ,10.4
+Lancaster,PA,8.9
+Philadelphia,PA,9.3
+Pittsburgh,PA,6.1
+Reading,PA,10.9
+Scranton,PA,6.6
+Gilbert,AZ,5.7
+Glendale,AZ,13.8
+Goodyear,AZ,8.2
+Lake Havasu City,AZ,13.7
+Cranston,RI,4
+Pawtucket,RI,7
+Providence,RI,8.3
+Mesa,AZ,14.5
+Warwick,RI,4.3
+Charleston,SC,9.4
+Columbia,SC,9.9
+Greenville,SC,11.6
+Peoria,AZ,7.5
+Mount Pleasant,SC,5.7
+Phoenix,AZ,15.5
+North Charleston,SC,20
+Rock Hill,SC,11.4
+Scottsdale,AZ,7.4
+Rapid City,SD,14.1
+Sioux Falls,SD,8.9
+Bartlett,TN,5.5
+Chattanooga,TN,12.4
+Surprise,AZ,8
+Clarksville,TN,9.1
+Franklin,TN,7
+Tempe,AZ,9.7
+Hendersonville,TN,9.6
+Jackson,TN,11.6
+Johnson City,TN,11
+Kingsport,TN,10.6
+Knoxville,TN,11.5
+Memphis,TN,15.5
+Murfreesboro,TN,9.5
+Nashville,TN,13.5
+Tucson,AZ,13.3
+Abilene,TX,15.8
+Allen,TX,7.7
+Amarillo,TX,18.8
+Arlington,TX,20
+Austin,TX,14.7
+Baytown,TX,24.4
+Beaumont,TX,22.7
+Brownsville,TX,34.6
+Bryan,TX,20.4
+Carrollton,TX,16.8
+Cedar Park,TX,8.7
+College Station,TX,8.6
+Conroe,TX,23.3
+Corpus Christi,TX,19.8
+Dallas,TX,26
+Denton,TX,16.9
+DeSoto,TX,10.7
+Edinburg,TX,25
+El Paso,TX,21.5
+Euless,TX,15.8
+Flower Mound,TX,5.7
+Fort Worth,TX,20
+Frisco,TX,7
+Garland,TX,26.1
+Georgetown,TX,10
+Grand Prairie,TX,20.1
+Grapevine,TX,12.4
+Harlingen,TX,23.4
+Houston,TX,25.4
+Irving,TX,21.6
+Killeen,TX,13.1
+Laredo,TX,30
+League City,TX,7.9
+Lewisville,TX,17.8
+Longview,TX,22.6
+Lubbock,TX,14.7
+McAllen,TX,28.4
+McKinney,TX,11.3
+Mansfield,TX,7.6
+Mesquite,TX,22.8
+Midland,TX,18.5
+Mission,TX,31
+Missouri City,TX,10.5
+New Braunfels,TX,14.2
+North Richland Hills,TX,13.9
+Odessa,TX,20
+Yuma,AZ,13.1
+Pasadena,TX,28.8
+Pearland,TX,7.7
+Pflugerville,TX,10.9
+Pharr,TX,34.8
+Plano,TX,12.5
+Port Arthur,TX,32.9
+Richardson,TX,15.2
+Round Rock,TX,10
+Rowlett,TX,13.2
+San Angelo,TX,16.1
+San Antonio,TX,18.7
+San Marcos,TX,17.2
+Sugar Land,TX,7.7
+Temple,TX,14
+Tyler,TX,19.2
+Victoria,TX,21.7
+Waco,TX,17.4
+Wichita Falls,TX,17.3
+Layton,UT,10.1
+Lehi,UT,5.4
+Millcreek,UT,9.2
+Ogden,UT,15.3
+Orem,UT,12.1
+Provo,UT,11.9
+St. George,UT,15.9
+Salt Lake City,UT,13.8
+Sandy,UT,8.3
+South Jordan,UT,4.6
+Taylorsville,UT,12.6
+West Jordan,UT,10.9
+West Valley City,UT,19.7
+Burlington,VT,3.9
+Alexandria,VA,11.9
+Chesapeake,VA,8.3
+Hampton,VA,9.5
+Harrisonburg,VA,13.6
+Leesburg,VA,10.5
+Lynchburg,VA,10.5
+Conway,AR,9.4
+Newport News,VA,12.7
+Norfolk,VA,13.4
+Portsmouth,VA,11.7
+Richmond,VA,13.6
+Roanoke,VA,12.8
+Suffolk,VA,7.3
+Virginia Beach,VA,8.8
+Fayetteville,AR,9
+Fort Smith,AR,14
+Auburn,WA,9.4
+Bellevue,WA,5.1
+Bellingham,WA,5.9
+Burien,WA,12.5
+Everett,WA,10.7
+Federal Way,WA,10.1
+Kennewick,WA,9.3
+Kent,WA,9.2
+Kirkland,WA,4.3
+Lakewood,WA,11
+Marysville,WA,5.7
+Pasco,WA,14.3
+Jonesboro,AR,10.2
+Redmond,WA,3
+Renton,WA,8
+Richland,WA,6.4
+Sammamish,WA,1.3
+Seattle,WA,4.6
+Shoreline,WA,6.6
+Spokane,WA,6.6
+Spokane Valley,WA,8.2
+Tacoma,WA,8.2
+Vancouver,WA,9.2
+Yakima,WA,14.6
+Little Rock,AR,9.6
+Charleston,WV,7.5
+Appleton,WI,5.9
+North Little Rock,AR,11.3
+Eau Claire,WI,6.9
+Green Bay,WI,9
+Janesville,WI,6.2
+Kenosha,WI,8.3
+La Crosse,WI,6.2
+Madison,WI,4.4
+Milwaukee,WI,10.3
+Oshkosh,WI,6.2
+Racine,WI,8.2
+Waukesha,WI,5.8
+West Allis,WI,6.7
+Rogers,AR,13.9
+Casper,WY,15.7
+Cheyenne,WY,8
+Springdale,AR,19.4
+Alameda,CA,3.5
+Alhambra,CA,7
+Aliso Viejo,CA,3.6
+Anaheim,CA,13.4
+Antioch,CA,7
+Apple Valley,CA,6.4
+Arcadia,CA,5.5
+Bakersfield,CA,8.1
+Baldwin Park,CA,11.8
+Bellflower,CA,11.5
+Berkeley,CA,3.4
+Brentwood,CA,2.6
+Buena Park,CA,9.5
+Burbank,CA,7.2
+Camarillo,CA,6.1
+Carlsbad,CA,5.5
+Carson,CA,8.4
+Cathedral City,CA,14.9
+Cerritos,CA,5.4
+Chico,CA,7.7
+Chino,CA,9.8
+Chino Hills,CA,4.7
+Chula Vista,CA,8.1
+Citrus Heights,CA,6.9
+Clovis,CA,5
+Colton,CA,8.8
+Compton,CA,12.5
+Concord,CA,7.3
+Corona,CA,9.8
+Costa Mesa,CA,13.1
+Cupertino,CA,2.2
+Daly City,CA,5.8
+Davis,CA,3.8
+Delano,CA,8.7
+Diamond Bar,CA,6.8
+Downey,CA,11.4
+Dublin,CA,2.5
+Eastvale,CA,4.3
+El Cajon,CA,8.7
+Elk Grove,CA,2.8
+El Monte,CA,15.4
+Encinitas,CA,6.1
+Escondido,CA,13.8
+Fairfield,CA,5.1
+Folsom,CA,2.7
+Fontana,CA,10.2
+Fountain Valley,CA,6.3
+Fremont,CA,1.9
+Fresno,CA,9.1
+Fullerton,CA,7.3
+Gardena,CA,12.3
+Garden Grove,CA,9.2
+Gilroy,CA,6.7
+Glendale,CA,8.6
+Glendora,CA,5.9
+Hanford,CA,7.1
+Hawthorne,CA,13.6
+Hayward,CA,5.2
+Hemet,CA,11.2
+Hesperia,CA,8.4
+Highland,CA,10.3
+Huntington Beach,CA,6
+Huntington Park,CA,18.9
+Indio,CA,9.4
+Inglewood,CA,13.7
+Irvine,CA,4.9
+Jurupa Valley,CA,14.1
+Laguna Niguel,CA,4.6
+La Habra,CA,10.6
+Lake Elsinore,CA,8.9
+Lake Forest,CA,6.8
+Lakewood,CA,5.2
+La Mesa,CA,7.1
+Lancaster,CA,5.8
+Livermore,CA,3.3
+Lodi,CA,7.5
+Long Beach,CA,9.4
+Los Angeles,CA,12.8
+Lynwood,CA,16.7
+Madera,CA,10.2
+Manteca,CA,5.1
+Menifee,CA,7.1
+Merced,CA,8.3
+Milpitas,CA,2.5
+Mission Viejo,CA,5.1
+Modesto,CA,6.6
+Montebello,CA,12.7
+Monterey Park,CA,7.9
+Moreno Valley,CA,11.8
+Mountain View,CA,5.5
+Murrieta,CA,6.7
+Napa,CA,8.2
+National City,CA,14.4
+Newport Beach,CA,3.7
+Norwalk,CA,10.6
+Novato,CA,4.4
+Oakland,CA,8.9
+Oceanside,CA,10.7
+Ontario,CA,11.1
+Orange,CA,8.7
+Oxnard,CA,18.7
+Palmdale,CA,8.5
+Palm Desert,CA,9.1
+Palo Alto,CA,2.5
+Paramount,CA,12.1
+Pasadena,CA,8.4
+Perris,CA,10.6
+Petaluma,CA,4.8
+Pico Rivera,CA,10.5
+Pittsburg,CA,7.9
+Placentia,CA,6.9
+Pleasanton,CA,2.4
+Pomona,CA,13.5
+Porterville,CA,8.3
+Rancho Cordova,CA,7.2
+Rancho Cucamonga,CA,5.2
+Redding,CA,7.5
+Redlands,CA,5.7
+Redondo Beach,CA,3.8
+Redwood City,CA,5.9
+Rialto,CA,13.4
+Richmond,CA,11.5
+Riverside,CA,10.3
+Rocklin,CA,4.7
+Rosemead,CA,8.2
+Roseville,CA,4.7
+Sacramento,CA,6.6
+Salinas,CA,14.3
+San Bernardino,CA,12.8
+San Buenaventura (Ventura),CA,7.8
+San Clemente,CA,4.7
+San Diego,CA,8.8
+San Francisco,CA,4.2
+San Jose,CA,5.8
+San Leandro,CA,6.1
+San Marcos,CA,9.7
+San Mateo,CA,4.8
+San Rafael,CA,8.4
+San Ramon,CA,2.3
+Santa Ana,CA,16.9
+Santa Barbara,CA,12.1
+Santa Clara,CA,3.4
+Santa Clarita,CA,6.4
+Santa Cruz,CA,5.4
+Santa Maria,CA,20
+Santa Monica,CA,5.4
+Santa Rosa,CA,8.9
+Santee,CA,5
+Simi Valley,CA,5.6
+South Gate,CA,16.5
+South San Francisco,CA,5.3
+Stockton,CA,7.6
+Sunnyvale,CA,3.9
+Temecula,CA,7
+Thousand Oaks,CA,5.8
+Torrance,CA,5.5
+Tracy,CA,6.7
+Tulare,CA,9.2
+Turlock,CA,5.5
+Tustin,CA,8.4
+Union City,CA,2.4
+Upland,CA,6.7
+Vacaville,CA,4.9
+Vallejo,CA,5.8
+Victorville,CA,8.1
+Visalia,CA,6.2
+Vista,CA,12.8
+Walnut Creek,CA,3.6
+Watsonville,CA,8.6
+West Covina,CA,7.6
+Westminster,CA,7.9
+West Sacramento,CA,4.8
+Whittier,CA,7.1
+Woodland,CA,8.4
+Yorba Linda,CA,3.4
+Yuba City,CA,10
+Yucaipa,CA,6.4
+Arvada,CO,6
+Aurora,CO,12.5
+Boulder,CO,4.6
+Broomfield,CO,4.9
+Castle Rock,CO,4.4
+Centennial,CO,3.9
+Colorado Springs,CO,8.9
+Commerce City,CO,9.5
+Denver,CO,10.3
+Fort Collins,CO,6.7
+Grand Junction,CO,10.6
+Greeley,CO,9.5
+Lakewood,CO,9.3
+Longmont,CO,7.6
+Loveland,CO,7
+Parker,CO,3.9
+Pueblo,CO,9.1
+Thornton,CO,9
+Westminster,CO,7.3
+Bridgeport,CT,15.1
+Bristol,CT,4.8
+Danbury,CT,18.5
+Hartford,CT,10.1
+Meriden,CT,5.7
+Milford,CT,3.4
+New Britain,CT,6.2
+New Haven,CT,9.8
+Norwalk,CT,19.4
+Stamford,CT,12.1
+Waterbury,CT,9.2
+West Haven,CT,8.4
