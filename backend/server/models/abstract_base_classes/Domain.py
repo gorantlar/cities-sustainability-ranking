@@ -1,22 +1,22 @@
 from abc import ABC, abstractmethod
-from models.subdomains.WaterAndAir import WaterAndAir
-from models.subdomains.HabitatAndSettlements import HabitatAndSettlements
-from models.subdomains.BuiltFormAndTransport import BuiltFormAndTransport
-from models.subdomains.EmbodimentAndSustenance import EmbodimentAndSustenance
-from models.subdomains.ProductionAndResourcing import ProductionAndResourcing
-from models.subdomains.ExchangeAndTransfer import ExchangeAndTransfer
-from models.subdomains.AccountingAndRegulation import AccountingAndRegulation
-from models.subdomains.ConsumptionAndUse import ConsumptionAndUse
-from models.subdomains.LabourAndWelfare import LabourAndWelfare
-from models.subdomains.TechnologyAndInfrastructure import TechnologyAndInfrastructure
-from models.subdomains.WealthAndDistribution import WealthAndDistribution
-from models.subdomains.IdentityAndEngagement import IdentityAndEngagement
-from models.subdomains.GenderAndGenerations import GenderAndGenerations
-from models.subdomains.CreativityAndRecreation import CreativityAndRecreation
-from models.subdomains.MemoryAndProjection import MemoryAndProjection
-from models.subdomains.BeliefsAndIdeas import BeliefsAndIdeas
-from models.subdomains.EnquiryAndLearning import EnquiryAndLearning
-from models.subdomains.WellbeingAndHealth import WellbeingAndHealth
+from server.models.subdomains.WaterAndAir import WaterAndAir
+from server.models.subdomains.HabitatAndSettlements import HabitatAndSettlements
+from server.models.subdomains.BuiltFormAndTransport import BuiltFormAndTransport
+from server.models.subdomains.EmbodimentAndSustenance import EmbodimentAndSustenance
+from server.models.subdomains.ProductionAndResourcing import ProductionAndResourcing
+from server.models.subdomains.ExchangeAndTransfer import ExchangeAndTransfer
+from server.models.subdomains.AccountingAndRegulation import AccountingAndRegulation
+from server.models.subdomains.ConsumptionAndUse import ConsumptionAndUse
+from server.models.subdomains.LabourAndWelfare import LabourAndWelfare
+from server.models.subdomains.TechnologyAndInfrastructure import TechnologyAndInfrastructure
+from server.models.subdomains.WealthAndDistribution import WealthAndDistribution
+from server.models.subdomains.IdentityAndEngagement import IdentityAndEngagement
+from server.models.subdomains.GenderAndGenerations import GenderAndGenerations
+from server.models.subdomains.CreativityAndRecreation import CreativityAndRecreation
+from server.models.subdomains.MemoryAndProjection import MemoryAndProjection
+from server.models.subdomains.BeliefsAndIdeas import BeliefsAndIdeas
+from server.models.subdomains.EnquiryAndLearning import EnquiryAndLearning
+from server.models.subdomains.WellbeingAndHealth import WellbeingAndHealth
 
 
 class Domain(ABC):

@@ -1,4 +1,4 @@
-from models.abstract_base_classes.Subdomain import Subdomain
+from server.models.abstract_base_classes.Subdomain import Subdomain
 
 
 class WellbeingAndHealth(Subdomain):

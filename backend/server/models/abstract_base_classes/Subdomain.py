@@ -15,6 +15,7 @@ class Subdomain(ABC):
 
     @abstractmethod
     def calculate_score(self, city, columns_info):
+        print(city)
         numer = 0
         denom = 0
         for col, col_info in columns_info.items():

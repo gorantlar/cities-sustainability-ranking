@@ -1,4 +1,4 @@
-from models.abstract_base_classes.Domain import Domain
+from server.models.abstract_base_classes.Domain import Domain
 
 
 class Economics(Domain):

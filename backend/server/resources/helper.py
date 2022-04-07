@@ -1,6 +1,6 @@
 import json
 
-path = "C:/Users/ssuryaw1/Downloads/SER517/GIT/SER-517-Neighborhood-Sustainability/backend/server/resources/config.json"
+path = "server/resources/config.json"
 
 
 def get_config():
