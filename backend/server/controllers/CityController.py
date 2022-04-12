@@ -1,4 +1,8 @@
+import os
+
 from server.models.City import City
+import pandas as pd
+import json
 
 
 def get_sustainability_index(city_name, state_id, db_session):
@@ -73,6 +77,28 @@ def delete_city(city, db_session):
     result = db_session.run(statement)
     print(f'results {result}')
     return result
+
+
+def get_all_cities():
+    os.chdir("..")
+    # store the whole csv in a pandas dataframe
+    df = pd.read_csv("seed/final500Cities.csv")
+
+    # json array
+    data = {}
+
+    # read the columns containing cities, states, and city_id
+    cities = list(df.loc[:, "name"])
+    states = list(df.loc[:,"state"])
+    city_id = list(df.loc[:, "city_id"])
+
+    # placeholder until score api is created
+    score = 0
+
+    for city,state,id  in zip(cities, states, city_id):
+        data[city + "," + state] = {'id': city_id, 'score': score}
+
+    return json.dump(data)
 
 
 # -------------- Helper functions ---------------------------------------------------------------------#

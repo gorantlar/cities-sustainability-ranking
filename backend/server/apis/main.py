@@ -19,6 +19,13 @@ password = "test"
 graphDB_Driver = GraphDatabase.driver(uri, auth=(userName, password))
 db_session = graphDB_Driver.session()
 
+@app.get("/index2/{page}/{limit}")
+async def get_cities(page, limit):
+    response = CityController.get_all_cities()
+    return {
+        "cities": response
+    }
+
 
 @app.get("/index/{city_name}/{state_id}")
 async def root(city_name, state_id):
