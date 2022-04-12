@@ -1,4 +1,7 @@
+from server.controllers import DomainController, SubdomainController
 from server.models.City import City
+from server.models.abstract_base_classes.Domain import Domain
+from server.models.abstract_base_classes.Subdomain import Subdomain
 
 
 def get_sustainability_index(city_name, state_id, db_session):
@@ -75,20 +78,41 @@ def delete_city(city, db_session):
     return result
 
 
+#Calculates and updates scores for city
+def update_city_score(city, db_session):
+    city_update_statement = __get__update_statement(city.city_id, {'score': city.score})
+    # print(f'executing {city_update_statement}')
+    result = db_session.run(city_update_statement)
+    # print(f'results {result}')
+
+    for attribute in dir(city):
+        if issubclass(getattr(city, attribute).__class__, Domain):
+            domain_obj = getattr(city, attribute)
+            info = db_session.write_transaction(DomainController.merge_domain_tx, city, domain_obj)
+            # print(info)
+
+            for domain_attr in dir(domain_obj):
+                if issubclass(getattr(domain_obj, domain_attr).__class__, Subdomain):
+                    subdomain_obj = getattr(domain_obj, domain_attr)
+                    info2 = db_session.write_transaction(SubdomainController.merge_subdomain_tx, city, domain_obj,
+                                                         subdomain_obj)
+                    # print(info2)
+
+
 # -------------- Helper functions ---------------------------------------------------------------------#
 def __get_create_statement(city):
     return 'CREATE (a:City {city_id : "' + city.city_id + '", name : "' + city.name + '", state : "' + city.state + '", state_id : "' + city.state_id + '", county : "' + city.county + '", county_fips : "' + city.county_fips + '", latitude : ' + city.latitude + ', longitude : ' + city.longitude + ', population : ' + city.population + ', density : ' + city.density + ', zips : "' + city.zips + '" }) RETURN a'
 
 
-def __get_merge_statement(city):
-    merge = 'MERGE (a:City {city_id : "' + city.city_id + '"}) '
+def __get_merge_statement(city_dict):
+    merge = 'MERGE (a:City {city_id : "' + city_dict['city_id'] + '"}) '
 
     on_create = "\nON CREATE SET"
     on_match = "\nON MATCH SET"
 
-    for var in vars(city):
-        on_create += ('\na.' + var + ' = "' + getattr(city, var) + '",')
-        on_match += ('\na.' + var + ' = "' + getattr(city, var) + '",')
+    for key in city_dict:
+        on_create += ('\na.' + key + ' = "' + city_dict[key] + '",')
+        on_match += ('\na.' + key + ' = "' + city_dict[key] + '",')
 
     merge += on_create[:-1]
     merge += on_match[:-1]
@@ -121,7 +145,7 @@ def __get_delete_statement(city):
 def __get__update_statement(city_id, details):
     if len(details) == 0: raise ValueError("Details cannot be empty")
 
-    retVal = f"MATCH (a:City {{city_id : {city_id}}}) SET "
+    retVal = f"MATCH (a:City {{city_id : '{int(city_id)}'}}) SET "
     for key, val in details.items():
         if key == "city_id":
             continue

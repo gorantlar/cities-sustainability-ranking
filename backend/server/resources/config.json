@@ -3,57 +3,57 @@
     "Ecology": {
       "weight": 1,
       "subdomains": {
-		"WaterAndAir": {
-		  "weight": 1,
+        "WaterAndAir": {
+          "weight": 1,
           "columns": {
             "air_quality_2020": {
               "weight": 1,
               "min": 0,
-              "max": 0,
+              "max": 103.0,
               "inverse": true
             },
-			"air_pollution_2018": {
+            "air_pollution_2018": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 4.8,
+              "max": 15.9,
               "inverse": true
             }
           }
-		},
-		"HabitatAndSettlements": {
+        },
+        "HabitatAndSettlements": {
           "weight": 1,
           "columns": {
             "park_access_2018": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 3.1,
+              "max": 99.8,
               "inverse": false
             }
           }
         },
-		"BuiltFormAndTransport": {
+        "BuiltFormAndTransport": {
           "weight": 1,
           "columns": {
             "alltransit_performance_score": {
               "weight": 1,
               "min": 0,
-              "max": 0,
+              "max": 9.6,
               "inverse": false
             }
           }
         },
-		"EmbodimentAndSustenance": {
+        "EmbodimentAndSustenance": {
           "weight": 1,
           "columns": {
             "frequent_physical_distress_in_2018_percent": {
               "weight": 1,
               "min": 0,
-              "max": 0,
+              "max": 21.0,
               "inverse": true
             }
           }
         }
-	  }
+      }
     },
     "Economics": {
       "weight": 1,
@@ -63,8 +63,8 @@
           "columns": {
             "cost_of_living_index_in_march_2019": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 78.7,
+              "max": 199.5,
               "inverse": false
             }
           }
@@ -75,25 +75,25 @@
             "past_trade_dollars_2020": {
               "weight": 1,
               "min": 0,
-              "max": 0,
+              "max": 3046091.314,
               "inverse": false
             },
             "past_trade_tons_2020": {
               "weight": 1,
               "min": 0,
-              "max": 0,
+              "max": 2751153.523,
               "inverse": false
             },
             "future_trade_dollars_2030": {
               "weight": 1,
               "min": 0,
-              "max": 0,
+              "max": 3688404.143,
               "inverse": false
             },
             "future_trade_tons_2030": {
               "weight": 1,
               "min": 0,
-              "max": 0,
+              "max": 2985396.038,
               "inverse": false
             }
           }
@@ -103,26 +103,26 @@
           "columns": {
             "government_finances_expenditure_per_resident_in_2018": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 558.33,
+              "max": 23697.37,
               "inverse": false
             },
             "government_finances_revenue_per_resident_in_2018": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 47.51,
+              "max": 19825.43,
               "inverse": false
             },
             "government_finances_debt_per_resident_in_2018": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 3.94,
+              "max": 53431.16,
               "inverse": true
             },
             "government_finances_cash_and_securities_per_resident_in_2018": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 0.01,
+              "max": 25294.13,
               "inverse": false
             }
           }
@@ -133,7 +133,7 @@
             "average_domestic_production_to_consumption_ratio_2020": {
               "weight": 1,
               "min": 0,
-              "max": 0,
+              "max": 3.118863686,
               "inverse": false
             }
           }
@@ -144,19 +144,19 @@
             "revenue_imputed_2017": {
               "weight": 1,
               "min": 0,
-              "max": 0,
+              "max": 23.46,
               "inverse": false
             },
             "payroll_imputed_2017": {
               "weight": 1,
               "min": 0,
-              "max": 0,
+              "max": 23.67,
               "inverse": false
             },
             "employees_imputed_2017": {
               "weight": 1,
               "min": 0,
-              "max": 0,
+              "max": 27.76,
               "inverse": false
             }
           }
@@ -166,26 +166,26 @@
           "columns": {
             "broadband_connection_2019": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 35.5,
+              "max": 91.8,
               "inverse": false
             },
             "preventive_services_2018": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 14.4,
+              "max": 43.7,
               "inverse": false
             },
             "park_access_2018": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 3.1,
+              "max": 99.8,
               "inverse": false
             },
             "walkability_2019": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 6.5,
+              "max": 94.4,
               "inverse": false
             }
           }
@@ -195,20 +195,20 @@
           "columns": {
             "unemployment_in_november_2020": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 2.5,
+              "max": 20.9,
               "inverse": true
             },
             "percentage_of_residents_living_in_poverty_in_2019": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 1.6,
+              "max": 38.6,
               "inverse": true
             },
             "median_gross_rent_in_2019": {
               "weight": 1,
-              "min": 0,
-              "max": 0,
+              "min": 636.0,
+              "max": 2760.0,
               "inverse": false
             }
           }
@@ -223,9 +223,9 @@
           "columns": {
             "two_or_more_races": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 0.4,
+              "max": 17.5
             }
           }
         },
@@ -234,9 +234,9 @@
           "columns": {
             "speak_a_language_other_than_english": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 2.4,
+              "max": 92.8
             }
           }
         },
@@ -245,9 +245,9 @@
           "columns": {
             "park_access": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 7.2,
+              "max": 99.9
             }
           }
         },
@@ -256,9 +256,9 @@
           "columns": {
             "foreign_born": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 1.2,
+              "max": 75.7
             }
           }
         },
@@ -267,9 +267,9 @@
           "columns": {
             "religious_diversity": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 11.0,
+              "max": 75.0
             }
           }
         },
@@ -278,9 +278,9 @@
           "columns": {
             "bachelors_degree_or_higher": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 8.2,
+              "max": 81.1
             }
           }
         },
@@ -289,15 +289,15 @@
           "columns": {
             "walkability": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 6.5,
+              "max": 94.4
             },
             "close_access_to_healthy_foods": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 2,
+              "min": 39.0,
+              "max": 67.0
             }
           }
         }
@@ -309,77 +309,55 @@
         "OrganizationAndGovernance": {
           "weight": 1,
           "columns": {
-            "Vacant_houses": {
+            "vacant_houses": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 0.019772793,
+              "max": 0.354693211
             }
           }
         },
         "LawAndJustice": {
           "weight": 1,
           "columns": {
-            "PopulationPercent": {
+            "population_percent": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 1.6,
+              "max": 37.9
             }
           }
         },
         "CommunicationAndCritique": {
           "weight": 1,
           "columns": {
-            "crimesOccured": {
+            "crimes_occurred": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 1.7,
+              "max": 20.8
             }
           }
         },
         "RepresentationAndNegotiation": {
           "weight": 1,
           "columns": {
-            "registeredVoters": {
+            "registered_voters": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 41.21,
+              "max": 84.4
             }
           }
         },
         "SecurityAndAccord": {
           "weight": 1,
           "columns": {
-            "violentCrimes": {
+            "violent_crimes": {
               "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
-            }
-          }
-        },
-        "DialogueAndReconciliation": {
-          "weight": 1,
-          "columns": {
-            "beliefs": {
-              "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
-            }
-          }
-        },
-        "EthicsAndAccountability": {
-          "weight": 1,
-          "columns": {
-            "acquittal": {
-              "inverse": false,
-              "min": 1000,
-              "max": 50000,
-              "weight": 1
+              "weight": 1,
+              "min": 30.8,
+              "max": 1932.3
             }
           }
         }

@@ -1,5 +1,6 @@
 import json
 from abc import ABC, abstractmethod
+from server.resources import helper
 
 
 class Subdomain(ABC):
@@ -11,23 +12,27 @@ class Subdomain(ABC):
 
     @staticmethod
     def get_breakdown_json(subdomain):
-        return json.dumps(subdomain.__breakdown)
+        return json.dumps(json.dumps(subdomain.breakdown))[1:-1]
 
     @abstractmethod
     def calculate_score(self, city, columns_info):
-        print(city)
         numer = 0
         denom = 0
+
         for col, col_info in columns_info.items():
-            self.breakdown[col] = self.get_normalized(city.__getattribute__(col), col_info)
+            float_value = helper.get_float(city.__getattribute__(col))
+            if float_value == -1:
+                float_value = col_info["min"] #default a column value to the minimum if not found
+
+            self.breakdown[col] = self.get_normalized(float_value, col_info)
             weight = col_info["weight"]
             temp = self.breakdown[col]
-            print("\t", col, temp)
+            # print("\t", col, temp)
             numer += (weight * temp)
             denom += weight
 
         if not denom:
-            print(f'Divide by 0: in Domain:calculate_score for {self.city.city_id}')
+            print(f'Divide by 0: in Domain:calculate_score for {self.city_id}')
             return 0
 
         return float(format(numer / denom, ".2f"))

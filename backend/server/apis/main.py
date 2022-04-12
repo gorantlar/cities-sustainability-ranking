@@ -5,9 +5,8 @@ import sys
 from fastapi import FastAPI
 from neo4j import GraphDatabase
 
-from server.controllers import CityController, DomainController
+from server.controllers import CityController
 from server.models.City import City
-from server.models.domains.Culture import Culture
 from server.resources import helper
 
 app = FastAPI()
@@ -31,29 +30,27 @@ async def root(city_name, state_id):
 @app.get("/seed/{secret_key}")
 async def seed():
     print("attempt to seed")
-    # config = helper.get_config()
-    # print(config)
 
     min_max = {}
 
     # read the file, parse city objects
-    with open('./server/seed/final500Cities.csv') as csvfile:
+    with open('./server/seed/final500Cities.csv', mode='r', encoding='utf-8-sig') as csvfile:
         cities = [{k: str(v) for k, v in row.items()}
                   for row in csv.DictReader(csvfile, skipinitialspace=True)]
 
         print(cities[0])
 
-        for city in cities:
-            city_obj = City(city)
-            # pass them to create or insert cities in controller(It should read and update the config as well)
-            node, info = db_session.write_transaction(CityController.merge_city_tx, city_obj)
-            for var in vars(city_obj):
-                float_value = helper.get_float(getattr(city_obj, var))
-                if var not in min_max:
-                    min_max[var] = [sys.float_info.max, sys.float_info.min]
-                    # print(min_max[var])
-                min_max[var][0] = min(float_value, min_max[var][0])
-                min_max[var][1] = max(float_value, min_max[var][1])
+        for city_dict in cities:
+            node, info = db_session.write_transaction(CityController.merge_city_tx, city_dict)
+            for key in city_dict:
+                float_value = helper.get_float(city_dict[key])
+                if float_value == -1:
+                    continue
+                if key not in min_max:
+                    min_max[key] = [float_value, float_value]
+                else:
+                    min_max[key][0] = min(float_value, min_max[key][0])
+                    min_max[key][1] = max(float_value, min_max[key][1])
 
         print(min_max)
         helper.write_config(min_max)
@@ -69,19 +66,20 @@ async def recalculate():
     config = helper.get_config()
     cql = CityController.__get_index_statement()
     city_nodes = db_session.run(cql)
+    cities = []
+    count = 0
 
     for city_node in city_nodes:
-        city = City(city_node['a'])
-        # print(getattr(city, 'name'))
-        # node, info = db_session.write_transaction(DomainController.merge_domain_tx, city, culture)
+        city = City(city_node['a'], config)
+        cities.append(city)
+        # CityController.update_city_score(city, db_session)
+        count += 1
+        print(count)
 
-        print(city.calculate_score())
-        # for each subdomain of culture, repeat
-
-        # economics = Economics(city, config)
-        # ecology = Ecology(city, config)
-        # politics = Politics(city, config)
+    cities.sort(key=lambda x: x.score)
+    for city in cities:
+        print(city.name, city.state, city.score)
 
     return {
-        "count": len(city_nodes)
+        "count": len(cities)
     }

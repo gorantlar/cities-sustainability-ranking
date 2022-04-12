@@ -4,14 +4,15 @@ from server.resources.helper import getDomains, get_value
 from server.models.domains.Economics import Economics
 from server.models.domains.Culture import Culture
 from server.models.domains.Ecology import Ecology
+from server.models.domains.Politics import Politics
 
 
 class City:
-    def __init__(self, city_dict):
+    def __init__(self, city_dict, config):
         for key in city_dict:
             self.__setattr__(key, get_value((city_dict[key])))
 
-        self.score = self.calculate_score()
+        self.score = self.calculate_score(config)
 
 
     @staticmethod
@@ -19,22 +20,25 @@ class City:
         if not isinstance(node, neo4j.graph.Node):
             raise TypeError("Argument passed is not a neo4j.graph.Node")
 
-    def calculate_score(self):
-        domains_config = getDomains()
+    def calculate_score(self, config):
+        domains_config = config["domains"]
+        # domains_config = getDomains()
         numer = 0
         denom = 0
         for domain, domain_info in domains_config.items():
             # passing subdomain dictionary to the constructors of domains
+            # print(domain)
+            # print(domain_info)
             self.__setattr__(domain, globals()[domain](self, domain_info["subdomains"]))
             weight = domain_info["weight"]
 
             temp = self.__getattribute__(domain).score
-            print(domain, temp)
+            # print(domain, temp)
             numer += (weight * temp)
             denom += weight
 
         if not denom:
-            print(f'Divide by 0: in City:calculate_score for {self.city.city_id}')
+            print(f'Divide by 0: in City:calculate_score for {self.city_id}')
             return 0
 
         return format(numer/denom, ".2f")

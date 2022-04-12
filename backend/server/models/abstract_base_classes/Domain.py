@@ -17,6 +17,11 @@ from server.models.subdomains.MemoryAndProjection import MemoryAndProjection
 from server.models.subdomains.BeliefsAndIdeas import BeliefsAndIdeas
 from server.models.subdomains.EnquiryAndLearning import EnquiryAndLearning
 from server.models.subdomains.WellbeingAndHealth import WellbeingAndHealth
+from server.models.subdomains.CommunicationAndCritique import CommunicationAndCritique
+from server.models.subdomains.LawAndJustice import LawAndJustice
+from server.models.subdomains.OrganizationAndGovernance import OrganizationAndGovernance
+from server.models.subdomains.RepresentationAndNegotiation import RepresentationAndNegotiation
+from server.models.subdomains.SecurityAndAccord import SecurityAndAccord
 
 
 class Domain(ABC):
@@ -29,18 +34,19 @@ class Domain(ABC):
     def calculate_score(self, city, subdomains_config):
         numer = 0
         denom = 0
+
         for subdomain, subdomain_info in subdomains_config.items():
             # passing columns list to the constructors of subdomains
             self.__setattr__(subdomain, globals()[subdomain](city, subdomain_info["columns"]))
             weight = subdomain_info["weight"]
 
             temp = self.__getattribute__(subdomain).score
-            print("\t", subdomain, temp)
+            # print("\t", subdomain, temp)
             numer += (weight * temp)
             denom += weight
 
         if not denom:
-            print(f'Divide by 0: in Domain:calculate_score for {self.city.city_id}')
+            print(f'Divide by 0: in Domain:calculate_score for {self.city_id}')
             return 0
 
         return float(format(numer / denom, ".2f"))
