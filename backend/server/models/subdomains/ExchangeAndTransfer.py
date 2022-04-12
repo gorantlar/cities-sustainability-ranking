@@ -1,7 +1,7 @@
 from server.models.abstract_base_classes.Subdomain import Subdomain
 
 
-class IdentityAndEngagement(Subdomain):
+class ExchangeAndTransfer(Subdomain):
 
     def __init__(self, city, config):
         super().__init__(city, config)

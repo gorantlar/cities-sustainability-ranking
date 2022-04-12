@@ -12,13 +12,16 @@ def merge_domain_tx(tx, city, domain):
     statement = __get_merge_statement(city, domain)
     result = tx.run(statement)
     record = result.single()
-    value = record.value()
+    # value = record.value()
     info = result.consume()
-    return value, info
+    return info
 
 
 def __get_merge_statement(city, domain):
-    merge = 'MATCH (a:City {city_id : "' + getattr(city, 'city_id') + '"})\n'
+
+    merge = 'MATCH (a:City {city_id : "' + str(int(getattr(city, 'city_id'))) + '"})\n'
     merge += 'MERGE (a)-[r:HAS_DOMAIN]->(d:Domain {name: "' + domain.__class__.__name__ + '"})\n'
-    merge += 'ON CREATE SET d.score = ' + domain.score + ' RETURN d'
+    merge += 'ON CREATE SET d.score = ' + str(domain.score) + '\n'
+    merge += 'ON MATCH SET d.score = ' + str(domain.score) + '\nRETURN d'
+
     return merge

@@ -15,15 +15,22 @@ def merge_subdomain_tx(tx, city, domain, subdomain):
 
     statement = __get_merge_statement(city, domain, subdomain)
     result = tx.run(statement)
-    record = result.single()
-    value = record.value()
+    # record = result.single()
+    # value = record.value()
     info = result.consume()
-    return value, info
+    return info
 
 
 def __get_merge_statement(city, domain, subdomain):
-    merge = 'MATCH (a:City {city_id : "' + getattr(city, 'city_id') + '"})'
+
+    merge = 'MATCH (a:City {city_id : "' + str(int(getattr(city, 'city_id'))) + '"})'
     merge += '-[r:HAS_DOMAIN]->(d:Domain {name: "' + domain.__class__.__name__ + '"})\n'
     merge += 'MERGE (d)-[rr:HAS_SUBDOMAIN]->(s:Subdomain {name: "' + subdomain.__class__.__name__ + '"})\n'
-    merge += 'ON CREATE SET s.score = ' + subdomain.score + ' SET s.breakdown = "' + subdomain.get_breakdown_json + '" RETURN s'
+
+    merge += 'ON CREATE SET s.score = ' + str(subdomain.score) + \
+             ',\ns.breakdown = "' + Subdomain.get_breakdown_json(subdomain) + '"\n'
+
+    merge += 'ON MATCH SET s.score = ' + str(subdomain.score) + \
+             ',\ns.breakdown = "' + Subdomain.get_breakdown_json(subdomain) + '"\nRETURN s'
+
     return merge
