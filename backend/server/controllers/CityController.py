@@ -1,3 +1,4 @@
+
 from server.controllers import DomainController, SubdomainController
 from server.models.City import City
 from server.models.abstract_base_classes.Domain import Domain
@@ -78,7 +79,7 @@ def delete_city(city, db_session):
     return result
 
 
-#Calculates and updates scores for city
+# Calculates and updates scores for city
 def update_city_score(city, db_session):
     city_update_statement = __get__update_statement(city.city_id, {'score': city.score})
     # print(f'executing {city_update_statement}')
@@ -97,6 +98,18 @@ def update_city_score(city, db_session):
                     info2 = db_session.write_transaction(SubdomainController.merge_subdomain_tx, city, domain_obj,
                                                          subdomain_obj)
                     # print(info2)
+
+
+def get_all_cities(db_session):
+    # json array
+    data = {}
+
+    cities = db_session.run("MATCH (city:City) RETURN city.name, city.city_id, city.state, city.score ORDER BY city.state")
+
+    for city in cities:
+        data[city[0] + "," + city[2]] = {'city_id': city[1], 'score': city[3]}
+
+    return data
 
 
 # -------------- Helper functions ---------------------------------------------------------------------#

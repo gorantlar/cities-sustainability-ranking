@@ -1,6 +1,5 @@
 import csv
 import json
-import sys
 
 from fastapi import FastAPI
 from neo4j import GraphDatabase
@@ -20,7 +19,7 @@ db_session = graphDB_Driver.session()
 
 @app.get("/index2/{page}/{limit}")
 async def get_cities(page, limit):
-    response = CityController.get_all_cities()
+    response = CityController.get_all_cities(db_session)
     return {
         "cities": response
     }
@@ -79,7 +78,7 @@ async def recalculate():
     for city_node in city_nodes:
         city = City(city_node['a'], config)
         cities.append(city)
-        # CityController.update_city_score(city, db_session)
+        CityController.update_city_score(city, db_session)
         count += 1
         print(count)
 
