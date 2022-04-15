@@ -1,5 +1,6 @@
 import csv
 import json
+import sys
 
 from fastapi import FastAPI
 from neo4j import GraphDatabase
@@ -33,6 +34,11 @@ async def root(city_name, state_id):
         "response": response
     }
 
+@app.get("/citydetails/{city_id}")
+async def getcitydetails(city_id):
+    config = helper.get_config()
+    city = CityController.get_city_details(city_id, config, db_session)
+    return city
 
 @app.get("/seed/{secret_key}")
 async def seed():
