@@ -13,6 +13,23 @@ def get_sustainability_index(city_name, state_id, db_session):
         "index": 90
     }
 
+def get_city_details(city_id, config, db_session):
+    node, info = db_session.write_transaction(find_city_details_by_id, city_id)
+    city = City(node, config)
+    print(city)
+    return city
+    #return 'sanju'
+
+def find_city_details_by_id(tx, city_id):
+    statement = __get_find_by_city_id_statement(city_id)
+    #print('statement', statement)
+    result = tx.run(statement)
+    record = result.single()
+    print('record',record)
+    value = record.value()
+    info = result.consume()
+    return value, info
+
 
 def create_city_tx(tx, city):  # tx is passed when db_session.write_transaction(CityController.create_city_tx, city)
     statement = __get_create_statement(city)
@@ -131,8 +148,7 @@ def __get_index_statement():
 
 
 def __get_find_by_city_id_statement(city_id):
-    return f"MATCH (a:City {{city_id: {city_id}}}) RETURN a"
-
+    return 'MATCH (a:City {city_id: "'+ city_id + '"}) return a;'
 
 def __get_find_by_cityname_and_state_id_statement(city_name, state_id):
     return 'MATCH (a:City {name: "' + city_name + '", state_id: "' + state_id + '"}) RETURN a'

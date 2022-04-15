@@ -18,7 +18,6 @@ password = "test"
 graphDB_Driver = GraphDatabase.driver(uri, auth=(userName, password))
 db_session = graphDB_Driver.session()
 
-
 @app.get("/index/{city_name}/{state_id}")
 async def root(city_name, state_id):
     response = CityController.get_sustainability_index(city_name, state_id, db_session)
@@ -26,6 +25,11 @@ async def root(city_name, state_id):
         "response": response
     }
 
+@app.get("/citydetails/{city_id}")
+async def getcitydetails(city_id):
+    config = helper.get_config()
+    city = CityController.get_city_details(city_id, config, db_session)
+    return city
 
 @app.get("/seed/{secret_key}")
 async def seed():
@@ -72,7 +76,7 @@ async def recalculate():
     for city_node in city_nodes:
         city = City(city_node['a'], config)
         cities.append(city)
-        # CityController.update_city_score(city, db_session)
+        CityController.update_city_score(city, db_session)
         count += 1
         print(count)
 
