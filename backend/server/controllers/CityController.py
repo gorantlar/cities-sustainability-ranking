@@ -1,4 +1,3 @@
-
 from server.controllers import DomainController, SubdomainController
 from server.models.City import City
 from server.models.abstract_base_classes.Domain import Domain
@@ -100,16 +99,36 @@ def update_city_score(city, db_session):
                     # print(info2)
 
 
-def get_all_cities(db_session):
+def get_all_cities(db_session, page, limit):
     # json array
-    data = {}
+    cities_all = []
 
-    cities = db_session.run("MATCH (city:City) RETURN city.name, city.city_id, city.state, city.score ORDER BY city.state")
+    # the count of all cities in the db
+    city_count_result = db_session.run("MATCH (city:City) return COUNT(city)")
+    city_count = 0
+
+    for count in city_count_result:
+        city_count = count[0]
+
+    # if page passed in is higher than max_page set to max_page
+    if page > city_count:
+        page = city_count - 1
+
+    # print(page)
+    # print(limit)
+    # print((
+    #         "MATCH (city:City) RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, city.score ORDER BY city.state SKIP " + str(page) + " LIMIT " + str(limit)))
+
+    cities = db_session.run(
+        "MATCH (city:City) RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, city.score ORDER BY city.state SKIP " + str(
+            page) + " LIMIT " + str(limit))
 
     for city in cities:
-        data[city[0] + "," + city[2]] = {'city_id': city[1], 'score': city[3]}
+        json_obj = {'city_id': city[0], 'name': city[1], 'state': city[2], 'state_id': city[3], 'latitude': city[4],
+                    'longitude': city[5], 'score': city[6]}
+        cities_all.append(json_obj)
 
-    return data
+    return cities_all
 
 
 # -------------- Helper functions ---------------------------------------------------------------------#
