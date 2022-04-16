@@ -116,7 +116,8 @@ def update_city_score(city, db_session):
                     # print(info2)
 
 
-def get_all_cities(db_session, page, limit):
+def get_all_cities(db_session, page, limit, city_filter):
+    print(city_filter)
     # json array
     cities_all = []
 
@@ -131,14 +132,29 @@ def get_all_cities(db_session, page, limit):
     if page > city_count:
         page = city_count - 1
 
-    # print(page)
-    # print(limit)
-    # print((
-    #         "MATCH (city:City) RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, city.score ORDER BY city.state SKIP " + str(page) + " LIMIT " + str(limit)))
+    match_statement = "MATCH (city:City)"
+    if len(city_filter) != 0:
+        match_statement += " WHERE"
+        at_least_one_filled = False
+        if 'name' in city_filter and city_filter['name'] is not None:
+            match_statement += (" city.name starts with '" + city_filter['name'] + "'")
+            at_least_one_filled = True
+        if 'state' in city_filter and city_filter['state'] is not None:
+            if at_least_one_filled: match_statement += " AND"
+            match_statement += (" city.state starts with '" + city_filter['state'] + "'")
+            at_least_one_filled = True
+        if 'state_id' in city_filter and city_filter['state_id'] is not None:
+            if at_least_one_filled: match_statement += " AND"
+            match_statement += (" city.state_id = '" + city_filter['state_id'] + "'")
 
-    cities = db_session.run(
-        "MATCH (city:City) RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, city.score ORDER BY city.state SKIP " + str(
-            page) + " LIMIT " + str(limit))
+    match_statement += (" RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, city.score ORDER BY city.state SKIP " + str((page - 1)*limit) + " LIMIT " + str(limit))
+    print(match_statement)
+
+    # cities = db_session.run(
+    #     "MATCH (city:City) RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, city.score ORDER BY city.state SKIP " + str(
+    #         page) + " LIMIT " + str(limit))
+
+    cities = db_session.run(match_statement)
 
     for city in cities:
         json_obj = {'city_id': city[0], 'name': city[1], 'state': city[2], 'state_id': city[3], 'latitude': city[4],

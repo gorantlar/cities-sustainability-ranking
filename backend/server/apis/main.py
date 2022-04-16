@@ -1,9 +1,10 @@
 import csv
 import json
-import sys
 
 from fastapi import FastAPI
 from neo4j import GraphDatabase
+from pydantic import BaseModel
+from pydantic.class_validators import Optional
 
 from server.controllers import CityController
 from server.models.City import City
@@ -19,26 +20,37 @@ graphDB_Driver = GraphDatabase.driver(uri, auth=(userName, password))
 db_session = graphDB_Driver.session()
 
 
-@app.get("/index2/{page}/{limit}")
-async def get_cities(page, limit):
-    response = CityController.get_all_cities(db_session, int(page), int(limit))
+class Filter(BaseModel):
+    name: Optional[str] = None
+    state: Optional[str] = None
+    state_id: Optional[str] = None
+    latitude: Optional[str] = None
+    longitude: Optional[str] = None
+
+
+@app.post("/index/{page}/{limit}")
+async def get_cities(page: int, limit: int, city_filter: Filter):
+    # print(city_filter.dict())
+    response = CityController.get_all_cities(db_session, page, limit, city_filter.dict())
     return {
         "cities": response
     }
 
 
-@app.get("/index/{city_name}/{state_id}")
+@app.get("/city_by_name_state_id/{city_name}/{state_id}")
 async def root(city_name, state_id):
     response = CityController.get_sustainability_index(city_name, state_id, db_session)
     return {
         "response": response
     }
 
+
 @app.get("/citydetails/{city_id}")
 async def getcitydetails(city_id):
     config = helper.get_config()
     city = CityController.get_city_details(city_id, config, db_session)
     return city
+
 
 @app.get("/seed/{secret_key}")
 async def seed():
