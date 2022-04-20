@@ -1,0 +1,2 @@
+export const GOT_CITIES = 'GOT_CITIES';
+export const GOT_CITY_DETAILS = 'GOT_CITY_DETAILS';

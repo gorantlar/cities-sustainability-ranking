@@ -4,3 +4,4 @@ backend/venv/
 *.pyo
 *.DS_Store
 /backend/*.DS_Store
+node_modules

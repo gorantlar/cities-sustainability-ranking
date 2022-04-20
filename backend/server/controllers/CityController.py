@@ -98,6 +98,7 @@ def delete_city(city, db_session):
 # Calculates and updates scores for city
 def update_city_score(city, db_session):
     city_update_statement = __get__update_statement(city.city_id, {'score': city.score})
+
     # print(f'executing {city_update_statement}')
     result = db_session.run(city_update_statement)
     # print(f'results {result}')
@@ -123,18 +124,18 @@ def get_all_cities(db_session, page, limit, city_filter):
 
     # the count of all cities in the db
     city_count_result = db_session.run("MATCH (city:City) return COUNT(city)")
-    city_count = 0
+    total_city_count = 0
 
     for count in city_count_result:
-        city_count = count[0]
+        total_city_count = count[0]
 
     # if page passed in is higher than max_page set to max_page
-    if page > city_count:
-        page = city_count - 1
+    if page > total_city_count:
+        page = total_city_count - 1
 
     match_statement = "MATCH (city:City)"
     if len(city_filter) != 0:
-        match_statement += " WHERE"
+        # match_statement += " WHERE"
         at_least_one_filled = False
         if 'name' in city_filter and city_filter['name'] is not None:
             match_statement += (" city.name starts with '" + city_filter['name'] + "'")
@@ -146,8 +147,15 @@ def get_all_cities(db_session, page, limit, city_filter):
         if 'state_id' in city_filter and city_filter['state_id'] is not None:
             if at_least_one_filled: match_statement += " AND"
             match_statement += (" city.state_id = '" + city_filter['state_id'] + "'")
+            at_least_one_filled = True
+        if at_least_one_filled:
+            match_statement = " WHERE" + match_statement
 
-    match_statement += (" RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, city.score ORDER BY city.state SKIP " + str((page - 1)*limit) + " LIMIT " + str(limit))
+    match_statement += "RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, " \
+                       "city.score ORDER BY city.state "
+    if page is not None and page != 0 and limit is not None and limit != 0:
+        match_statement += (" SKIP " + str((page - 1)*limit) + " LIMIT " + str(limit))
+
     print(match_statement)
 
     # cities = db_session.run(
@@ -161,7 +169,7 @@ def get_all_cities(db_session, page, limit, city_filter):
                     'longitude': city[5], 'score': city[6]}
         cities_all.append(json_obj)
 
-    return cities_all
+    return cities_all, total_city_count
 
 
 # -------------- Helper functions ---------------------------------------------------------------------#

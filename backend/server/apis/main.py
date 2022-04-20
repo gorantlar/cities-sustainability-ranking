@@ -2,6 +2,7 @@ import csv
 import json
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from neo4j import GraphDatabase
 from pydantic import BaseModel
 from pydantic.class_validators import Optional
@@ -11,6 +12,17 @@ from server.models.City import City
 from server.resources import helper
 
 app = FastAPI()
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 uri = "bolt://localhost:7687"
 userName = "neo4j"
@@ -31,9 +43,10 @@ class Filter(BaseModel):
 @app.post("/index/{page}/{limit}")
 async def get_cities(page: int, limit: int, city_filter: Filter):
     # print(city_filter.dict())
-    response = CityController.get_all_cities(db_session, page, limit, city_filter.dict())
+    cities, total_count = CityController.get_all_cities(db_session, page, limit, city_filter.dict())
     return {
-        "cities": response
+        "cities": cities,
+        "total_count": total_count
     }
 
 
@@ -55,6 +68,12 @@ async def getcitydetails(city_id):
 @app.get("/seed/{secret_key}")
 async def seed():
     print("attempt to seed")
+    '''
+    Three things
+    1. Read the csv, create city nodes which will contains only columns(or fields) as attributes
+    2. Track min, max for each column when iterating over all cities
+    3. Update the config file with the latest min, max values
+    '''
 
     min_max = {}
 
@@ -88,6 +107,12 @@ async def seed():
 @app.get("/recalculate/{secret_key}")
 async def recalculate():
     print("starting to recalculate")
+    '''
+    1. Fetch nodes from THE DATABASE (not the csv)
+    2. Create/Serialize these city nodes into city objects -> This ensures calculation of scores on column, subdomain, domain and city level, but only inside the object of city
+    3. Use objects of each city, to set attributes inside corresponding nodes in the database. 
+    '''
+
     config = helper.get_config()
     cql = CityController.__get_index_statement()
     city_nodes = db_session.run(cql)
@@ -102,8 +127,12 @@ async def recalculate():
         print(count)
 
     cities.sort(key=lambda x: x.score)
+    rankSoFar = 0
     for city in cities:
         print(city.name, city.state, city.score)
+        city.rank = rankSoFar
+        rankSoFar += 1
+        CityController.update_city_rank(city, db_session)
 
     return {
         "count": len(cities)
