@@ -101,9 +101,14 @@ async def recalculate():
         count += 1
         print(count)
 
+    # calculate and store the rank of each city in the city node(smaller value means higher rank)
+    city_rank = count
     cities.sort(key=lambda x: x.score)
     for city in cities:
-        print(city.name, city.state, city.score)
+        print(city.name, city.state, city.score, city_rank)
+        city.rank = city_rank
+        city_rank -=1
+        CityController.update_city_rank(city, db_session)
 
     return {
         "count": len(cities)

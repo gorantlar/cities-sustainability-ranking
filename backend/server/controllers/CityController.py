@@ -4,6 +4,7 @@ from server.models.abstract_base_classes.Domain import Domain
 from server.models.abstract_base_classes.Subdomain import Subdomain
 
 
+
 def get_sustainability_index(city_name, state_id, db_session):
     node, info = db_session.write_transaction(find_city_by_name_and_state_id, city_name, state_id)
     city = City.get_city(node)
@@ -94,10 +95,33 @@ def delete_city(city, db_session):
     print(f'results {result}')
     return result
 
+# Calculates and updates ranks for city
+def update_city_rank(city, db_session):
+    city_update_statement = __get__update_statement(city.city_id, {'rank': city.rank})
+
+    print(city_update_statement)
+    # print(f'executing {city_update_statement}')
+    result = db_session.run(city_update_statement)
+    # print(f'results {result}')
+
+    for attribute in dir(city):
+        if issubclass(getattr(city, attribute).__class__, Domain):
+            domain_obj = getattr(city, attribute)
+            info = db_session.write_transaction(DomainController.merge_domain_tx, city, domain_obj)
+            # print(info)
+
+            for domain_attr in dir(domain_obj):
+                if issubclass(getattr(domain_obj, domain_attr).__class__, Subdomain):
+                    subdomain_obj = getattr(domain_obj, domain_attr)
+                    info2 = db_session.write_transaction(SubdomainController.merge_subdomain_tx, city, domain_obj,
+                                                         subdomain_obj)
+                    # print(info2)
+
 
 # Calculates and updates scores for city
 def update_city_score(city, db_session):
     city_update_statement = __get__update_statement(city.city_id, {'score': city.score})
+    print(city_update_statement)
     # print(f'executing {city_update_statement}')
     result = db_session.run(city_update_statement)
     # print(f'results {result}')
@@ -125,6 +149,7 @@ def get_all_cities(db_session, page, limit, city_filter):
     city_count_result = db_session.run("MATCH (city:City) return COUNT(city)")
     city_count = 0
 
+    # update city_count with the result returned from db
     for count in city_count_result:
         city_count = count[0]
 
@@ -149,10 +174,6 @@ def get_all_cities(db_session, page, limit, city_filter):
 
     match_statement += (" RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, city.score ORDER BY city.state SKIP " + str((page - 1)*limit) + " LIMIT " + str(limit))
     print(match_statement)
-
-    # cities = db_session.run(
-    #     "MATCH (city:City) RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, city.score ORDER BY city.state SKIP " + str(
-    #         page) + " LIMIT " + str(limit))
 
     cities = db_session.run(match_statement)
 
