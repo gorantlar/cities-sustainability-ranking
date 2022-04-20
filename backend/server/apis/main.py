@@ -127,12 +127,12 @@ async def recalculate():
         print(count)
 
     cities.sort(key=lambda x: x.score)
-    rankSoFar = 0
+    # rankSoFar = 0
     for city in cities:
         print(city.name, city.state, city.score)
-        city.rank = rankSoFar
-        rankSoFar += 1
-        CityController.update_city_rank(city, db_session)
+    #     city.rank = rankSoFar
+    #     rankSoFar += 1
+    #     CityController.update_city_rank(city, db_session)
 
     return {
         "count": len(cities)
