@@ -14,9 +14,9 @@ const Pin2 = ({ size = 20, city, onClick }) => {
     // console.log(size);
     let finalSize = size;
     
-    if(city.score > 70){
+    if(city.score > 50){
         finalSize = size;
-    }else if(city.score > 50){
+    }else if(city.score > 40){
         finalSize = size/1.5;
     }else{
         finalSize = size/2.5;

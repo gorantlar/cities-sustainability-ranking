@@ -42,6 +42,8 @@ class Subdomain(ABC):
         maxi = info["max"]
         inverse = info["inverse"]
 
+        answer = value / maxi
         if inverse:
-            return (mini + (1 - ((value - mini) / (maxi - mini)))) * 100
-        return ((value - mini) / (maxi - mini)) * 100
+            answer = (mini / maxi) + (1 - answer)
+
+        return answer * 100
