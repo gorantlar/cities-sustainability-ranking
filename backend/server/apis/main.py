@@ -122,7 +122,6 @@ async def recalculate():
     for city_node in city_nodes:
         city = City(city_node['a'], config)
         cities.append(city)
-        CityController.update_city_score(city, db_session)
         count += 1
         print(count)
 
@@ -130,8 +129,8 @@ async def recalculate():
     rank = count
     for city in cities:
         city.rank = rank
-        print(city.name, city.state, city.score, rank)
-        CityController.update_city_rank(city, db_session)
+        print(city.name, city.state, city.score, city.rank)
+        CityController.update_city_score(city, db_session)
         rank -= 1
 
 

@@ -94,31 +94,9 @@ def delete_city(city, db_session):
     print(f'results {result}')
     return result
 
-# Calculates and updates ranks for city
-def update_city_rank(city, db_session):
-    city_update_statement = __get__update_statement(city.city_id, {'rank': city.rank})
-
-    print(city_update_statement)
-    # print(f'executing {city_update_statement}')
-    result = db_session.run(city_update_statement)
-    # print(f'results {result}')
-
-    for attribute in dir(city):
-        if issubclass(getattr(city, attribute).__class__, Domain):
-            domain_obj = getattr(city, attribute)
-            info = db_session.write_transaction(DomainController.merge_domain_tx, city, domain_obj)
-            # print(info)
-
-            for domain_attr in dir(domain_obj):
-                if issubclass(getattr(domain_obj, domain_attr).__class__, Subdomain):
-                    subdomain_obj = getattr(domain_obj, domain_attr)
-                    info2 = db_session.write_transaction(SubdomainController.merge_subdomain_tx, city, domain_obj,
-                                                         subdomain_obj)
-                    # print(info2)
-
 # Calculates and updates scores for city
 def update_city_score(city, db_session):
-    city_update_statement = __get__update_statement(city.city_id, {'score': city.score})
+    city_update_statement = __get__update_statement(city.city_id, {'score': city.score, 'rank': city.rank})
 
     # print(f'executing {city_update_statement}')
     result = db_session.run(city_update_statement)
@@ -242,6 +220,12 @@ def __get__update_statement(city_id, details):
     for key, val in details.items():
         if key == "city_id":
             continue
-        retVal += f"a.{key} = {val}"
+        else:
+            # the comma will be added to the end of each in case there are multiple key value pairs
+            retVal += f"a.{key} = {val}, "
+
+    # strip out the last comma since there are no more key value pairs
+    retVal = retVal.rstrip(' ')
+    retVal = retVal[:-1] if retVal[-1]==',' else retVal
 
     return retVal + " RETURN a"
