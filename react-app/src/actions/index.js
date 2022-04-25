@@ -26,3 +26,19 @@ export const getCity = (city) => {
         })
     }
 };
+
+export const closeSidebar = () => {
+    return function(dispatch) {
+        dispatch({
+            type: types.CLOSE_SIDEBAR,
+        })
+    }
+}
+
+export const openSidebar = () => {
+    return function(dispatch) {
+        dispatch({
+            type: types.OPEN_SIDEBAR,
+        })
+    }
+}

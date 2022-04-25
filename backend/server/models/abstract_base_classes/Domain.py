@@ -50,3 +50,11 @@ class Domain(ABC):
             return 0
 
         return float(format(numer / denom, ".2f"))
+
+    def __str__(self) -> str:
+        attrs = [a for a in dir(self) if not a.startswith('__') and not callable(getattr(self, a))]
+        retval = '{'
+        for attr in attrs:
+            retval += (attr + ":" + str(self.__getattribute__(attr)) + ", ")
+        retval += '}'
+        return retval

@@ -16,7 +16,7 @@ def get_sustainability_index(city_name, state_id, db_session):
 def get_city_details(city_id, config, db_session):
     node, info = db_session.write_transaction(find_city_details_by_id, city_id)
     city = City(node, config)
-    print(city)
+    # print(city)
     return city
     #return 'sanju'
 

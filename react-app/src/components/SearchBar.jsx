@@ -3,15 +3,30 @@ import Autocomplete from '@mui/material/Autocomplete';
 import { useState, useMemo, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import "./SearchBar.css";
-import { getCity } from '../actions/index';
+import { getCity, openSidebar } from '../actions/index';
+import {
+    Marker,
+    Map,
+    useMap
+} from 'react-map-gl';
 
 // export default function SearchBar({ top500Cities, placeholder }) {
 export default function SearchBar({ cities, placeholder }) {
     let dispatch = useDispatch();
+    const { current: map } = useMap();
+
+    // const { cities } = useSelector((state) => state.cityData);
+    console.log('map', map);
+
 
     const newCitySelected = (target, city) => {
-        if(city != undefined){
-            dispatch(getCity(city));
+        const citySelected = city;
+        
+        if (city != undefined) {
+            console.log('citySelected', citySelected);
+            dispatch(getCity(citySelected));
+            map.flyTo({ center: [citySelected.longitude, citySelected.latitude], zoom: 8.5, offset: [-150, -50] });
+            dispatch(openSidebar());
         }
     }
 

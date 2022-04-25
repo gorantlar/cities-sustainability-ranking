@@ -6,14 +6,15 @@ from server.models.domains.Culture import Culture
 from server.models.domains.Ecology import Ecology
 from server.models.domains.Politics import Politics
 
-
 class City:
     def __init__(self, city_dict, config):
         for key in city_dict:
+            if key == 'zips':
+                continue
+                # self.zips = str(city_dict[key])
             self.__setattr__(key, get_value((city_dict[key])))
 
         self.score = self.calculate_score(config)
-
 
     @staticmethod
     def get_city(node):
@@ -41,7 +42,7 @@ class City:
             print(f'Divide by 0: in City:calculate_score for {self.city_id}')
             return 0
 
-        return format(numer/denom, ".2f")
+        return format(numer / denom, ".2f")
 
     def __hash__(self):
         return hash(self.city_id)

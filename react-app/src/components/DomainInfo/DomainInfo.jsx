@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './DomainInfo.css'
+import './DomainInfo.css';
 
 export default function DomainInfo({info, obj}) {
 	const [isOpen, setIsOpen] = useState(false);

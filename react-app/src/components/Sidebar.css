@@ -1,16 +1,27 @@
 .navbar {
     background-color: transparent;
-    position: fixed;
+    position: absolute;
+    top: 5px;
+    right: 10px;
     height: 5%;
-    width: 100%;
+    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
   }
 
+  .floating_button {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+
   .button-bar {
-    position: fixed;
+    /* position: fixed; */
     width: 95%;
     display: flex;
     justify-content: end;
@@ -18,8 +29,8 @@
   }
   
   .nav-menu {
-    background: url('../black_background_texture.jpg') no-repeat center center fixed;
-    /* background-color: #1a1a1a; */
+    /* background: url('../black_background_texture.jpg') no-repeat center center fixed; */
+    background-color: #1a1a1a;
     width: 30%;
     height: 100%;
     display: flex;

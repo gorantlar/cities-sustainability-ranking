@@ -11,7 +11,8 @@ class Subdomain(ABC):
         self.score = self.calculate_score(city, config)
 
     @staticmethod
-    def get_breakdown_json(subdomain):
+    def get_breakdown_json_string(subdomain):
+        # return subdomain.breakdown
         return json.dumps(json.dumps(subdomain.breakdown))[1:-1]
 
     @abstractmethod
@@ -46,4 +47,12 @@ class Subdomain(ABC):
         if inverse:
             answer = (mini / maxi) + (1 - answer)
 
-        return answer * 100
+        return float(format(answer * 100, '.2f'))
+
+    def __str__(self) -> str:
+        attrs = [a for a in dir(self) if not a.startswith('__') and not callable(getattr(self, a))]
+        retval = '{'
+        for attr in attrs:
+            retval += (attr + ":" + str(self.__getattribute__(attr)) + ", ")
+        retval += '}'
+        return retval

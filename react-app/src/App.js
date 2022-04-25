@@ -10,7 +10,8 @@ import Map, {
   NavigationControl,
   FullscreenControl,
   ScaleControl,
-  GeolocateControl
+  GeolocateControl,
+  useMap
 } from 'react-map-gl';
 import SearchBar from './components/SearchBar';
 import ControlPanel from './components/ControlPanel';
@@ -20,7 +21,7 @@ import Pins from './components/Pins';
 import CITIES from './static_data/cities.json'
 import { useSelector, useDispatch } from 'react-redux';
 import { getCities } from './actions/index';
-// import SearchBar from './components/SearchBar';
+import Sidebar from './components/Sidebar';
 
 const TOKEN = 'pk.eyJ1IjoiYW1hci15YWRhdiIsImEiOiJjbDIzeXZuYTQxZnl6M2RtanNmejJ3ZTlvIn0.IKUuDLlJE-Uq_FGIc3s6Ow'; // Set your mapbox token here
 
@@ -31,6 +32,8 @@ function App() {
     dispatch(getCities(0, 0, {}));
   }, []);
 
+  // const { current: map } = useMap();
+
   const { cities } = useSelector(state => state.cityData);
   // console.log('state', state);
   // const cities = [];
@@ -39,7 +42,6 @@ function App() {
 
   return (
     <>
-	  <Sidebar/>
       <Map
         initialViewState={{
           latitude: 40,
@@ -79,10 +81,11 @@ function App() {
             {/* <img width="100%" src={popupInfo.image} /> */}
           </Popup>
         )}
+        <SearchBar cities={cities} placeholder="Enter a city" />
+        <Sidebar />
       </Map>
 
-      <ControlPanel />
-      <SearchBar cities={cities} placeholder="Enter a city" />
+      {/* <ControlPanel /> */}
     </>
   );
 }

@@ -60,8 +60,10 @@ async def root(city_name, state_id):
 
 @app.get("/citydetails/{city_id}")
 async def getcitydetails(city_id):
+    print(type(city_id))
     config = helper.get_config()
     city = CityController.get_city_details(city_id, config, db_session)
+    print('city', city)
     return city
 
 

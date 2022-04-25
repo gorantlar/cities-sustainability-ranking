@@ -28,9 +28,9 @@ def __get_merge_statement(city, domain, subdomain):
     merge += 'MERGE (d)-[rr:HAS_SUBDOMAIN]->(s:Subdomain {name: "' + subdomain.__class__.__name__ + '"})\n'
 
     merge += 'ON CREATE SET s.score = ' + str(subdomain.score) + \
-             ',\ns.breakdown = "' + Subdomain.get_breakdown_json(subdomain) + '"\n'
+             ',\ns.breakdown = "' + Subdomain.get_breakdown_json_string(subdomain) + '"\n'
 
     merge += 'ON MATCH SET s.score = ' + str(subdomain.score) + \
-             ',\ns.breakdown = "' + Subdomain.get_breakdown_json(subdomain) + '"\nRETURN s'
+             ',\ns.breakdown = "' + Subdomain.get_breakdown_json_string(subdomain) + '"\nRETURN s'
 
     return merge

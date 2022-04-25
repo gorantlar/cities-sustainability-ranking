@@ -3,7 +3,7 @@ import { RiCommunityLine } from 'react-icons/ri'
 import './City.css'
 
 function City({data}) {
-  const cityData = JSON.parse(data);
+  const cityData = data;
 
   function getCityName(){
     if (typeof(sessionStorage) !='undefined'){
