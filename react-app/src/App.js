@@ -39,6 +39,7 @@ function App() {
 
   return (
     <>
+	  <Sidebar/>
       <Map
         initialViewState={{
           latitude: 40,
