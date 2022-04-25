@@ -18,7 +18,7 @@ const Pins = ({ cities, setPopupInfo }) => {
             latitude={city.latitude}
             anchor="bottom"
         >
-            <Pin2 city={city} onClick={() => map.flyTo({center: [city.longitude, city.latitude], zoom: 12.5, offset: [-300, 0]})} />
+            <Pin2 city={city} onClick={() => map.flyTo({center: [city.longitude, city.latitude], zoom: 8.5, offset: [-300, 0]})} />
         </Marker>
     ));
 };

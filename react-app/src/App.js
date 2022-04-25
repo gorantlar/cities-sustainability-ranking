@@ -12,6 +12,7 @@ import Map, {
   ScaleControl,
   GeolocateControl
 } from 'react-map-gl';
+import SearchBar from './components/SearchBar';
 import ControlPanel from './components/ControlPanel';
 import Pin from './components/Pin.tsx';
 import Pin2 from './components/Pin2';
@@ -30,24 +31,11 @@ function App() {
     dispatch(getCities(0, 0, {}));
   }, []);
 
-  const { cities } = useSelector(state => state.cities);
+  const { cities } = useSelector(state => state.cityData);
+  // console.log('state', state);
+  // const cities = [];
 
   const [popupInfo, setPopupInfo] = useState(null);
-
-  // const pins = useMemo(
-  //   () =>
-  //   cities.map((city, index) => (
-  //       <Marker
-  //         key={`marker-${index}`}
-  //         longitude={city.longitude}
-  //         latitude={city.latitude}
-  //         anchor="bottom"
-  //       >
-  //         <Pin city={city} onClick={() => setPopupInfo(city)} />
-  //       </Marker>
-  //     )),
-  //   []
-  // );
 
   return (
     <>
@@ -93,7 +81,7 @@ function App() {
       </Map>
 
       <ControlPanel />
-      {/* <SearchBar /> */}
+      <SearchBar cities={cities} placeholder="Enter a city" />
     </>
   );
 }

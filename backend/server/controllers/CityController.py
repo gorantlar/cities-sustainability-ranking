@@ -132,23 +132,23 @@ def get_all_cities(db_session, page, limit, city_filter):
     if page > total_city_count:
         page = total_city_count - 1
 
-    match_statement = "MATCH (city:City)"
+    match_statement = "MATCH (city:City) "
     if len(city_filter) != 0:
-        # match_statement += " WHERE"
-        at_least_one_filled = False
+        where_statement = ""
+
         if 'name' in city_filter and city_filter['name'] is not None:
-            match_statement += (" city.name starts with '" + city_filter['name'] + "'")
-            at_least_one_filled = True
+            where_statement += (" city.name starts with '" + city_filter['name'] + "'")
+
         if 'state' in city_filter and city_filter['state'] is not None:
-            if at_least_one_filled: match_statement += " AND"
-            match_statement += (" city.state starts with '" + city_filter['state'] + "'")
-            at_least_one_filled = True
+            if where_statement: match_statement += " AND"
+            where_statement += (" city.state starts with '" + city_filter['state'] + "'")
+
         if 'state_id' in city_filter and city_filter['state_id'] is not None:
-            if at_least_one_filled: match_statement += " AND"
-            match_statement += (" city.state_id = '" + city_filter['state_id'] + "'")
-            at_least_one_filled = True
-        if at_least_one_filled:
-            match_statement = " WHERE" + match_statement
+            if where_statement: match_statement += " AND"
+            where_statement += (" city.state_id = '" + city_filter['state_id'] + "'")
+
+        if where_statement:
+            match_statement += ("WHERE " + where_statement + " ")
 
     match_statement += "RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, " \
                        "city.score ORDER BY city.state "
