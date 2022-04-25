@@ -1,15 +1,23 @@
 import * as types from '../actions/types';
 
-const initalState = {
+const initialState = {
     cities: [],
     totalCount: 0,
-    citySelected: undefined,
+    citySelected: { name: "sanju" },
     loading: true
 };
 
-const cityReducers = (state = initalState, action) => {
+// const citySlice = createSlice({
+//     name: "cityInfo",
+//     initialState,
+//     reducers: {
 
-    switch(action.type) {
+//     }
+// })
+
+const cityReducers = (state = initialState, action) => {
+
+    switch (action.type) {
         case types.GOT_CITIES:
             return {
                 ...state,
@@ -17,6 +25,13 @@ const cityReducers = (state = initalState, action) => {
                 totalCount: action.payload.total_count,
                 loading: false
             };
+        case types.GOT_CITY_DETAILS:
+            console.log("GOT_CITY_DETAILS");
+            return {
+                ...state,
+                citySelected: { ...action.payload },
+                loading: false
+            }
         default: return state;
     }
 
