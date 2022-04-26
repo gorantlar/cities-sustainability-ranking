@@ -151,7 +151,7 @@ def get_all_cities(db_session, page, limit, city_filter):
             match_statement += ("WHERE " + where_statement + " ")
 
     match_statement += "RETURN city.city_id, city.name, city.state, city.state_id, city.latitude, city.longitude, " \
-                       "city.score ORDER BY city.state "
+                       "city.score, city.rank ORDER BY city.state "
     if page is not None and page != 0 and limit is not None and limit != 0:
         match_statement += (" SKIP " + str((page - 1)*limit) + " LIMIT " + str(limit))
 
@@ -165,7 +165,7 @@ def get_all_cities(db_session, page, limit, city_filter):
 
     for city in cities:
         json_obj = {'city_id': city[0], 'name': city[1], 'state': city[2], 'state_id': city[3], 'latitude': city[4],
-                    'longitude': city[5], 'score': city[6]}
+                    'longitude': city[5], 'score': city[6], 'rank': city[7]}
         cities_all.append(json_obj)
 
     return cities_all, total_city_count
