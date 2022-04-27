@@ -16,6 +16,7 @@ import Pins from './components/Pins';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCities } from './actions/index';
 import Sidebar from './components/Sidebar';
+import ControlPanel from './components/ControlPanel';
 
 const TOKEN = 'pk.eyJ1IjoiYW1hci15YWRhdiIsImEiOiJjbDIzeXZuYTQxZnl6M2RtanNmejJ3ZTlvIn0.IKUuDLlJE-Uq_FGIc3s6Ow'; // Set your mapbox token here
 
@@ -60,10 +61,10 @@ function App() {
             onClose={() => setPopupInfo(null)}
           >
             <div>
-              <div style={{fontSize: '1.1em'}}>
+              <div style={{ fontSize: '1.1em' }}>
                 {popupInfo.name}, {popupInfo.state}
                 <br />
-                {popupInfo.score}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style={{opacity: 0.3}}>#{popupInfo.rank}</span>
+                {popupInfo.score}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style={{ opacity: 0.3 }}>#{popupInfo.rank}</span>
               </div>
               <div>
                 <a
@@ -74,12 +75,16 @@ function App() {
                 </a>
               </div>
             </div>
-            {/* <img width="100%" src={popupInfo.image} /> */}
+            {/* <img width="100%" src="/Our_Cities_Logo.png" /> */}
           </Popup>
         )}
         <SearchBar setPopupInfo={setPopupInfo} cities={cities} placeholder="Enter a city" />
         <Sidebar />
       </Map>
+
+      <div style={{ position: 'absolute', bottom: '70px', left: '10px' }}>
+        <img width="7%" src="/Our_Cities_Logo.png" />
+      </div>
 
       {/* <ControlPanel /> */}
     </>
