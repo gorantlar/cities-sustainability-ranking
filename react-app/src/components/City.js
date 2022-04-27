@@ -1,6 +1,12 @@
 import React from 'react'
 import { RiCommunityLine } from 'react-icons/ri'
-import './City.css'
+import './City.css';
+
+const iconStyle = {
+  height: '20px',
+  width: '20px',
+  margin: '10px', 
+};
 
 function City({data}) {
   const cityData = data;
@@ -35,7 +41,7 @@ function City({data}) {
   return (
     <>
       <div className='title'>
-        <RiCommunityLine/>
+        <RiCommunityLine style={iconStyle}/>
         <h1 title='City Name'>{getCityName()}</h1>
       </div>
       <div className='scoreAndRank'>

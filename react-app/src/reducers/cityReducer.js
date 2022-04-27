@@ -240,7 +240,7 @@ const cityReducers = (state = initialState, action) => {
                 loading: false
             };
         case types.GOT_CITY_DETAILS:
-            // map.flyTo({ center: [action.payload.longitude, action.payload.latitude], zoom: 8.5, offset: [-150, -50] });
+            // map.flyTo({ center: [action.payload.longitude, action.payload.latitude], zoom: 8.5, offset: [-250, -50] });
             return {
                 ...state,
                 showSidebar: true,

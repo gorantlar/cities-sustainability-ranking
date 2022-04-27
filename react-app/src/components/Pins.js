@@ -1,27 +1,23 @@
 import React, { useState } from 'react';
-import Pin from './Pin.tsx';
-import Pin2 from './Pin2';
+import Pin2 from './Pin';
 import {
     Marker,
-    Map,
     useMap
 } from 'react-map-gl';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getCity, openSidebar } from '../actions/index';
 
 const Pins = ({ cities, setPopupInfo }) => {
     let dispatch = useDispatch();
-    // console.log(cities);
 
     const { current: map } = useMap();
-    const [sidebar, setSidebar] = useState(false);
-
-    console.log('map2', map);
 
     const markerClicked = (city) => {
+        console.log('city', city);
         dispatch(getCity(city));
-        map.flyTo({ center: [city.longitude, city.latitude], zoom: 8.5, offset: [-150, -50] });
+        map.flyTo({ center: [city.longitude, city.latitude], zoom: 8.5, offset: [-250, -50] });
         dispatch(openSidebar());
+        setPopupInfo(city);
     }
 
     return cities.map((city, index) => (

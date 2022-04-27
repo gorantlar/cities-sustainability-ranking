@@ -11,7 +11,7 @@ export default function DomainInfo({info, obj}) {
 		if(key !== "name" && key !== "score"){
 			
 			rows.push(<h3 className="subdomainName"> {key + ":\t " + value.score} </h3>);
-			const listItems = Object.keys(value["breakdown"]).map((colName) => <li className="listItem">{colName + ": " + obj[colName]}</li>)
+			const listItems = Object.keys(value["breakdown"]).map((colName, index) => <li className="listItem" key={`li-${index}`}>{colName + ": " + obj[colName]}</li>)
 			rows.push(<ul>{listItems}</ul>);
 		}
 	}

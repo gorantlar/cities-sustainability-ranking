@@ -1,20 +1,26 @@
-  .title {
-    color: #f5f5f5;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 8px 0px 8px 16px;
-    height: 5%;
-    font-size: larger;
-  }
+.title {
+  color: #f5f5f5;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  /* padding: 8px 0px 8px 16px; */
+  margin-top: 30px;
+  height: 10px;
+  font-size: larger;
+}
 
-  .scoreAndRank {
-    color: #f5f5f5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5%;
-    font-size: larger;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
+.scoreAndRank {
+  color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin: 15px 40px;
+  font-size: larger;
+  /* padding-left: 10%; */
+  /* padding-right: 10%; */
+}
+
+.scoreAndRank span {
+  font-size: 1.2em;
+}

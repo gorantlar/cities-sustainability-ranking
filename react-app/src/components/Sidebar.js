@@ -28,7 +28,7 @@ function Sidebar() {
             <div className='navbar'>
                 <div className='button-bar'>
                     <IconContext.Provider value={{ color: '#fff' }}>
-                        <FaBars onClick={sidebarButtonClicked} />
+                        <FaBars style={{height: '20px', width: '20px', marginTop: '15px', }} onClick={sidebarButtonClicked} />
                     </IconContext.Provider>
                 </div>
             </div>
@@ -37,7 +37,7 @@ function Sidebar() {
                     <li className='navbar-toggle'>
                         <div className='menu-bar'>
                             <IconContext.Provider value={{ color: '#fff' }}>
-                                <AiOutlineDoubleRight onClick={sidebarButtonClicked} />
+                                <AiOutlineDoubleRight style={{"height": '20px', "width": '30px', marginTop: '15px', marginBottom: '15px', opacity: 0.5}} onClick={sidebarButtonClicked} />
                             </IconContext.Provider>
                         </div>
                     </li>

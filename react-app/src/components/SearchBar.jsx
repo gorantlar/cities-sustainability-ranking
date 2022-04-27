@@ -11,7 +11,7 @@ import {
 } from 'react-map-gl';
 
 // export default function SearchBar({ top500Cities, placeholder }) {
-export default function SearchBar({ cities, placeholder }) {
+export default function SearchBar({ setPopupInfo, cities, placeholder }) {
     let dispatch = useDispatch();
     const { current: map } = useMap();
 
@@ -25,8 +25,9 @@ export default function SearchBar({ cities, placeholder }) {
         if (city != undefined) {
             console.log('citySelected', citySelected);
             dispatch(getCity(citySelected));
-            map.flyTo({ center: [citySelected.longitude, citySelected.latitude], zoom: 8.5, offset: [-150, -50] });
+            map.flyTo({ center: [citySelected.longitude, citySelected.latitude], zoom: 8.5, offset: [-250, -50] });
             dispatch(openSidebar());
+            setPopupInfo(city);
         }
     }
 

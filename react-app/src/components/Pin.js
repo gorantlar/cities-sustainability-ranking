@@ -10,18 +10,18 @@ const pinStyle = {
     stroke: 'none'
 };
 
-const Pin2 = ({ size = 20, city, onClick }) => {
-    // console.log(size);
+const Pin = ({ size = 20, city, onClick }) => {
+
     let finalSize = size;
-    
-    if(city.score > 50){
+
+    if (city.score > 50) {
         finalSize = size;
-    }else if(city.score > 40){
-        finalSize = size/1.5;
-    }else{
-        finalSize = size/2.5;
+    } else if (city.score > 40) {
+        finalSize = size / 1.5;
+    } else {
+        finalSize = size / 2.5;
     }
-    
+
     return (
         <div>
             <div>
@@ -33,14 +33,4 @@ const Pin2 = ({ size = 20, city, onClick }) => {
     );
 }
 
-export default React.memo(Pin2)
-
-// function Pin({size = 20, onClick}: {size?: number; onClick?: () => void}) {
-//   return (
-//     <svg height={size} viewBox="0 0 24 24" style={pinStyle} onClick={onClick}>
-//       <path d={ICON} />
-//     </svg>
-//   );
-// }
-
-// export default React.memo(Pin);
+export default React.memo(Pin)

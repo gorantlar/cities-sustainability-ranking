@@ -3,22 +3,16 @@ import { useState, useMemo, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { render } from 'react-dom';
+
 import Map, {
-  Marker,
   Popup,
   NavigationControl,
   FullscreenControl,
   ScaleControl,
   GeolocateControl,
-  useMap
 } from 'react-map-gl';
 import SearchBar from './components/SearchBar';
-import ControlPanel from './components/ControlPanel';
-import Pin from './components/Pin.tsx';
-import Pin2 from './components/Pin2';
 import Pins from './components/Pins';
-import CITIES from './static_data/cities.json'
 import { useSelector, useDispatch } from 'react-redux';
 import { getCities } from './actions/index';
 import Sidebar from './components/Sidebar';
@@ -32,11 +26,8 @@ function App() {
     dispatch(getCities(0, 0, {}));
   }, []);
 
-  // const { current: map } = useMap();
 
   const { cities } = useSelector(state => state.cityData);
-  // console.log('state', state);
-  // const cities = [];
 
   const [popupInfo, setPopupInfo] = useState(null);
 
@@ -58,7 +49,6 @@ function App() {
         <NavigationControl position="top-left" />
         <ScaleControl />
 
-        {/* {pins} */}
         <Pins cities={cities} setPopupInfo={setPopupInfo} />
 
         {popupInfo && (
@@ -70,18 +60,24 @@ function App() {
             onClose={() => setPopupInfo(null)}
           >
             <div>
-              {popupInfo.name}, {popupInfo.state}
-              {/* <a
-                target="_new"
-                href={`http://en.wikipedia.org/w/index.php?title=Special:Search&search=${popupInfo.city}, ${popupInfo.state}`}
-              >
-                Wikipedia
-              </a> */}
+              <div style={{fontSize: '1.1em'}}>
+                {popupInfo.name}, {popupInfo.state}
+                <br />
+                {popupInfo.score}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style={{opacity: 0.3}}>#{popupInfo.rank}</span>
+              </div>
+              <div>
+                <a
+                  target="_new"
+                  href={`http://en.wikipedia.org/w/index.php?title=Special:Search&search=${popupInfo.name}, ${popupInfo.state}`}
+                >
+                  Wikipedia
+                </a>
+              </div>
             </div>
             {/* <img width="100%" src={popupInfo.image} /> */}
           </Popup>
         )}
-        <SearchBar cities={cities} placeholder="Enter a city" />
+        <SearchBar setPopupInfo={setPopupInfo} cities={cities} placeholder="Enter a city" />
         <Sidebar />
       </Map>
 
