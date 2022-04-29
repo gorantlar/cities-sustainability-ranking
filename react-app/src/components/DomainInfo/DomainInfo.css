@@ -28,10 +28,16 @@
 
 
 /*  buttons */
-.toggle.Ecology { background: #c0392b;}
-.toggle.Economics{ background: #005EFD; }
-.toggle.Politics{ background: #BDA74E; }
-.toggle.Culture{ background: #3E6315; }
+.toggle.Ecology { background: #c0392b; width:80%; left: 20%; }
+.toggle.Economics{ background: #005EFD; width:80%; left: 20%; }
+.toggle.Politics{ background: #BDA74E; width:80%; left: 20%; }
+.toggle.Culture{ background: #3E6315; width:80%; left: 20%; }
+
+
+.for-icon.Ecology { background-image: url("./ecology.png");   background-repeat: no-repeat, repeat; z-index:1; background-size : contain;}
+.for-icon.Economics { background-image: url("./economics.png");   background-repeat: no-repeat, repeat; z-index:1; background-size : contain;}
+.for-icon.Politics { background-image: url("./politics.png");   background-repeat: no-repeat, repeat; z-index:1; background-size : contain;}
+.for-icon.Culture { background-image: url("./cultural.png");   background-repeat: no-repeat, repeat; z-index:1; background-size : contain;}
 
 /* ------------------------------------------- */
 
@@ -44,22 +50,13 @@ ul {
 	list-style-type: none;	
 	}
 
+h3 {
+	background: #000123;
+	border: 3px solid rgba(0,0,0, 0.45);
+}
+
 h3:hover {
-	color: rgba(255,255,255, 0.45);
-
-	/* ff 3.6+ */
-    background:-moz-radial-gradient(circle at 48% 52%, rgba(64, 56, 56, 1) 54%, rgba(135, 128, 128, 1) 100%);
-
-    /* safari 5.1+,chrome 10+ */
-    background:-webkit-radial-gradient(circle at 48% 52%, rgba(64, 56, 56, 1) 54%, rgba(135, 128, 128, 1) 100%);
-
-    /* opera 11.10+ */
-    background:-o-radial-gradient(circle at 48% 52%, rgba(64, 56, 56, 1) 54%, rgba(135, 128, 128, 1) 100%);
-
-    /* ie 10+ */
-    background:-ms-radial-gradient(circle at 48% 52%, rgba(64, 56, 56, 1) 54%, rgba(135, 128, 128, 1) 100%);
-
-    /* global 92%+ browsers support */
-    background:radial-gradient(circle at 48% 52%, rgba(64, 56, 56, 1) 54%, rgba(135, 128, 128, 1) 100%);
-	}
+	background: #00112a;
+	border: 5px solid rgba(0,0,0, 0.45);
+}
 

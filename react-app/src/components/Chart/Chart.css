@@ -16,3 +16,8 @@
     background:radial-gradient(ellipse at 47% 52%, rgba(98, 98, 98, 1) 0%, rgba(54, 49, 49, 1) 0%, rgba(54, 49, 49, 1) 0%, rgba(33, 32, 58, 1) 0%, rgba(51, 54, 64, 1) 98%);
 
 }
+
+.polarArea:hover {
+    background: #0D0705;
+    border: 3 solid rgba(0,0,0, 0.45);
+}

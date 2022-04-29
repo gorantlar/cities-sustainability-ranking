@@ -96,7 +96,9 @@ export default function Chart({ city }) {
 
     return (<>
         <div className="chart">
+            <div className="polarArea">
             <PolarArea data={data} />
+            </div>
             <div className="breakdown">
                 <DomainInfo info={city.Ecology} obj={city} />
                 <DomainInfo info={city.Economics} obj={city} />

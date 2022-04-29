@@ -20,9 +20,14 @@ export default function DomainInfo({info, obj}) {
 
 	return (
 		<div className="DomainInfo">
-			<button className={"toggle "+info.name} onClick = {() => setIsOpen(!isOpen)}>
-				{info.name + ": " + info.score}
-			</button>
+			<div className={"for-icon "+info.name}>
+				<button className={"toggle "+info.name} onClick = {() => setIsOpen(!isOpen)}>
+					<span>
+						{info.name + ": " + info.score}
+					</span>
+				
+				</button>
+			</div>
 			{isOpen && <div className={"contents " + info.name}>
 		      <React.Fragment>
 				  {rows}
