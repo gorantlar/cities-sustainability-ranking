@@ -82,9 +82,9 @@ function App() {
         <Sidebar />
       </Map>
 
-      <div style={{ position: 'absolute', bottom: '70px', left: '10px' }}>
+      {/* <div style={{ position: 'absolute', bottom: '70px', left: '10px' }}>
         <img width="7%" src="/Our_Cities_Logo.png" />
-      </div>
+      </div> */}
 
       {/* <ControlPanel /> */}
     </>

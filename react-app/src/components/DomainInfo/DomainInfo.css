@@ -28,12 +28,17 @@
 
 
 /*  buttons */
-.toggle.Ecology { background: #c0392b; width:80%; left: 20%; }
-.toggle.Economics{ background: #005EFD; width:80%; left: 20%; }
-.toggle.Politics{ background: #BDA74E; width:80%; left: 20%; }
-.toggle.Culture{ background: #3E6315; width:80%; left: 20%; }
+.toggle.Ecology { background: #c0392b; width:75%; left: 24%; }
+.toggle.Economics{ background: #005EFD; width:75%; left: 24%; }
+.toggle.Politics{ background: #BDA74E; width:75%; left: 24%; }
+.toggle.Culture{ background: #3E6315; width:75%; left: 24%; }
 
-
+.DomainInfo{
+	padding: 10px;
+}
+.for-icon{
+	height: 75px;
+}
 .for-icon.Ecology { background-image: url("./ecology.png");   background-repeat: no-repeat, repeat; z-index:1; background-size : contain;}
 .for-icon.Economics { background-image: url("./economics.png");   background-repeat: no-repeat, repeat; z-index:1; background-size : contain;}
 .for-icon.Politics { background-image: url("./politics.png");   background-repeat: no-repeat, repeat; z-index:1; background-size : contain;}

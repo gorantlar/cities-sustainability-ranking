@@ -15,7 +15,7 @@ const Pins = ({ cities, setPopupInfo }) => {
     const markerClicked = (city) => {
         console.log('city', city);
         dispatch(getCity(city));
-        map.flyTo({ center: [city.longitude, city.latitude], zoom: 8.5, offset: [-250, -50] });
+        map.flyTo({ center: [city.longitude, city.latitude], zoom: 8, offset: [-250, -50] });
         dispatch(openSidebar());
         setPopupInfo(city);
     }
